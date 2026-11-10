@@ -55,3 +55,6 @@ validation/nautilus/.venv-nautilus/
 validation/nautilus/catalog/
 performance-evidence.json
 release-performance-evidence.json
+
+# macOS
+.DS_Store
