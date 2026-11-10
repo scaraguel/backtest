@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:27e90e3857fd2fa3393ea8d6bb885185e66ed04e864dbfa78c67be5d29d37930",
+  "claims": [
+    {
+      "id": "claim_760166fe0172431e94d27002266b6cd9",
+      "statement": "DataFeed accepts prices, optional signals, and optional context from either a frame or a Parquet path per source, rejects conflicting path/frame inputs, and normalizes Pandas and lazy Polars inputs while preserving datetime units, timezones, and nulls and rejecting ambiguous Pandas index/column schemas.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_frame_inputs.py#L9-L75",
+          "version": "repo-lines-v1:sha256:f9f53706570992986522718610d0ed83364210ef461e7b6ea3a509578954093b:eyJzZWxlY3RlZExpbmVDb3VudCI6NjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiODE3MTE0NjkxZmVjOGI4NmZjNDk3NmEzZTJhODYzZTM5Yjk3ODFkYmEyYTAzY2FhOTlhYjEzYzE0OGNkNDgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyMWU0MDFkYmU2ZTYxMjk1NDNiZjJmMTA0MjU0YzI0MWVhYzUwMmY5MzE1ZTI3YjFkNjVhNjIyNjIzZTE3OTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBiMDA1YzBhNGYxMGFmNjUwN2FkYWZlY2M2MDMyZjQwYzk1ZDc4ZWFkMTdkY2FjNWM3YmRiYThlYWNjMzZhMjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/datafeed.py#L92-L179",
+          "version": "repo-lines-v1:sha256:f0fa453d28d5a9af2231114da9bb2089597c1b35a64ff8f3207b5b8b6de644b1:eyJzZWxlY3RlZExpbmVDb3VudCI6ODgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyZTMyYTliZGUxOTUzOGI2NGQ4ODMzMThjZWRkMWQwZDAwZWRkYjVhNjczY2QxNWU4MDUzNWYzMGQ5ZTFiYTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlOWUyOGRmNzBiOGM3NmIxOTUzY2Y4Mjg0NmFlNmQzMTcyOGM0ZWQxOTliNTc5NDlmZGJhMmMxMGZhNjU5ODAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQzMzEwOTVkNWZkOTQ5N2Y0M2RkNjkwMWE5M2Y3NDNiYjY1NTUwNmEwNTBlMTVjMjgxNWJmMWM5ZDRmMTMyOTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJjZDY4MjQxODRhNTRiMzYwMDRmMWZlMGUxODAyZjZmMWMyMTExZjEyMjdkZGFkYjY1MTVmODU0MjI4YTg0OGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f8beb15da3874a33a6fd84adba2796ed",
+      "statement": "DataFeed resolves FeedSpec plus explicit constructor overrides against the price schema, requires one resolved entity column and valid timestamp/entity keys, rejects null or duplicate event keys, and adopts close as the reference price only when the default price column is absent and close exists.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/datafeed.py#L180-L250",
+          "version": "repo-lines-v1:sha256:23c0c6af9c8b77904abaddfb2799ec18ac3f7aec65bd312c77c701490af1353f:eyJzZWxlY3RlZExpbmVDb3VudCI6NzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmZWI5M2E1Y2FmMWJlMTZlMGYxYTI4ZmRhZWRlNTAwOTAxM2NkOTA5MjQzYWE4YjMwMDA5MGU0OTI5OWFmZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5N2I0N2JiODFjZTkzY2JhNjdhZmMwODY5OGE4MGNmYTA5M2E4NjY3ZTljOWY5NjUzMzc4MThkNjU3OGQxODUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzOTliOTM4NDBhZTY5ZjA0NGY3YWU1NzBkMTllYTU1MzgzNjNhYjdhOGMyNzQ3NTQ2NGI1NWVlZjc1YzM2MWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyNmY5MTlkMWRiZWJjYzliNTMyYjQyNjM2M2Q4YzI1ZTg1OWIxMWM5Y2JmNTVjMTQyNWYxMDQ4MDhmNTNhOTMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/datafeed.py#L337-L366",
+          "version": "repo-lines-v1:sha256:b2357741c444f99a5bd678e01fde9500d9e039ee7227ef2b1c180f553878590b:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwZGUyNTg3MTk2MTQ5MjYwNzFjOGZiMTlmZDg2NjE1MDU1NWYxYjAxMzU0ZjhjZDE2MDNhMTA5YTdkZGFlNDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlMzAyNWU0OTE5YTg3OWJkNjkyMTE3MWU5NGE3NTJlYmZmNDdkMTBmZjMxMTM3NTk2NTc5M2I3MDZhYzNmNmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlNTVjZDQwMGY0MzAwMGI0NzhjYTVlYjM5MGE4MjYyMzJjY2IwNjRiOTgzNTlkNGM1MzFjYjZhNzI3MmYxYWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc4M2E3YTk3YTZkYzdkOGY0ZjEyOTk2YjQ1NDQzMDQzYTVkOGNmNzgyMDcxYTkxZjBmNThiYTdkZGFjZTFlYjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8297c1ff733c4ad8a56a7dfe8c9b9d99",
+      "statement": "DataFeed stably sorts each input frame by timestamp when needed, stores timestamp-to-offset/length indexes, iterates the sorted union of price, signal, and context timestamps, and converts only the active timestamp slices into per-asset and context dictionaries.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/datafeed.py#L484-L535",
+          "version": "repo-lines-v1:sha256:141a12003701fa45b5355002a53d386ef2fe06eea91fbc8cbca930b6636338c8:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYwYjNhY2E5MWZjMjUyNjFjNjFhMTI0Y2VhYTVkZDVjNjhlNzAxMzgwMmRhNmM1ZGQ1YTJiMTRjODczYjgyMTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxYTdiM2M3NjQ2NWQ0MjcwNmNjMDVjMDExN2I5YzBiN2ExMDNmYTBiYjM5OTY0ZDdkYTQ0YmJkNDhlYjViYTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJhMGIzYmM3NTI3NDA0MTAxYWVhYjk1YjlmZmY1ZGJmZjU5NjM4YTI3ZTVmN2I5NzM1ZTczZDZlNTNmMmNhMWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlmNmE5OGVlNTJmYTM1ZjExYWFlNzZkYTMxNDc4ZWRjNGFmODg5ZjJhYjE2ZmU4OWE2YzAzNmM1OTZhZWE2MzUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/datafeed.py#L592-L713",
+          "version": "repo-lines-v1:sha256:f47b09c4be08896c019c6da33d58f10119bce8f9d77b3cbe56e1699942f3d70c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIxNzBhOTQwNTU4OWEzNzhjY2ZlYzZhZWQ3MWYzZWI2OWY1ZTVkODAyMjMyNDBiOTZjY2I1ZDYwNTdiZGU4OWM2IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlZDg5M2JlNmIwZjcwMGE0NmIzODEzOWY3YTJkNDEwZGQ4MDc0MGNmMjU4MGRjMTJkM2FkMWNmNTAxZTVkZDZhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://tests/test_datafeed_memory.py#L41-L96",
+          "version": "repo-lines-v1:sha256:ef0410e4eae788198e1813e820de97d7cd7cb9d6d90936b337dfbd9c154fe0bb:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3MzYzM2RkZjQxNmI0N2FkMjk1NWQ4NzVkZTdkNGIzYWIyM2RhNzA3Nzg2MmVhYjBkODkxODIwNzQyMTE4ODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1M2UyOTE4MWJkNThjMDEwY2RmMTc5MWFhMGZkYzU0NDk1MDczYTViNjRiYTI4NjE1MTdkZGFiMmUyMGU4N2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVkYjBkOTI1M2M1MmMxYWMxMTRmYjMxMTlkOWIyNjcwNTk4NWZjYThhNzNkOTE0MDQwZTkwMzJlYzNmMjdlMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM2YTY0MGNhYWMwNjViOTNjMGVjMGNmMmY4OTk4NzU1YTliZDZmZDgxZTIxNzkxODE0ZDY2ZjA2ZDhmNWQ1YTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_af675aa3f53843548886d6e81ffbf359",
+      "statement": "Per-event price payloads fall back missing or null open/high/low to close, volume to zero, and reference price to close; midpoint can be derived from bid and ask, but VWAP remains absent rather than falling back to close.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/datafeed.py#L607-L683",
+          "version": "repo-lines-v1:sha256:65c8ae3c917fc7dbe1d114cc9320c54ea50e7b2c8daf5001a4e209130a8a6117:eyJzZWxlY3RlZExpbmVDb3VudCI6NzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU3NzYzMGQwZDJmNzNiY2EyY2U3MmY1Nzg0MmYwNmQ4NmQ0YzUzMjFlYzE0Njc1NjFhMjc5NDBhNjc0OGYxMDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3YTYwNjJkZjQyNzQ5OWE1ZjU0YzQ5OWI0YTZlZTczOTU0Y2NjNTc5YjVkYmIzNmViMGFmZjIxMTRjZjhjOGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5ZTIwMDRhMDllODQwNGY0YTkyZjc4NDg5YzhjNmJmNTVjMDcxMWVhZTY2YjRmYzlmMjA3N2E4MzQ3NDkwYzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhjNjk2ZTNjZDBmMDYyMTE4NzZhODYwNmE5NWE0YTgzZWJkYTRlYmNjYTAzZWNkNDMxYzk4OGUwYjdjZmI3ZjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4e19fb090a154942ab1c8b515e327078",
+      "statement": "Engine transfers the feed's pre-extracted OHLCV, VWAP, quote, size, and signal views into broker market state before strategy dispatch, while retaining a compatibility path that reconstructs those views from ordinary payload dictionaries.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L544-L634",
+          "version": "repo-lines-v1:sha256:70cc0dd1f96795916e5c54c93128920a6480ad5bcd99332fa5900260756999e2:eyJzZWxlY3RlZExpbmVDb3VudCI6OTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1NWFlNTBiNGFiZWY2NzhiZDUxYzQ4ZjM1NmEyOTYwYmZlOTNjM2NkMDI2YzhlMDczYmYxZjJiYjdjYmU5ZDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzOTBiZjFlYzZiMTBmZDE3NzA5OGJiNzBlMGFjOGRjYWUyZmEyNmUyZTE1OWE5ZmMxMmY3YWZkZjk4YWE4YzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZkZjE5N2MzMmQzNjhkYjViZTU1MWRmMjBjODIyYmE1MDgxOGEzYjBiNTgxMTJlZDMyY2NiNmMwNjgyMzAwMjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5NGM5NmRkYjRlOGQ4NzA3ZDU0NjVjOTgzNDgxNWJiNzUzNjcxNWNjMjk1ZWRmNGQ5MDkyMTJhZTc4YTIyMTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L653-L688",
+          "version": "repo-lines-v1:sha256:958ad5fcff2703b9b1a319f3f77393b2a1ccf930f89030c0e43f7352ef80078f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0YjY1ODQxMGI0OWI1MmE1MGIxODliODE3MTljNTk0MmMzOGU3NWQyNjcwZTkxZDE1OTVjNWQ0MDk0N2NjNmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFlZjcxZDdmNTk1MGQwOWJhNTg1N2U1YThlMTMyMjg4OGJlYzI1YzI2ZjY3Zjc1ZWMwYTAyYmFiYTg0OTJjNzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwNDI5ZTYxOTFlZjVlMTUyOWViM2FjMmRlMTlkMjYyMjA3MzIyMjI3NzUxMDA3Y2IyYTFhNzgzMjgwN2NkYmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNlNjdhNWQzYmU3MDQ0MWUxNzYwMTAwMTA2ZTY1NWNmMWJjZjU4YTNmMmM5ZTlhN2UxN2UwMGIyZDZhM2M3ODEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3299f836e8874c35b6525e0f3386381d",
+      "statement": "Broker resolves configured execution and mark sources with explicit fallbacks: bid/ask and quote-derived prices may fall back to the reference/open price, side-aware quote size falls back to volume, while VWAP has no substitute; Engine rejects VWAP execution when the feed declares no VWAP column.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L1404-L1490",
+          "version": "repo-lines-v1:sha256:4e25c0cb82aca80a49fe3d72a335ab988282521d2391785e02b8fe7c9097f3f2:eyJzZWxlY3RlZExpbmVDb3VudCI6ODcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkMmI5YjRiMjkzODhhNjIyZmM1N2YzYTA1NTJlZmE2ZDE1NGRmNjYzZmU1ZmNlYWNiZjM3NjJlMmNjMzM5MDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjODcyYzgzMmZhZjQ1N2UwMGVjODYyODZkOWI2OTU3OWZiMDc5ZWU0N2I3ZmU2Mjg0ZTNjNTI2YjA2OTRjYTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4YWEzYTk1OTFmYTA2NTgxODE0ZTY1YzUzNTAxMGYwMjJjYzM4NDc4M2E3NmUxNmJlNTkyNmE2YjRiN2M2ZWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIwZTRjY2I3ZGRjNjljZDRhMWVjMGM1MjM4YWM4M2FmNzE2YjQzY2UyMTkwOGQ1OWYwNTQ3Y2VmOTliZjJhMjIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L1492-L1524",
+          "version": "repo-lines-v1:sha256:37d85268894f258f0ae7143358de258c23913420c611ae15b9657026a03f2a5c:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiZTZjZWEwNTI3NzFlYzNiMDI3YTQ4MGE1MWU0ZmQ2ZTcyYjQ2NDZhNzNlY2RhYzFlOGFiY2FjODQ3ZjI5MDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwYzQ3NzJmNjA2ODA4MWFkNGVhYTIyOTcyMjEyNWIzMmJhYTcyZDVjOWM5NzBiNmZjN2E5ZDI0YTljMmNiOWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMxMjAwZDkzNTNiMTg3YWI2NDMxNmMyMmJkODI3MzY3ZWY1M2RkOTRmYWRhYWZiNTBkNWFmY2NkYWE2NGZlYzQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhmMzEzZDVjYTRmMDQ3MGQwOWVmZTM0YWEyYTMyNDE0ZGUxNjg4OGUxMWFlMTg0MmQ4Zjg4ZTM0YmNkMGM1MDIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L201-L210",
+          "version": "repo-lines-v1:sha256:84182ec87ba2ef44b7d62a43c1f381f08b46fa9fe52e68942b5e325a437bf74f:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlZjVkMDhlNGMwZmE0NWEwMTExNDcwZGU4ZDQwMDU4N2UyMGY4MWMzOGI1NjJhOTQ1ZjFkOTE1YzM2YTBkNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkZDFiNmNlZDYwYzc1Y2U3NjBmZDAwMmJmZmJlYTdlM2UyNWRkMzQ2Y2YzMjYzYWJmMjI0MzRhNDc3ZjQzOWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNiNmE0YzE5ZjkyN2M4NDFmMWFlM2ZhZTQ2MjFkOGUwNGUwY2UxNTUyZTgyYWNmNDc2NDJhNmE3M2U1ZGNjZGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7ecd45340d394ff196a0c96b41fd1165",
+      "statement": "An Engineer feature specification must declare artifact identity, source schema and FeedSpec, price basis, feature columns, observation, decision, publication, eligibility, and stable entity roles; feature_signals validates aware decision/publication instants and unique decision/entity keys, then projects decision time onto the target feed clock while retaining publication and eligibility metadata.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_feature_signals.py#L108-L157",
+          "version": "repo-lines-v1:sha256:9ff5e987505be84d51ed85b60171da9e9fa49518afed453bef45e1b6fe974535:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4OWNhYjFlMGJmNDM5NzBjYmJlMGMxYjYxZjk0ZGM0YTFiZDUzMzMzMjBmOTAwMWRlZWVlOGMwN2I1YTk5ZGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhiZTgyOTczYWM0ZGM2YTkzYTY0OGViYTFiZjRkNWZlMzBjMDkwNTNjZjFjZGY3ZTU3MDE1MTBhODM1ZjE1MzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/_feature_signals.py#L14-L107",
+          "version": "repo-lines-v1:sha256:9f3b38a814a5715b0afd0533d2e1dd77ec84106dad8cfccc92bc694c005ad078:eyJzZWxlY3RlZExpbmVDb3VudCI6OTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4YzYyYjg0MDc3NWUwMDk0M2ViY2FkNTFlZGM0NGEzNWRjYmY4YjA1N2I4NDdiMTAwMjc3MzcxZDgyMDI2ZTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZmOGRkNDEyMzBjNTdkMzhjMTNkMjZiMTBiMDcxNzAxMmMyNmViMmE2NDk4NDI2MzcxMDBhYzdjZmQwYjQ4NWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgxOGFmNDEzOWRiNzY3YTkwNWM1MTE1OGYxODk2M2ExOGFjZWRjMDU0MjY3NjdjZGFlM2RmZjJkNjEyY2YyN2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjljZGYxYWY1NDY3NjZiMTc1Yjc3NjgwNjQ1NDM1NWJkNGMyOTg1MDE0MWU2N2FmZDc5ZTgxNTUxZTcwNjgxOWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_505f3c7ca57e4c079972a331b17cf3da",
+      "statement": "RuntimeServices incorporates feature-declared publication and eligibility mappings, rejects conflicting caller mappings and incompatible schemas, and makes a field available only when it is published by the runtime as-of time and, where declared, explicitly eligible.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L122-L216",
+          "version": "repo-lines-v1:sha256:fa1453902bde79bcb7c63f8edc5a82ac6a38f4b20c0cfb55f465525df0dc3215:eyJzZWxlY3RlZExpbmVDb3VudCI6OTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlMWY5NzY0ZTU4ZWU5NmNiOGVlODcwZGExODNkY2U5ODQ4Mjc5MTEyMzRiYWYwNDc2NmEzZWExNjUzYTNhNGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxMDQyNGJkZTNhZDkxZmY4ZGFlYTgxYTRhYTUwNGIyZmU5ZDM3OTIzZjU5Mzc5MTUyZDU0M2Q3YjRkZWFmNzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMzMjU4MzkzYjYwOTBhNGQxNDIzMjAyYzVmZTBkNWQwNDE5YTYxYWIwZTY2ODc5ZjUxODM3MTcyODFkYTczODUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3NjM1ODVlOWFjM2MxYzVjZjZhZGI1NWEzNDQ5ZDYxZDE1YWY1ZThlYmIyM2E5OGFkZDIzNDM4MDI0ZDYzNzkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L956-L1028",
+          "version": "repo-lines-v1:sha256:9476f0b75c7a3cb415c15a4cb162d2277bfd021e71201648b07246650ca3fa2d:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjZmE2YTM2ZDFhMWUyMDAzZDhkNmQ2ZGUzMGE4MDM3NDRlNmM3MGE5ZWM3NDUxN2JjMWE5NmI0NDkzZGZiNjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzMjJiMmM1MTI0OTE1M2JmMjNjYTU5MjRjOTdiYTVlNDFjNjZlZGZiZWM2MDE3MWYyMTkxMjVkMTFjNmFhNjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyYjM3OGU2NDhmMDlmZGM2YmEwNjI1MzJiMGI4ZjQxMTlmZDIyMDg2NzIxNDQxMWNjY2JiOWE2NDhiMDkzMGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU2NjU3YTNhNDJjY2NkYzNlZmU5YWQ0MDEzODMzMDQ1YTAyOTJlNzIyYmVjZmVjOGIzNmE5NGJmZGMwNDNjN2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1b41c716ba114d1bb7f1c1845f5c2095",
+      "statement": "Temporal boundary helpers preserve nanosecond event identity by using pandas Timestamp instead of Python datetime for ns values and by repairing row/frame conversions; regression tests verify separate nanosecond events survive history, fills, account outputs, cash events, and persisted-result round trips.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_temporal.py#L1-L114",
+          "version": "repo-lines-v1:sha256:d74f9b4e4ff4c5d6ce39072506d51d71e9483cc1fb4b46022097c2799424d2b1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyYWIzNDE3ZTM5MjIyNjE3M2U0Njg1NTNiYTkwMTQwMTU5NGYwZGJjZGEyMWU3MTllN2Y0ZDc5MGI0ZjkwNGMwIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzMGNmMDA0Y2EwMjZhNDQ3YTEzMWJiZGZiYjg0NDJmNWVlNjYzNWEwOTcwMTlmYjRmYTg4YWIyNDg2NDE5YmQwIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MCwicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://tests/test_timestamp_precision.py#L52-L119",
+          "version": "repo-lines-v1:sha256:962b6ed8e15a5e86b1ef767d0d38468b1fe55fa0e1cc36b825f1b36fdbaa740a:eyJzZWxlY3RlZExpbmVDb3VudCI6NjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRiMTA5YTJlOTJjYzhlNGY2MmUxYzkyMDhjMjc4NjYwOGRjZDBjNDBlMWNkMjcwMjVkOTYwY2NlMGY5ZjVmYmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxMmI0N2JhYzRiN2I2NTUyNGFkMmE3MjEwYWRiNzQyYjM5MDVlNTNmYTcwZGNiYTU1NDk4NDRjY2UwNmM2ZjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZjMWZiYTM3Nzg0MGNkNmE5YjY5ZDAyMzQyYmNhZGE3YTFkN2IzMzIyNjI2ZmE1Y2JhZTVlNDAyY2Y2ZTQyMmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a661a1924df24fbfaea46a4b147f0925",
+      "statement": "Calendar session filtering distinguishes physical event instants from right-labeled closing bars: event instants use [open, close), while bar-close or right-labeled bars use (open, close]; contradictory bar_close with a left label is rejected, and schedules are expanded to cover overnight sessions and optionally split around breaks.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/calendar.py#L589-L737",
+          "version": "repo-lines-v1:sha256:88650e30c8b87d3b4958efb07b00a8e7056105996b96a301141ba9396c33b2b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ5LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI0ZmI3NjYwNjc3ZTNiNTcxMjVjNTI1YTgwMWM4N2ExZTZlNzJlMjNjMWI0NWJhZGZiMjIzYWM5ZDgyM2Y1OWZjIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzMGMxZjE4OGYxNDJlZDdhODI0NjgwYjIwNzE3MmM1NTE5YmM2MTRhNDhmZGE3Y2YxNjdlZGI4ZGRmNzk5NTZjIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1MWE5ZGU5Y2Y0YTU0NjVjODVmZjE0YzhlNTNmOTcyZjg5ZmFlZDI1M2I5ODIwNzcxMDQ4Y2RlYTBlNTdlOTQ0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJiMDQ2YzY4OGYyYTFkYjFjYzY5YWZkMzQwNzM1NzkwODIzM2JiMWQ1MDMwMmJhNzIzZjA1YzZmNDAzOWExZGZjIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/sessions.py#L31-L39",
+          "version": "repo-lines-v1:sha256:6cb1921323fcdb9b096cc85cecdfdd8cfdc403f7cd9d6e0e481ca8842641bf00:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2EzNzhlM2M1MDYwMTU3ODhkZTY3NWI4NjQwNzVhMGNhY2RlZmIzZWZjNzlkNDE1MDY2OWYyNTgwOTczNzI4YyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYTg3YjQ2YjkzZjFlZThmZjRjYzIzMWU3NTM4YTg5OWQwNzgzY2QxZTFiNjg0NWRjMTI3YjY1N2Q4YWE4ZDViMiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWIyYTY2NWZlNWRkZjk0ZWFlYmUyZTZmMGY4OWI2OWE0M2U5YzE5MmVhZDcxYzY2NTRiMGIxMTgyNjgzODUwOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZDg4ZDlmOGEzOTAxYThlOTc2NjI5ZmUxMDU2MDYzNGE2YTkzOWQ1MWM5ZWM1NWY1ZjY0YTkyNWJkNmY1YTM3ZCJ9"
+        },
+        {
+          "resource": "repo://tests/test_timestamp_precision.py#L141-L168",
+          "version": "repo-lines-v1:sha256:2c5b8de19fbb4f9a4ad8589b7dcf961666cd53c5806c76ced624ee5f10c69545:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwNjg5ZjdjYWZkMGYzYjBlODBkMTExYjE5NDJjMGQyMWFmNTAwYzQ3NWI3OTMxMmUwMDM2MDRhMzQ5OGRhZjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIxY2FiYTU5NDNkOTBlMGM3Mzc5Y2E3NzZiMTFmNzk5MTlkYTQyNTE4MjU3YmMxMWI1MTNmMzJhNmI1NTk2MTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0NTQ5ZTliMjdjNzg5ODRkNGM2NGQyMDFiZmY3N2E2NTk2ZWVjMTZlM2QwMjRkMTZhNzg4Y2VmNDgwNTQ0MzIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5544a08e8ecc421c8ed9e3893fdb5152",
+      "statement": "Session-date assignment treats session labels as dates but localizes physical timestamps into the exchange timezone and consults authoritative calendar sessions for overnight and closing-endpoint cases; custom session boundaries are constrained so unsupported morning or evening overrides fail rather than silently changing session identity.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/sessions.py#L117-L240",
+          "version": "repo-lines-v1:sha256:d869ae8409d7aab8873ca79fb46641b5bb35224f7f6c0a05253830466d9b7b29:eyJzZWxlY3RlZExpbmVDb3VudCI6MTI0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1ZjFmYTY3ZGRkMDA4ZmIzMjg5ZjFkNGE3ZGNjNDQ2ZjcxNWQ1OGIzNTU5NmVlNTdmN2JlYTc1Y2IxN2VlMTZlIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIzM2U3ZDgzYjZhZWM5ZjczMDBkMWJlMjAzY2Q1MGZmNzIzZDBkNTJiNmZhZmY5NWYwZjE5YzRmMmU1YzQ5NTgxIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlYmIyM2VlYTU1ZjhiZDJmYWFiZDRlMjdkZGZkZDVkOGY1N2Q4M2FjMmJlNzU5ZjBkNzRlNmVlYmRjMWI3MGYyIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/sessions.py#L368-L420",
+          "version": "repo-lines-v1:sha256:dc9a7730a7ccd6be8510709c128b9253446c0bcdd6ffea3a7bcd508772105b89:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdhNTc0ZmM0ZWQwMWFhNmQyYTcwYmVlYTEyNTBiOGQwMzZmNTI0OTU2YjI2MjU0ZWUxNDIyZDQ0OGMxM2RhOTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVlZTVkNDczNjE0OWY2MTE3MTVmOWQwMGQ5OWQ5MGU3N2U0YTM4OThiZDVjM2RmZGI0Y2NjN2U1YmI1YTgwNjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyMzc1MTU0ZmE0ZDMwYjQ0Zjk3ODVlNzIzNGQ5NjE3NDYzMThkN2MwMGE1MzY5NjRhZjFlYzBhNTdkNGEzZDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f2d2b0f587d24fddbe9e79384c66d11c",
+      "statement": "When DataFeed is given a session_col, it requires a Polars Date session value, a price row at every feed timestamp, monotone and unambiguous session membership, one bar per asset per session, and a complete asset cross-section; it records each session's final physical timestamp as the decision timestamp.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/datafeed.py#L536-L574",
+          "version": "repo-lines-v1:sha256:09f1a0c99739e50b5d877e7e25cc178af8e417a56f5e72c619263e9f8c8ed65d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5YzI2NjA4NGUzMDljZmVlZjU0ODIxMWYwNDFmYmRkM2RiOTE1NzYxYjNkNWM5MTcwMjY0NGM5NWVkYmQ5YjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1NmM2NjBkYmQyNDZiYzY0ZTJhOGVmNDJjMjFhZWIwMzI0YmFkNjM5ZDM4OTE4YTBlYzZmYjhiMGU2ZDVlMjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE4Zjk4ZjA0ZWFkNzIwMWE2YmRlMTZiZjYwZTVmOTE0MGM5MGRlODE5MGE4OGZlODJlMmEzYjMxMzQyYzNmOWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMyODE5YmI2ZTY3MDVkYTdhMDlkYTU2ZGE5MDYwY2NmMTRmYzhjMjA0Y2NhMmE3NDZmM2Q5NGY4ZTljZTlkYTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_22e716cf99f7433d999e08c01edd1597",
+      "statement": "In session-decision mode, Engine still updates broker state at every physical event but accumulates asset and context payloads and dispatches the complete cross-section only at the final timestamp of the session; this mode requires NEXT_BAR execution and excludes newly created market-on-close orders from same-event filling.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L140-L151",
+          "version": "repo-lines-v1:sha256:adb17539c54eebd5914c307daf366cbf8b3cae3401b5bb098ba55377dab9bdf1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczMjc3M2I2NDc1YmMyZDYwNmViOGMxOTQ1YTgzMjYyMzg1MmM3MGRhZGE3ODEwOTZkZjRmMGVkYjYwYjBiZGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0YmQ3NWIyOGRkMzNmNzhmMWZjYzkyMjc4YjkwMmRjNzJiZjc2OWQzMTUzMTg1NWRkNWY3MTNhMzY2OWFiMzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE1NTM4YTA3YzExYjYyZWEzNzNkYjVjMmYxODViZTIxYTRjMTNkZTk3ODRiOGY1YzYxMGE5MzJhYjkwMWZmYTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMyMTg3ODQ3N2EwYjU1NWQzZGI0OTNiZmEzOWViMThiY2MyYzMxOGNlZjc2NzM1OTJlOWJkOGJkMDEzMDBhMjAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L487-L532",
+          "version": "repo-lines-v1:sha256:64ccb8c2fb4b948da26a325a13ca0befc9879c09b1b538f7a9b8174677cbf104:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjNDYzYTRhZmU2MjlmMTY0MzlkODcxMTVmNzU3YjYxZjQ3NzNkYWVlNWE2OGU1NTJkNDg1ZDFhNTBkNGUzZGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ1NWNiMjU2N2UzNWEyZjI2NDc3MzAwYjNlOWQ0YjY5YWQ2M2IzMmQzNWQ3NGJlM2Y4MWNlYjVmMGFhZGVjMzIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRhOTMzNmEwYzQ3YzhkZWNmMDNlYjVjMjg4N2ZmOTg0MGM5NjhiN2E3NTdlMDdhNmMzN2RmYzE2YjY4Y2ZkYzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU2YmYxMDNjYWRlYzlhYmRlZDY0ZmVlYzJlZjlkMmE1NWQ5MDAwZWUwZTNmZGM5ODhiMDA4MTFhZWRmZDViMTgifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L634-L700",
+          "version": "repo-lines-v1:sha256:1b57d29938cc73d5be37d228dbbed5464d8556bd888a8d79b79ad8697ff76dd2:eyJzZWxlY3RlZExpbmVDb3VudCI6NjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzOTBiZjFlYzZiMTBmZDE3NzA5OGJiNzBlMGFjOGRjYWUyZmEyNmUyZTE1OWE5ZmMxMmY3YWZkZjk4YWE4YzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlNGFhZDE5NjU4MjI3OTA3MmJhZTU1OWIwZjMwZWMxNjhiOTg3Njc5YzlmYjI0NTY3ZmEzY2VlNDJiNWEzYTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1YzAxY2YwZGVjODNiZGUyNzgwNmZkMjdkZGE3OGQ5Yzg5MWIzNTI5Y2U4MGZjYjdhZDEyODk1YzUxOTQ2ZjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxYTU2YzNhMzdmMTMzMmM1ODY4NWQ4OWI3YmViOTNhMDg1N2I5MDkwYjliMDkxYjQ5Y2I0YmI2NTlhMTVlYjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_db2442be5aab4a8fa5f82fc460148f7e",
+      "statement": "With session enforcement, Engine checks session labels as trading dates but physical instants against precomputed intraday intervals, skips excluded bars, and rejects funding events on excluded timestamps before lifecycle startup; RuntimeServices separately refuses session-label timestamps for physical causal cutoffs.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L451-L486",
+          "version": "repo-lines-v1:sha256:e65fdcd6a18991575afb8ed47c8c4d1cdc6b5c80d5fbfba07cf07f6bf1b593d3:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyOTcwNzJmZjE0MTNjMmEyNGEzNTM2ODk3NzE2ZTcwNjYxMjE5MDFmZjZjYTg5YWQ0YjMyOTFlNDA4Y2Q2NDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM3ZGI2N2QwYTY0YTZhZGI0Y2Q5NDBiNzY1ODdlNDM0M2RiZjRjYjZhMWIyMWIxMDZiZjI3Nzk5YjhkMTc3ZDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE3MDY5ZTg2YTEyMmUxNmVjMzlhNWJhYzIwMWY1MWE4NjNkNzU0YmU1MDgzNGUyODdhNmVlZjc2NDJkMzllNTIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L956-L966",
+          "version": "repo-lines-v1:sha256:0503995ac7b1f26ac1a3b403beedba8cb0acfd4a7e7e55972f20e37d855c0eca:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjZmE2YTM2ZDFhMWUyMDAzZDhkNmQ2ZGUzMGE4MDM3NDRlNmM3MGE5ZWM3NDUxN2JjMWE5NmI0NDkzZGZiNjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5OGM1NDFiMzlmMDIwZWUxNzE0ZjAxNzY4NjQzZTBiMzIzZjcwZTJkZDE1M2ZlMjZiYzBjY2E3YTU2NDRhZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUyYjM3OGU2NDhmMDlmZGM2YmEwNjI1MzJiMGI4ZjQxMTlmZDIyMDg2NzIxNDQxMWNjY2JiOWE2NDhiMDkzMGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUxNzcxNmQ0OTM5ZmQyYjcwMjdjZWE5ZGU0MzcwMTVlYWFhNTMxYTViM2RlNWNlYjUwYmM0NjkxMGU3NjkzMTgifQ"
+        },
+        {
+          "resource": "repo://tests/test_calendar_contract.py#L332-L387",
+          "version": "repo-lines-v1:sha256:b09a30974cc568153018454d5afc4cb44b36af733b637d0025436baac6856f71:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjViYzgwNjJjZjM5Njk2OGU2MjU1NjZjNjgwNTJkOTk2YTgwNTFmOGZjNzA5MDljZmFhYWQxYWU4YmQxMjBhMWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxYTg5Y2VhNjBiY2EyNDdlMjZiNmZlNTFiY2U1ODFhYTIxOTU5ZmY3NWFhOTA1YWI3NGFjZWIyMWUwYWI4NjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5Y2Q5NjQ1MzgyNjdmOWE1MzhhN2EwYTc1NTI1MTYwYWQ5MjE0ZTkwNTQzMTQ2NjU3ZTM5YTQzNjNhZGE2MjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:31.122Z"
+  }
+}

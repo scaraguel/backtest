@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ce091237a5fd52458d90185e7cd2d44349e3a6e15d4c02826f09642e7675945e",
+  "claims": [
+    {
+      "id": "claim_4263a670ba7442ce9f28abdc7d50355a",
+      "statement": "The Engine processes deferred next-open exits first, evaluates position rules before strategy callbacks, processes same-cycle risk exits before callbacks in NEXT_BAR mode, validates account controls at configured event boundaries, and updates trailing water marks after fills at event end.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L637-L714",
+          "version": "repo-lines-v1:sha256:a943f469d023548efc99bc85eba932cbbea6f66cd14f06446ea9b5d3ce1e9949:eyJzZWxlY3RlZExpbmVDb3VudCI6NzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhZDkyZmZhNDgxNmFhOTYzYzUwZTgzZmE3ZTQwNWE0YTM4YjllOGJhYTNiMDk2NWIwYzBhMzBjYTkyZGY5N2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0ZTQ1MjY5MmI0OGU3NmRhZDYwZmQ0OTdlNGQ3ODc1ODEyNDNmODRkZGY4YzI0MmI3MjRiYmExNWQxMTI1ZDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkwYmE1ODQ2ZWVmYzhmYjY0MmYxNDhhODZlYmM3NDQ0YTcwYjRlYjYwOTI4NjhhYjRmYmUxYzZlZGRiNzc2NTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc5MTJkOTNhZGU1ZTNjOGI0ZGY2ZDk4OTNhNTVhMGM1ZWI4NTc3M2FhOGI2ZmVkOGMyYWFjMWZlMGY4MWE3ZTQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_18474bd0eaf447c09ebcc60c53d5ae97",
+      "statement": "RiskEngine evaluates the per-asset position rule in preference to the global rule, skips a position when no current price is available, and converts full or partial actions into normal broker orders or persisted deferred exits.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/core/risk_engine.py#L206-L275",
+          "version": "repo-lines-v1:sha256:eca6948c2846a7146c94591ce98838b24e25b5fd91d4d79714efec7bd9a47613:eyJzZWxlY3RlZExpbmVDb3VudCI6NzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlNmY0YWQwYzI3ZjBiNTMxYjE0NmE3MTcyNGI4ZTVkMjIzNTU3ODI2YjJmNzQwN2UzNmZmNGZkYWY4ZTExOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNjYWU2NjE0Yjg3YWMwODZhMGUzNzVlYTQxYTg0ZDE0MTU2NjY5OGNiYjBiYjgzZDg0ZjlmNWI2NThjYjgyMWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/risk_engine.py#L42-L111",
+          "version": "repo-lines-v1:sha256:db596f51231e22fb5c5d9552fcaeab28930c7161ea9fa4a8174ec3ba99539ab7:eyJzZWxlY3RlZExpbmVDb3VudCI6NzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmZmQ5MDA5MjNjOGFmYWI3ZjM0MjI5YTYxNTM4YWUwNTc3N2U5ZTI2YmRhOTZmZWFiYTg0Yzc3NmJiMjczNzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJhMGYzMjgxNTI3MGYxOTYzNWMwNjk5YmU3YjJlYzRkOTI5OTc1MzA4ZTI1Y2FjNzliYzFhNjdiNzI5YTA4NjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY2YWZlMzQ1YzhhYTViMDlmOTBlMmIwM2Q3MTExZjkxY2U4NTMwYzNiY2I3OWMzMGI1ODkyNTE3ZTNjNjE5ZmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_19984948f8bf4ff190668b12f50eab12",
+      "statement": "Static stop-loss and take-profit rules use intrabar OHLC thresholds for long and short positions and support stop-price, close-price, bar-extreme, and deferred next-open fill behavior, including open-price gap-through handling.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/risk/position/static.py#L23-L220",
+          "version": "repo-lines-v1:sha256:52e4c6f99837ea2155efd2cda4c109cb74d21e8832ff756858e24b1752e69ff5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTk4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhOTViMWM4OWZhMjk3NWFlOGI1NGNjZmQxYWU5ODc5YzY1OTAxM2Y4MmQ5ZDViYTYwNDMzODgxYjlkM2NlNmNhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmOWEwMTE3MzgxYmM5ZmQ2OGI1ZWE1NjIxNThmNjM0ZTg1NTdjODE3M2U4OGYzZDA0ODNiOWNjYWNkYTc3NzY0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkYjgyYTU2YmZiZmEwZmUzYTIwZGQ4YjVkNzhlYzY0YWI0Y2ExOTc3NmRmZGNlMTE0MzJhM2U3M2Q0ODVmMTcxIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_70a956c77af54da4abac3e9ebc3141c4",
+      "statement": "TrailingStop supports lagged, intrabar, and VBT-Pro-style water-mark timing for both long and short positions, with next-open deferral and open-price gap-through behavior.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/risk/position/dynamic.py#L23-L250",
+          "version": "repo-lines-v1:sha256:7732d670e50042569d3578c236875753083d54b01b181dbcbc2ab68c44ef08f2:eyJzZWxlY3RlZExpbmVDb3VudCI6MjI4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI5YzI0ZTRkZDI2N2Y4MDFkM2ZmZDM4MWMwYTU0MzA2MzczMTE3NzBlOWRjMzkxNjliZTAyNmQ1ZDI0MmNjMWUxIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIyMmI5NjM1M2UwNjA3MjgzZTMxOGNiNTJiZTFmOWIyNTYzOTgwMjNlYTkwNDNlODI4ZjA5NGNiMzg1YzVjODg1IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2YzFmMDJmZDdlYzFkNDYyYzBjYjgxOGI5NDhmZmU0ZjcxNWIyYzJjNDMyNjMwYzIzMmRmZTM0ZDQyNzQzZmE5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJmZGNhMGNjZWUxMTkxMTg4ZGU4ZTMxZWYyYzhhZTljNGRmOTY0MjJmZDdjZGQ5NjllYTFjMTBiYjdjOGY1ZDg0In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_b1df4d3362034f72b04befeaf414ffd3",
+      "statement": "For a position rule activated after the daily open, RiskEngine can evaluate declared high-first or low-first paths, reject path-dependent outcomes under REJECT_AMBIGUOUS, or select the more conservative outcome.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/core/risk_engine.py#L113-L190",
+          "version": "repo-lines-v1:sha256:eaefd10cc1a0106577f4f40c30b9fc3d4ab4a983d3e125bb4748ecaf1a2b896c:eyJzZWxlY3RlZExpbmVDb3VudCI6NzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhZmFjN2Y0YzI4NWVlM2UxMTNjN2YyODY2ZjYxOTVkNjIwNGY4ODdiMGUwN2I1Yzg2NjY3NGNhMjFjMjc3NzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhMjJkZDMxZjcxNWVmZGQ4YjAxZGYyYTY0Mzc3OGI1MDIxN2RhMmE1Nzc0ZTBlYzA2MDNlZjczNDhjYmE1MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQzMmUyNjViZjY3ZWZhOGQxYmI3YWQ3NzY4NTAzMDQwODAxY2UxOTU3ODU3MDgxN2Q4MmY2NDBmN2QyODI1ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYwNjVjMzU3NjEwNjRiNGQ3YjI3NjU1MmMxZGRkNTI0Zjk0ZTExMWU3NDE1MzYyZWZmMmQwZjQ5MDRjYjBjODAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_68e346d3e0134a4aa60d806a6b80681d",
+      "statement": "Risk-generated exits carry a human-readable risk reason, normalized exit reason, and optional rule fill price on the order, and the fill executor preserves the cause as fill exit_reason and exit_reason_detail.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/core/order_book.py#L132-L159",
+          "version": "repo-lines-v1:sha256:4fc621e8ebdb0f848d843b20c8fba5373f68988bc930309dc725c553b10f363e:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJjNDM5ZDAyMzZmMTY3YmIzMmNmMjcwNjNkZTNlYmVjNzA0N2JlZjgyMjk0OTY1NDJmYTQxOWQ3MTZhMDVlODgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkMzRhOWRmNzc5Yjk1NjZiMDRhZDJiOWU2Y2RkZTNiMWQ1ZTZjMWE4YzhiOTdhYjdjMjhhN2IxM2EzM2JkNmEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlZGE5OTVkY2ZmZWIzMzY5NDU5ZmFjNjhlZmJmNGQ4NGIzOThlNzQ3MjgxNzI2ZmFiNGQ2NDZmMGIzYTdjYzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUwNDliZjVjYzc5ODViNTczYWIxYTIzYzk1YzJiODZiMTgwMDEyNGZjOGYwMjMwNGY5YjE5N2Y4MzMyOGJlZmMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/risk_engine.py#L57-L109",
+          "version": "repo-lines-v1:sha256:2baca230d146dfce8e823436b67a5f954c4b12858e8c86ea5eb16ca6f8daaca2:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhMmEyZjFhODQ3MTBiZmI1NzFlMTBjNzRmODNiNDc2Y2U0NmQ4YjYzMWUzZDI3YjllMjQyMTZlMzk2YjQzZGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQzMmUyNjViZjY3ZWZhOGQxYmI3YWQ3NzY4NTAzMDQwODAxY2UxOTU3ODU3MDgxN2Q4MmY2NDBmN2QyODI1ZTkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/fill_executor.py#L301-L338",
+          "version": "repo-lines-v1:sha256:1426854bc32f4c7d29c8ed1cc0026677e2d5f8f97ad57d1c6bdcb6c85bfc2bda:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2ODZiNDA0NmM4YTE3M2U3MGI1NzBmYmYzOWJhMGFlZGFkODQ3Nzg5YTI3YjMzMTNlNmY2YzUxOTdlZDA5M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlYmZlYmRhMjI3Mjc1NDFjNjI4NWJiOTQ2MWM2MjE3NDU1OWY3Y2MwMmViYWMyNWQ3MzJiNmJiNDA3YmFjZDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAwZTg0MTBhZDU5ZjI0Yzc0ZDVkZDk0YmQxMzk3YTM4YzE2NTVhZTY0MmI2NzI4YzAwYmJiYzRlM2I0YTMzZjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVkYmJjOGI5NTdkODE1M2RhYmVkYTU2NjRiZjE1NmE5NTZjNzZiYjc3YTI2YTMxMzg4NjJmZTNmN2I0OWQyNjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_beb55f7e389d4f5895e8d9eb90a29fe2",
+      "statement": "RiskManager portfolio limits are explicitly updated from equity and position values; halt state is sticky until reset or reinitialization, liquidation is applied once, and reduction is applied once per continuous breach and rearms after recovery.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/risk/portfolio/manager.py#L217-L268",
+          "version": "repo-lines-v1:sha256:0428192fbbfcd260f72dbc09aa9f40cf0d0719914b5f5b4d1bb82a0503813d96:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0ZjBmODA3MGYwNGJlZDRjODE3MzU5N2NlMDg1NTA0MGE5YmFmNTY4YTFmYmIwMWRlMDllZTI1MDBmZjBmZWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwZjE1ZjRlODQ3NjA0YzU2ZjY4Y2JiZmM5YzRjNWRlN2UxMzkzNDYyYmEyOGVjYjgyMzU0MzY1ZjhjYzc0ODkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQyOGIyMTgyNTQyNjgzZGVmNDEwOWZlYTI0ODE1NDIyZTkyOWNmODg0ZjA1MzdmMTI4OTQ5YjBkZWY2ZGM3YWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUxZDUzNmUwZjI0YWEzYTZlM2JmZTQ4ZDFhODhlYzk4MGM5MjRhYTk4NDgzZGM1NDBhNzJkODFjYzE2MzE2NjAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/risk/portfolio/manager.py#L62-L178",
+          "version": "repo-lines-v1:sha256:b0f89916e519e41ba46a32cbbfbe9dc0fe4a477b5305a7aca8aaf67dfe35c771:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0YTNjMjQ5NmYzYzUyNDdlYTgyZmIyZDAwMTZlMDc5NmViZTAwNjlhYjBlMzczZWFmZWI5OThkN2M0MDRmZmM0IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4OWE3MjY1NDU1YjY3NzNiNWRjOWY2YTU3Y2JhYjE3ODhkM2M1YmM4MTNkMTZlYmRlYmJhZjQ0MjhiY2U4MjRjIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI1ZGY1MWVkOGJiYTJlMWEwYjFjZmYyNTNjOGUzYWViNDZiNzYzMmEyZjA5YjY5ZmMwMzY2NDYxNjRhOTNiODQ2In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_315049ca1e804a529fa0bbbd683b2b85",
+      "statement": "Portfolio liquidation and reduction cancel pending orders and submit risk-tagged closing orders through normal broker submission; reduction prevalidates all quantities and restores broker lifecycle state if any reduction cannot be accepted.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L2598-L2685",
+          "version": "repo-lines-v1:sha256:db5d956c5e19ded3aa68d2ee5237b191e89485c1964e9ef0e9150b00a2c4f14c:eyJzZWxlY3RlZExpbmVDb3VudCI6ODgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEzODExYjA1MTNiNzViYzhjZGJkYmNiOTc1ZjczMjlhYmRkZWRjZmNjM2ZmOGFiOWEwMjQwNzkzZGE2MDQyNjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhYTI4NTUxNTMxMTM3YTMwMWQxZTkzNGU4ODhjNDZiYjlmM2FiMmM4MWI3MzBhYWI2ODQzMjVmYzRlOGQ5OGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRkNmM0NTMxODJkNmViMmY0N2RhZDM0MGIwMDQ3MWRhYmIwY2FmMjE4MzU0NTQ3ODg1NTEzYWJmYTFhOGYyYjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI0OGYxZjE0YzEzOTAxNTM3NWFhNDUwODRmYzYzZjAyOGZlYTMwODMzNTZlN2RlY2Y2ZWQ0ZTNiYzExMmRmMDEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_99c5f254ab5c4431966429d1a919ac75",
+      "statement": "Trading controls validate immutable request context before an order is allocated an identifier or committed to submission counts, include held and directional pending quantities, and are also reapplied when a pending order's remaining quantity is updated.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L1968-L2053",
+          "version": "repo-lines-v1:sha256:d8ed2b6d68b71c50c18c5ab7141d13d40ac7f58e274c6b917e9be4441e3d65d6:eyJzZWxlY3RlZExpbmVDb3VudCI6ODYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxMDM0ODFjNTdkMGYwZGMwZjc2Y2QyY2M4YjM2MDRjNGU4Mjk2ZGE0MTIyYWRkMTllODE3NDVkYzdlMzMxYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5M2VkN2QzMTAyYzIyZmIwNmZiMDY1NWFhNzc1NWQ4ZGNjYTZhNTRkMzEzNjczMDI0NzVmYjI1Y2ZiZThhYTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFhMWE2MjIyMzkxZDMwYWY0ZTNiNDBmNTk5MjI1NTUwZmQ5ZDdkNmM1NjMxZmNhY2U5N2FhZDlkODI2MWVjZjIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/controls.py#L53-L152",
+          "version": "repo-lines-v1:sha256:0b62e0cc0adbc95b896894d0db832d1c2a3710f35144a435abfcbf90ee7142fb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJkNGQzYWM4M2I1NjJiMmVjZjA1YTIyYTg2ZjQzN2JlZjE4NzBjNGY3ZjZjNWNkYWEyMTk0OThmNDQwYTgxOTQwIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMzY5YzBmOGEzMzc4ODdhYTRhZGJiOGFjNmFiYzJkMGI3ZDRhOWUwY2Y1NzkzNWI3NDE4MDc2MDIyMWJkYzZhIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3MGNlM2YyNGFiNDdjMmY1YTlkMzM3ZjM3N2VkODU3M2ZhNTY1ODQwNzY0MDJmMWFmMDU0YTNkZWQ2MTk0NjJmIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI1ZmVmODJlNzcwMjBhZmFmZmUzNDI0NGNkZDI4Nzk1ZGEwNDhiNGYxZTEwMmFmMzliYTI1NTRhMTRlZmE0MjdmIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/order_book.py#L333-L359",
+          "version": "repo-lines-v1:sha256:255352efd94c99326755a318dba38ba5e697a732a9de4b8d4285ee04b8e0ca70:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkMDU5MTVjMWQyODg5M2I1ODU4OTVkZGFmODE0MWY1ZDZkODA4NTI4NTZiOWNkNDlkMDM5N2I4MDM1MjExMWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwZWExYWRiYTVlZDk1ZGIyNGU5MjU2NGJjOGVjZDI4YzM5Y2FlY2I4YmE3ZTBkMDQ2Mzg2NGE0ZDcwYjdiMDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3NmE5NTdlOTYwMDVkZGZmZTA1MjZmZWQzZGE2YmVjNjg1MDliZGZhMzRlYmI4ZDk5ODQ1OTlmZjFlZjFkMzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQwYWY2YjIwMzE4ODVlYTY0Y2EyMDc4YWMzNzA4YTA1NmYwMzk2OGIyMDFiYjM2MWE4ODhlN2YzMzAwZGVjYmYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/order_book.py#L91-L173",
+          "version": "repo-lines-v1:sha256:43c045d6fd8f0e6ec58881eec9264a862e8350df3b83c49c374b81c404a0627a:eyJzZWxlY3RlZExpbmVDb3VudCI6ODMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFhY2FmOTI2NzExNjFmNzU3ZmYwMTE4YmViNzNlZGExODcwMzQxNzgwMGY1ZjRkMzU0YTI4YTVhMWNiNWZjNjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhZTJiNWJlOWE5MjBmMDk5YWUyNDY5MzRmZWEwZGRlODVlZWUzZjQ4NjJkNmMzNGM4M2M1MGRhMWFjNWU4NTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUxYWU4ZjMwMTRiNjk4MzYyMDI1MzkyYjhmOTFkNjNhMGIzZGE3ZjJlOGJlNzQ5NDg3OTY4ZTIwNGI3Y2I5OWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhkMjMwNjVhOWYxNWM3ZWNkMTM5MjhmZGI0NWMzN2ZhOWYzZWI3ODZhNGE2MTE4YTk0NzQ3MTQ1ZDBlNTA1OWEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c1242c11c521459aa95513fb5c9f2918",
+      "statement": "Account controls validate one observed marked-account snapshot at after-callbacks, after-fills, session-end, or explicit invocation boundaries; a breach raises without liquidating or rolling back already completed callbacks.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L1938-L1966",
+          "version": "repo-lines-v1:sha256:7dbfbe0b11d1849997579d53a4691977e545fd1733acb4d45d4e1dc622bcf3d1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5N2M3MTI0N2FmM2NkMWVkZjU1NWE3ZDEwNzU5MzE1N2Y2ZGMyYTIyYWYwZGU4MmU3Nzc0YWJmMTBmOGFkZTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM2YTIzNzk0NjQ3NjA3ZTU2MmRkZjAyOWIwMmNhZDVjNDA2YjE3MWU3NmEzZTU5YjFkNjA4Y2ZlNDZhYmIwMGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmMmU3NjIxZDhhYjRjNzhmNTgxOTM0NmNhZjgzMTRiNmI4OGQ1ZjIxYjU5MDI5ZTAwMTRlYzFjMDhhYjQ3MzQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMwMzFiMGZkMTVhZThhNWJmMWU3MGI1ZjllNTYyNDdlOTc3M2RlZjUzNWRlZDk1N2RmYTdlYzk2NGYzMzkzZDMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L2192-L2242",
+          "version": "repo-lines-v1:sha256:9dd5184c0fba4fd912c63c2818afe4d2d1adcc68679b215ab27e3918ea83a59a:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2MzJmZDUxZTExMGY2N2U1ZmY0YjY3N2MyM2RiMTIzMjhlNjZkYzE0OGYxOGUzM2U1MjAxMWY1NWY4Y2QyOGIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjZmQxNTFlZDEyODEzZTk1MzE5ZTE3ZjVmNGUyM2UwNWU5YTZlZTcwMmY4NTM3OTBjOTFhZWQwNGYxMWQ5OGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMwNzAzZTVmMjU1NTYwOGFlMmZhM2UyNTkyNjY5MjRiYjk4MGIwOGVkZjkzYjM2MTg2YzQ0ZmE0MTNmMDQ1ZjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRhNzBiMDQyYmViMWVjOGEwNGFhNTVmMDExZTVlZTAyZWY1YTMyMGY4MDAyNTQ1NjkwZjhiMjZmYWJkNDEyNjAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L676-L706",
+          "version": "repo-lines-v1:sha256:bf605b6df3dec89d55a27d303ff213614f3508a5ecf9eb18ea026135cebf6cba:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZlYWFkOGQyYTQ4ZGZkN2FjNDYzODA0ODU1N2ZhNzJlZmYxZTQxYWQxNWEzNjM3YWQ4ZWY0MTUxM2FkNGZiMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiNDBmZDA4MTExYmMxNjI1ODk1MzFkMWFiYmVkNWNiZTA0MGQ4NDUzMjgyYTYwZDJkMDAzYTdmMDM0YmIxMzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkyZTRjZTQ4MmQxMzBiMjAzOGIxZmI3N2FiZDRlMGQzZTliYTdhOTRhMzk2MWMzYWZhYzE2ZjIwNjhhZjM4MjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk4Mjk4MThmMmViZTljNWQ5YjkxNmNjOGFmMzE3OThlZmUyN2FkMmYxYzA3ZDcwYTc4MTk4MTgzNzc4NjYzZmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e3785245e09d4670b1d6cfaf53ddf25d",
+      "statement": "TargetWeightExecutor reconciles target weights by optionally cancelling pending orders, calculating multiplier-aware rounded deltas, submitting target reductions first, closing holdings omitted from the target, and submitting increases last under one rebalance identifier.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/execution/rebalancer.py#L257-L405",
+          "version": "repo-lines-v1:sha256:0b62343fc19e429bcc4aa60ce928a59768707064a273b4cdffe2eba9d5338dd7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ5LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyY2MzNmIyMWM2YWI0NTdkMDFjMDc3NTg3ZjVkNDcwM2FkMzFjZGQyY2MwNzI4ZDQ1ZTVkMjMxMWIwMjJmYjBlIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI2MWQ0ZDExNTRlODUyOGIzMjk4ZGVlZWI2YTQ4YTYxZWI0MWYwNTVhYWMwNTQ5YjA5MTdlNmYwNDg2YmZjNjUwIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJhN2E3ZTBhZDM2NTdjMTVmNjYxNDk4ODZlODg3MDEzMGQ4NTA1NjlmYTM4YmJmNDJhODUwZjNjMTYxM2FiYjQ3IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI5MmYxZTI4Y2Q3ZWIwZTk1YTEyNzk4MzUwMGEzNTY0MjRlNmFmZDA0MTcwYzE2OWRjMjk1YWI2ZTI2ODIxM2I3In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/rebalancer.py#L407-L479",
+          "version": "repo-lines-v1:sha256:82a7ad92d81126d5e92d9f3e88dc891df41ace642caae6df17fcb78dcc5c4119:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlZDdhODM3ODIyOTIzODQyZTZhODM0YzdlN2QzMzEzNDYwMzMwYjJiYWU2YzM2YjcwZmU1YTFhMTEzZDJiNWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhNWZjNmI2ZDg0MTU4M2VhNDBhNWJhMmFjY2MyOTZiMzk3NGQ2ZTg5YjJjY2QyMzc5MzdkY2U2YjgxMTc1ZGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE5ZWI0ZTEwMzA2NmUxNDk1MjZkMzBlYmFjYzIwYTcyZTAyNjcxODBkYWUyZmQwMTc2OGMxYTM1YmVlNDkzYjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZjYjI5NmZjNzk1OTIzN2FmNjVkZTE4ZDEwY2MzNGEyM2YwZGFhMzhkNjI1MjgyMDkzZjFkYzE2OWFhNTVjMzgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_79300ad427234153b247a5ff7b2531f7",
+      "statement": "TargetWeightExecutor's SNAPSHOT mode retains starting equity and weights, INCREMENTAL processes eligible orders and refreshes both, and HYBRID processes eligible orders while retaining the starting sizing basis; these modes do not override normal fill eligibility.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/execution/rebalancer.py#L267-L393",
+          "version": "repo-lines-v1:sha256:847fc3fcd2785fb4c3c59dd093e6bcb2e619c096d6950bca16c20bad8ee5fbad:eyJzZWxlY3RlZExpbmVDb3VudCI6MTI3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJjNGFiOTIyMWU0MzZlNTZmYWY3NDlkZThkMzY5OGZkNWUxY2U4YWFmNDRlNzJjYTBkOGY2ZTQ4YTBkMTY2ODQ0IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI5MzYwN2Q1NDlmZmNjMTk0YjQwMGU4YmQ5ODhjYzRhZjI2MWJhNTE5MmZiNWQ3MjUyNzBkY2U2YWJhZGFlN2U0IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1ZGY2NTgwOTFlODQ5YmVmMDk2Nzc3N2Q5MjZmNTcyNWQzNWE1ZWQwNGRmNjg5MzRjNzVhYzBmYzM5MzVjYTcyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJhZGQzOWRjMzY4YjZlNGQzOGI1Y2ExNDc4NzQyNTk0NjRjNDVlNmQ3NzJmZDUwMzFlOWZjMzRlNGQwMTdiMGUyIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/rebalancer.py#L65-L94",
+          "version": "repo-lines-v1:sha256:dac2e04909a2589a6da9e835181afa8ea169ba98dd57e999ec1c90f64804357f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyODJjZjc0ZDYzOGQ1NDMyYjA5M2YwZmRjNGYwYTY3NmY2ZDMyMjM1MjVlZWRiY2Q4ZjZlMWYyZTExN2FlYzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4YzFmOTU3YzA1MGIyNGI4OWY5NWIxMGI3MjliYjdlMDJmMmU5NmRhYzRkMzFlZWUxNTYyNjUxNTdlYzJmYTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg0NjdkMTFmNDQ3ZmM2MDgwNGM4MzYwOGJhYTEyMjIyMmQyZTJhNTMwN2UxMzViZmNhZWRmOTVkMmZhNDg1YTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVhMWU4YjM0YTZjODU5MWIwZmRiMWQwZTk1Mjc3OWM3Njg3Zjk2ZGZjN2RkOTM2ZDJmMTEwN2U0NmI3OTU1ZDUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_48c24f934a8248149558396d6fc8d136",
+      "statement": "Broker.rebalance_to_weights can use the last positive price under MissingPricePolicy.USE_LAST and gate late assets by observed history, while TargetWeightExecutor requires a current positive close for new target trades but uses a fallback chain to mark existing positions.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L3111-L3229",
+          "version": "repo-lines-v1:sha256:80d05ae5598421002e42232024cec7bfd4393fca9fcdf6d21b8053ff2d2b798c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE5LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1NTAzMmU5NjRkMDkzMjM1MWU1ZDE4NTI2OTI4MWIxNzFhM2EwOWIwOGIyODZlNjYxZWE0NzAzMjNjODJlYjRkIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI1MTAzNDgxYzU3ZDBmMGRjMGY3NmNkMmNjOGIzNjA0YzRlODI5NmRhNDEyMmFkZDE5ZTgxNzQ1ZGM3ZTMzMWE2IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1Mzc0NzNjMjhkZGIyZDM5YWZmM2NhYTM4ZmIyZDQ0ZjdjMDFmNWZjOWIxNjg1YjY5YTRjNDkzMTI1MzFhOTE0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJmYmMwM2E3NzA3OTZkMWU5NWRiOGRlYWQ0OGMyZTYxZGQwMTA3NDQxNDQ2Nzc2MGViYzBkZGU1MDY3ODRmNGRmIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/rebalancer.py#L449-L514",
+          "version": "repo-lines-v1:sha256:86eff314d33860f5f46c83aa22fb1416c1e4eaaad99483486a30bc9d5fa27c22:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3YTFhZmNkNTUxNjE4OGZjYWYxMWU3ZGU2ZDU1NDNhYTk3YTc5NTBkZDZjYmQ3NzYxYzRjMjJjNDhjYWEwNjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkOGE5ZTljMzI1MjgyMGM2NWE4MTY1MjBiOGRiNDkzMjI4MDg0OWVjOGM3ZDJlYjYyNzJhZmRmZWJlMDU5YzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA4ZjMwOWFjMjA2Y2JmNmU4M2MyNzkxNGViNDg2YmMzNDgxN2RhYmMyZTdhZGI5ZjAxZGNkNjczZjFmMWFlNTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkwYmE1OTI0OTdkMjdkMDJlNjVmYzc4MDEyNWE2Nzg1NTFkMTYxYWE1OGZjNjU3MWQyOWJmNDE0ZmQzZjY4ZDkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1626a6fdcbc54bd9b493884aee30d880",
+      "statement": "TargetWeightExecutor schedule evaluation is online and stateful: scheduled calls require timestamps, executor reuse or schedule mutation requires reset, and run completion validation is registered automatically with an Engine broker while standalone users must invoke it.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/execution/rebalancer.py#L162-L255",
+          "version": "repo-lines-v1:sha256:8311cb841bcd9ebc28559f5a6c57c6f2e3022c9c13edc6c4b209917840161795:eyJzZWxlY3RlZExpbmVDb3VudCI6OTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3ZDE3OWY2ZmZjNGFiNmVkODljNTk2NDNlZjk1Y2E3NDU5MjdmYmZlODJmZWYwMjA5YzJjNDhiN2Y4NzRlMTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiMmMwMjlmMmE2YzNkMDVmNzQ5ZDJlYzVhMDMyN2YzMWFkYjIyNGY5MmM1MTA2MDYyOTI3OWM1OGE3ZWNjOWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmNzRmYmU2ODg1ODI3NmZlNWQ3NzUyYTVhM2Y5ZTEwMTVjN2M5NTEzYTIwZmE0MzQzYjc2MmM2MWQ5NzQxY2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc2OGM0OWRjYWRhMmQ5OTIzZDVjYjExYmRhYjAyNDQzMDdjOWQ3NmVkYjI2N2RkNzA1MzEzMTM0NzBhYzM1MGMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/schedule.py#L40-L180",
+          "version": "repo-lines-v1:sha256:02b8cccf93dcb69e0bfbdcf6b881bfb2252cb969f7297f821c96fe32eed268ff:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhZmI2ZDAyZmYzMDFmZTMyYTRhYWM4Yzc5NGYxZGQ3Mjc4NDIwMDNjZGRjMjM0ZTViOGY4ZTRhNjA2OTU2YWFhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJjMWM1ZTM0YjY1ZGU1ZGUyMzAzZDM5YzZhNDc3NmVlOTc5MmIwNTYyMTcyMzZlODFjOWIyZjgxNDE0YTVjNDI5IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3MGNlM2YyNGFiNDdjMmY1YTlkMzM3ZjM3N2VkODU3M2ZhNTY1ODQwNzY0MDJmMWFmMDU0YTNkZWQ2MTk0NjJmIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI5NmM4NmE4MDhhYTY2OGU0MzEzNjA0ZjI4NGNmYzA1ZjAzYWNjMDc3NTRmZDllZGI3MTRjZDkwMTM0OWEwMWIwIn0"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:31.122Z"
+  }
+}

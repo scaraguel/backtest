@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:d3fc420644e71089cb883b42c9582f9f25b38a189cf05d627c06d27bc56ebb4d",
+  "claims": [
+    {
+      "id": "claim_61406a97363243ffb60f17a75a42ae34",
+      "statement": "RuntimeServices is bound to exactly one active Engine run, rejects nested active binding, and is unbound in Engine.run's finally path so retained market, signal, auxiliary, history, and instrument views cannot be used after normal or exceptional cleanup.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L235-L280",
+          "version": "repo-lines-v1:sha256:584550dcf7fe14006a1154d46f27d56409736a00b3cedbf188fc304fa2096b26:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZiZmFjNjBjMTMxNDY4NTQzZWRjZTE1ZTQxM2MxZTM4MjI3NzhiMzZjZDI4MDBkNDQwMDJkN2NmM2I5NGQyZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxOWQ3ZDYxZmRlZjNiNjNhMDJjOWU3YzZlYzI4ODc2NTVjZjQxMTZhOGQ5MDI5ODZjMThlMDkxNjdmNGM0MGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUxMjIzNzc0YWQ3YjA2ZTE3NWM0ODM0MzNkODBhZmM1YWYyY2EwMDA3OTk4OThiNzlmNzUwNzk1YTU0NmMzYTgifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L1018-L1185",
+          "version": "repo-lines-v1:sha256:06f80c764c20f59e0f27786df734044567defffa66ba5ade78ebd52a0691882b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTY4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4NjQyZGNjNTkwZDc2OWYzYjY3ZTE2YWY0OWU2YmJlNzZlZGNiYzVmMzhjZmQzNjE2ZDVlN2UwNzY0MGZjZWQ4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0ZDY4YjRlNmUyNWE4MzRhOGI0ZGI2MzQ2NDU2Yjg0Y2NkNjg5MTgxNWRmMjQ0MWFjNWNjM2ExNzM1N2NiY2QwIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2MWM5NmFlZDMxMWYyY2JiN2RiOGQzOWY2MTNjNTZhNDRjNWNhOThkZjJkZTI2ODMxMDc2NDBmN2UwNGEyODg3IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://tests/test_runtime_market.py#L189-L269",
+          "version": "repo-lines-v1:sha256:9656d6fe4fdaf913d63220fc28acde360fc4534e9260ee48a70d87c3a47a4836:eyJzZWxlY3RlZExpbmVDb3VudCI6ODEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA0M2E1ZjE5ZWQ2NjIyMWZlNTc0ZjY0YmNlZmQxNjM4ZTU1MjlkNzliZDZkMDg4YThmNDBmYjJhNzMzODFkOTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5MmVlMTk0M2NiMmRiOGMwYThkNDk3MjU5ZDljODgyNDVjZTU0YzZjMjZkYmY4ZGI1MzA4OThhZjNjYTVlOGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxODY0MzNmOWY5NTc5Y2JmNzIyZjQ0OTFmN2MyNmUxOTg5NWMwYTEwN2ZkMjY5ODUyOTkyNmFiNTM1NzBjNDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e0c0ba0fff2c40a8aa89880a3db86394",
+      "statement": "Runtime execution bounds and execution windows are inclusive physical-time filters: rejected feed rows produce no callbacks, fills, or account samples but earlier rejected rows remain available as causal warmup history at a later accepted cutoff.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L506-L545",
+          "version": "repo-lines-v1:sha256:d5f0a03f8bdba2244e15079f1d166b39d5ab98e2e09f2b2fdced76ea6856a1b3:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVjNDlhZmQzM2VkMWIyY2Q4YTk3MjNiMWRiYjYzMmMwZjQ0NWFkMjBkZjU5MmM3YTMwMjMyNGQzYzUzZDA5ZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxNTdmNWNiN2EwOTJiMjNiMDRkNzMxNDU4YWMyYzkzMzg2YWEzNGQyM2RiNTU3MzEzMjMxYWM4ZGVlMzlkNjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzM2MxYTQ2M2ZmMDlkZDE3NTg0ZTRlZjY0MDIwNmFiOWNjYTU3YjlkMzljNDk0YTBiOTE1NDRiZjFiMDRiZWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0YThhMWNhNWI3YWFlMTY4MDQ2YzMyOWJkNjQ5YzNiMTY5MGVlMTdjNWRlMWM5ODc3MzIyNzQ5MDE3NjE2MmQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L1107-L1138",
+          "version": "repo-lines-v1:sha256:70a6148c149c0e61e432b0aae719e26ba6e6da8fd0cde8641ffa88ee248fee81:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyMzQ4MTc2NmRlMDFjMjUxNzFhNWViZWE5ZTZmYmY0OGIxYzJjOTUxYjZmNTZlMTE3N2IyYzI2YWYwZjRiOTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlNmEzOWM3ZmYzMTI3NTk4NTVkOGJhY2VmMDkyMDA5NmNmZTIwYTc3NzI1YzgxM2M2NjQyNjM3MWE0NjlhZWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI5NmY3ZGU3M2QwMmM4ZGU0YWU0YjY4MWFmNmFhMTkyNzk5NDg1MGIyZTNhN2YzZmI0NWY2MGU4MmJkNTRmNjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFlZjg5NDcxYmMyZTU4NDg2Y2FhOGI3MjBlMDc4N2I2YWQzMWEyNmU0OGQzOGM3NTUyZmE1YzQ3NWYwZjlkMTAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L785-L859",
+          "version": "repo-lines-v1:sha256:711e75e58a1dfc468d0a7dab9bf4d218f32de563231a506a9ddc078f508782d3:eyJzZWxlY3RlZExpbmVDb3VudCI6NzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk3Yjg4YmIxMmFkOGJmYTFmMmZjOTJjYjQyNmI3NjAyOGVjNzQzZjg5NGQ0N2I1Njc2ZWU3OWI3NTMxZDU0ZmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxNjA0MDQ5NTVjMGMxMDI2ZWI3OWRlNzNmMTAzZjQ3NDdhNzM0NzE0OWU4MzU4MjVlZmZiYjRiNzU4YTgxZDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEzMmU1Zjg3OGMxMWFlMzgyM2YwNGNmNmY2ZWMzMzZlM2NkMmI4MThiYmNkZmVjZTkyZGRiYTA5MzdhNjZiOTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA2ZTQxYThkOGIyNWI4NzEyMzc4NTU3YzY0YWQyZDMxZGQ2Mjc0Yjk2NDdiMmUwNjk1MDViNDViMzk1NTdhMzcifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_event_windows.py#L16-L63",
+          "version": "repo-lines-v1:sha256:e5b2819409858022420ba68c24128875b716956744f13017510e666e920d4247:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkMDNjMzc0ZDJiNWFmMTU0OGUxNWFiZGIyMTk4MThmZWU5Mjg1ZDNlNzQ3YWI3ODc2ZDc1M2RhMGU3YWYyZjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUyN2JjNjRmYmIyNWFhZDQ2ZmY3MTE1NjhlNTFmMzk3MWVmY2ZjZjMwZjIyZTBlMzBmNWI3ZTlmNmIwOWRiNDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjExZGRkYWQ5NWU4NTI3YmQwNmMwMWJlZTNjZGI2ZGJjNDRhODc4NDdiNmNiYTFkNmU1NzZlY2FiNDk3OGY1NjAifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_market.py#L33-L62",
+          "version": "repo-lines-v1:sha256:62c206376b33392037f7180bcbd6780762052116cd56f0c0a240709b4593fe46:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxNzExNWI3MmZmMjEyYzRhZWU1YjI0ZmNiODhhNjI5MzU4ZGQzMzgwMDQ5MGYwZjc0YmNlYzRlYzc0MzBlMjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhlMTdlZmEwZmY1NWI3OWU3NjgxMjU0OWQyNjUwNzdmOWVhNGY2MzY3YzA1ZTdmNDljZjMwMjM2NGQ1YjdiMGMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_be841c1c3e5d4edea75133cda7f65f31",
+      "statement": "MarketDataView enforces per-field publication cutoffs, optional Boolean eligibility, and instrument activity; accepted events use an inclusive cutoff while pre-event clocks exclude observations at the same instant.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/execution/callbacks.py#L267-L298",
+          "version": "repo-lines-v1:sha256:54b19d76c0339fe3d1c1352d57720350398235c17114053f52f14e77d1adc6f8:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3OWYyMDQwYWJmMDkxNjRiNDgyYWZhMGM1NDYyMWM1Njc5ZjU2NTBhZTBiOTU4ZDFmNmJmYTlmYWZjNjEwOGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1YzRjMDM4MTk0ZGRlODU4ZTEyZjc1ZjRkNDFiMTU4ZDMzYjdlODY4MmZjMjg0OWJlOTM2MTJiMjk1M2NjMzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4MGQzZWM5ZTRjNGQ0MTU4OTEzN2VmM2RlMmEzMjM2MmJhYTJiM2I2MWEzOTlkYWNmYmQ2OTgzZDBlYjg5NDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZhYjc4NDQyOTkwNjcwNDRkYzg0NjIxZmQxN2Y3NDAzNDE4OWZiYmVkMjNhYjAxYjE1NjA3OTIwMTAxYmJkM2UifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L1129-L1169",
+          "version": "repo-lines-v1:sha256:ff3a428504270e66903a73a09bcafe37b1f5ad7f7f4442a94838f1c0a8e706db:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkOTUwOWQwZjIwZjI3NGVhOGMxZGYxNGFlYTI4NjBmNmUwMWVlZmVlODY0MTc5ZjY2OWIwZjA5MzhjYzdjOTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3MmY5Njk1Yzc0NjdjNzQ3NzNjOWNlN2ZjNDI5YzVkMGQwZTQ4N2YzYzUxZDE1ZDY2NjhhM2QyNDA3MmJiOTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkMmIzNzNjMTNkNmY5ZDgyYTRjNDYxM2ZiZDUxZjJiMDhkMDFlNzlkNTQyY2JkZjU0MWU3Zjk3MmNkYTgxNTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4YTk5ZmEwNmRjYmViOTJkNzhlNTg5ZTk3ZTA2YTk3YTAzMTA4YWM3ODBjNzhkYzcxNDFmOTNlMjlhYjFmZTQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L159-L191",
+          "version": "repo-lines-v1:sha256:6b03f5047998f72ab670da7964b2b303fe22af0b4eec255b128e84108b18a95d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlZWI5ODRhNzRkY2M2MGMxODQ1MzBmMzBjMDJmMmJjOWNkNWM4NGM4Njg4YTQxNTM2YzI3MzIxYWU0NWIxODgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEyNmQzZjliMDQ2MDRiNjFhNjNiODIyZTNiNzY5ZjVhMjQyNmVjNmQ0ZTBiOGYyZWFiYzhkMzIwZWJkNDQ3NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE3OGZjZjA5NmE2ZjBlYWUxNmNhNjkyZDJhNDQ5OTY3MzI4MTM1YTZiNDM2YWM3OTM4NWU2OGVlZDRjOWI1MWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUyNDhmOTdhNzdjNTZkODRjNWRhYzJjZDk0M2NmMjA4NjgyZTBkZTRmNGNlMGM0NTQ3YTQ1NmZmMDk1ZmNjNDIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_fc2b237417c64ea9aea55ffbad5515ec",
+      "statement": "Known-at and eligibility masks are applied not only to query views but also to market quotes, signals, and context delivered to strategy callbacks, preventing unpublished values from becoming marks or fills.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L1129-L1169",
+          "version": "repo-lines-v1:sha256:ff3a428504270e66903a73a09bcafe37b1f5ad7f7f4442a94838f1c0a8e706db:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkOTUwOWQwZjIwZjI3NGVhOGMxZGYxNGFlYTI4NjBmNmUwMWVlZmVlODY0MTc5ZjY2OWIwZjA5MzhjYzdjOTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3MmY5Njk1Yzc0NjdjNzQ3NzNjOWNlN2ZjNDI5YzVkMGQwZTQ4N2YzYzUxZDE1ZDY2NjhhM2QyNDA3MmJiOTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFkMmIzNzNjMTNkNmY5ZDgyYTRjNDYxM2ZiZDUxZjJiMDhkMDFlNzlkNTQyY2JkZjU0MWU3Zjk3MmNkYTgxNTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4YTk5ZmEwNmRjYmViOTJkNzhlNTg5ZTk3ZTA2YTk3YTAzMTA4YWM3ODBjNzhkYzcxNDFmOTNlMjlhYjFmZTQifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_features.py#L107-L131",
+          "version": "repo-lines-v1:sha256:58127cc192979b322d643beae13105e8222fb947a404c1a34c5d98408ef58ed4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYwNjJhNWFhOGI4MDdlZmFmNDg3YWVkYzFiODc0MjgxZjc4YTFiODlmMzU4MGFjOGRhNjdlOWZkYmM5ZGYzMzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhZGZiOWE3OWJjODg2MDBkYzM2Nzc4YWQ0MDU5NTAxYmNlYmFmZGZlMWY2MGFjNGViMzA1N2I0NWIyZjUyZTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImU1OWY1ZjE2NTg1YTcwYmJjNDA0NWFhMDgzYjYyYTExNjcxZmM2NjQyNTQ0NzM0OGRiZDQ0YzQ2ZmIzOGUxNDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ5MWRjOWU4NzZhMzc1ZGJhZGJjZDI3NzMzNTE3M2ZlMzQ4ZDJmNzVlMGIyNTcxNTFmM2QxNzFiNDNmYTExZmIifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_features.py#L20-L54",
+          "version": "repo-lines-v1:sha256:4d2dc46379b448fecceffa94c62d44683949c5ac73a93f36e1c0d0e9c52ad5d2:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjYzEwNTM5OGQ0OTAwYzM2MWVmMjA1MThkYjJlNGNiNTFlMTRhZjdhNmQ2NWY2ODdjNGY3MTA5NThjOGM3OTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxZjJkMmZjNDY3ZDUyMWU1MGYxMWE4YTI1ZjM3M2U4MTM3YWIwY2QwMTA1MDMwODQxNjNmNWJkNTc0M2ZlY2MiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIwNDRlZWIzNzFkOTliY2ZhOTUzZmQzZWNjYWMyMjc5OTMyOGMxYzM1YzZmYTAyMDQ1N2Y5NmVhZjA0MDRhNGYifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_market.py#L160-L187",
+          "version": "repo-lines-v1:sha256:39cdfab18e2f8fc5e348d3e437a32ff449935669cbf24b8185585ebc64f0ad3a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzN2RkNWMwZjFmM2JlMjg1N2RkMDRmYjE3MGYyYmEwZWRmZWIzMWJlYWM4ZmEzNGY2MWFiZjRjZDM1ZWIwZGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE2NDYwNzgyY2EyNDZjZGM2Yjc2OTAwOWNjM2ZkMmE4OGFjOGI5NmIzNDFjZTRjZmQ5NTk1NWFjNTljMmVkZWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYzODZhOTIzNTc3ZTFhZWI5ZWY1OGEwNjQxMTUxM2NiY2M5NGNkZjY3N2MxNWE3OGQyNTZiNmFlM2E0NzM4M2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_53fd06a6fa014b168eb6760e51dbdeb6",
+      "statement": "Forward filling is an explicit read-only stale view with observed-at provenance and optional maximum age; it cannot fill volume or quote-size fields, does not affect can_trade, and cannot manufacture an executable quote.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L205-L334",
+          "version": "repo-lines-v1:sha256:ed336e9f61655d1b95fd55790051e1f79c4f06477b7f86610090fd00d0552a69:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwZmQ0NGIwNTE3YWExZGU2OTNjMzZmNDkyMzRiMGViZDRkYTg1ZDkyYjAxNmM1ZTUwMGQwMDVlYTFjODAwOTgxIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlMzg2NWIxZWNhYzViOGJmNjhmMzcwNGQ5N2FlODlkNDNjZmFlYjAzNTA2ZjQ0ZDM4MDNhMmUzYmVjYTllYjUwIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4MjJkOTU3ZDdjYjM3ZmQ1NGY3NWE2MzJiMGI5YTdhOTVmYzVmYjNjZTY3NWNkMTNkNjliMjQ4YTI2OWZmMDhmIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L559-L640",
+          "version": "repo-lines-v1:sha256:8349aceef1080456c17abdf283e25f7bcde8e8952228b3a61fda5f789f26840f:eyJzZWxlY3RlZExpbmVDb3VudCI6ODIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMGZmODEzNmY1NDc5N2FjYjk0MjcyNDhkY2NkOWYwOGUyMThjZjcyNzJlNGRjZjRiN2Q2OTcwOTg5NzdlZTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYxODAyYmIyYTgzMWMzMTU5NzVhMDYxZmU4ZWNiNmI5NmNmNjFmY2U1NjI0NmVkYzgxNmM1ODY3ZjFjYzU4ZWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYxZjI1ZmMzNmM5MzU5OWRiMTM2YTk2YzliNTFjZTlhMjk0NjBmNWVkZWQzOGQwYzkwMTc3YTIxNDIyMDliMzQifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_staleness.py#L27-L87",
+          "version": "repo-lines-v1:sha256:4311bdfce908602f06367860cce81c88d91824b6c9254aa1cb7923b5ae99cd40:eyJzZWxlY3RlZExpbmVDb3VudCI6NjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2MWUyMWM0OTlmNmMwNTkwNDQ1YTM4Y2UxOGVmYzUxOWViYTNjZjQwZDU0YzFmMWNkOGM5NGY2ZTA3MmE0MmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1NGIxNzAyNDkzMmIyMzBlYzQxYmZlZTk5NjllYmE1ZWQwZmMzN2M5MDIwMGFkNWM1MzhhYTRkMTgwNGJlNzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVmOTE0Y2UxZjE3N2ZiZWU3MTI1N2VjNGVhOTc0MzM0N2UyY2VmYjJhMTIwMTY5N2ZlZWNhMGRhZDliY2MzZGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA0OWEzZDEyZTk1ZWU1YjkwMDM1ZmRkYTk1NTViZjk1NGZmZmViNDMyNWE5NmFlMzQ3NjU2MzA0ODhmNzdkMGEifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_staleness.py#L90-L129",
+          "version": "repo-lines-v1:sha256:aff7144e6ea414603688afa75a778999e35d45012365f82a2ed1630610b8138a:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlNWU0MmFlNmFjNmNiZjM2NWEyN2YzZGI3YzdhZTU2M2I1NWNjZjRmMmI2MTI3NDNkYjA2YzIzNGNiMDQwZGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2YmFhZDVjMWFiMzRmYzdkZThiMTc0MWZhMWZhNTZlZjkyODRjZDBlYTMxZWYxMzM4YTZhYjc2MGE0Y2NjYjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjczMTg0OGVhYWEyMGQxNTQxZjM5MWRkNDNmYjI0NDk3ZWU4YjNjMTc3YzgxOThlODg4OGYyNTQ3MTgyZWNhOTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZiOGE5MDdjNDM2YTc2YjY3NzhlYzY5ZDc2MjVmMDc5YWIxYjc5OWMwNjM4YTIxNTk1NjNjNDczODJhMzBjNTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_179d492d14184cb2ab1c59f74dd05fec",
+      "statement": "FeatureDataView shares the run cutoff but has no quote roles and permits only observation or elapsed history windows, while context publication masking is applied to the callback payload rather than exposed through a separate query view.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L1152-L1169",
+          "version": "repo-lines-v1:sha256:4305470d6f11d58656915ee4832ddd704ad862e9659b683cfbc8049dc6e086a8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkYjMzMDk3N2RhMTBjNjQ4OWRmZWI2YjMyODA3MmQwNWE1MzliYTE4Mzc3Nzk1ODQyMGI2OTk5MjZhODYxOGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3MmY5Njk1Yzc0NjdjNzQ3NzNjOWNlN2ZjNDI5YzVkMGQwZTQ4N2YzYzUxZDE1ZDY2NjhhM2QyNDA3MmJiOTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExNWJjZTEyMzQyNGJkMzNkNGM4ZDM2NDA5NmUzZGZmZjIzMTBiMGFiNDc5MzM3ZDZhY2IxMDEzNTNjYzIwNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY4YTk5ZmEwNmRjYmViOTJkNzhlNTg5ZTk3ZTA2YTk3YTAzMTA4YWM3ODBjNzhkYzcxNDFmOTNlMjlhYjFmZTQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L642-L689",
+          "version": "repo-lines-v1:sha256:fdeefce980d7b53dc8e83bcfef3af1a3deacae67df54e80fe06adc204d8c5f50:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1YThlNDMyOWU0MTAxYjRiNDljNmQyZjg3MzI2Mjc0OTY0NTdiMzY1NTRkNDFkYTI2ZjI1MGVjM2NhOGIwZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQyZmUzNGRmMDIxNWU1YzhmNjgyNGM2ZmExYWNkNjg5ZjRiYjIxYjk1MjZmMDFlM2IzN2ZiZmE4YjQwYTdiMGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1ZDE2ZGYyMmRhNTBiNWYxNGEzMDBkOGU3YzQwYzdmMzU1MmRjMThlNGMyZjM0M2NmMmQxODY5NTY3ZTViNWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0MjllZGU0MDFkMTE5ZDljODgzNzQxMGNlMTgzYzhjODVkOWZkMzg0Y2Y5NGU2ODRiMzAyYjkxYzc3YWJjYjIifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_features.py#L134-L166",
+          "version": "repo-lines-v1:sha256:5be402c7ec1a4e80a4aad0dcab4b1b74f42eeec57bc18609262458218a3746bd:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5NTk3MDNhN2U1ODc4ZDM2OTUxZWFiNWEwYjFhMTQ1MGFiMThlMmY2Y2MzNjg0ZGE3N2IyY2I4ZWMzNTBkZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI0Yjg5NWZkODQzYjhkYmUxNmE5ZjY5N2FjMzk2ZmEyMWQ1ODlmNTUyYzMyYWUyMDU1ZDE0NmZhZGEzYjMyODIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmMDMwMmU5ODdlODdiYzE4YThkZWVjMDFlNzI0NmM5ZDZhYTMzODA0OWE5OWQwNmNlZWJiNTI3YzU0MTFlZmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9d7c1488f3674f89b1fae7a9a12cdaad",
+      "statement": "AuxiliaryData freezes an explicitly supplied offline frame, requires aware physical observation/publication instants and per-payload known-at declarations, exposes only declared fields under an exact source ID, and records immutable preparation metadata plus a content hash.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/auxiliary.py#L15-L129",
+          "version": "repo-lines-v1:sha256:ba7c1c2c850e47cba4a1998db7b147edccc04d27973dbc7d341b2c205a67503e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJkZDgzZTRlMWVkNWUyMTczNzdmZTM1NWVhMzA3YTQ5MmVjNmEyODk4YzE1NDZhYjgxOTU1ZmU0MWM3MjU3NTllIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJhODNlYmU1ZjYwOTcyOGU1MGUyMWY4OTk4ZGExMTkyZDU0ZmJlZDY1NGU1YjNjYTYwMWJjZDhiOTczYmI0NzRhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L691-L769",
+          "version": "repo-lines-v1:sha256:9adf0bb4829e08a71e1677dee6765262565265d415e45ecef43ed241c49d9b21:eyJzZWxlY3RlZExpbmVDb3VudCI6NzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImExMmVhOTRlNjU3Nzc5MWUyNjY3NzU2ZjJmNGExMzE4YTRiZGZiNzY4OWY0ZmY5MTZhYmRhNDY0NDJiNDQ5MWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmZDVhMTE0ZWI4YTBiYzIwN2YwN2FkODQwZDg5MTY2MWJmMDExNmU4YzE4MWExZWQwNjliZGExNjE4MTBkMWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFjZjY4ZjA3ZGJlNjBkMTEwOTU3YWIwMGU5Zjk2Mzc0NmQxYjljZjFjYjE1ODU3ZGIxODBkOGY0ZDQ3ZmZiMDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM0ZmMyMTRlYWUzYzU3ZWVhNTJiZWU3ZDBlNjZkYjJmNDJlMzlkODk3ODhhMTM5OTEwZDdiNWEwNThmN2I3YWEifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_auxiliary.py#L72-L147",
+          "version": "repo-lines-v1:sha256:2284074a8b233107adcabe3c5f57ffa2412754c35c83874e9b928f1487a99f35:eyJzZWxlY3RlZExpbmVDb3VudCI6NzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3NmIyMmUwZDU5MjZmZjgxOTNkMjYzNDZkMTFhZDkyNzg2NTIwOWI5ZWU2MzIwOThhZWQzNWQ1NWFhMjU2YmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUzZTcxZDgwMDM0ZDgzMzAyYjhmNTZjNGVjYTQ4YWMyZTBkYjNiY2M5ZTAwYmRjODc1MzA4YWFlYTk2MGIyNzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhMzdkMjA0OTUyYjU1MDhjNjkyOGQyNzU1ZjljMjgzOGFiYzVjZWEzOWY0NGUzYjdiOGM5YmQ4ZTkzOGZhMWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ecd5241073594394a343aec32892802e",
+      "statement": "Prepared history providers receive the actual causal as-of cutoff and, at exclusive clocks, an observation-before cutoff; returned snapshots are rejected for mismatched causal metadata, future observations or revisions, imputed observations, invalid physical clocks, or undeclared keys.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_history_source.py#L14-L113",
+          "version": "repo-lines-v1:sha256:f472885f2e7dc780170c9cea6974148fc5af1ef0ac4526038aa9ca4b004f5c5e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIxYWIyMGFjMjVmOTIzZTkxNzc4M2NjZTc5ZDUzNzZkMmJlMjg4MzVlNTNkN2QwMGQxNDBmMTVmOTI3MWFjMjUxIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmZTM3NTkxNzJkNjRhZTVkMjExYWU1NDM1YWYzY2IzODQyZDZjZGUwMjRiNzZlNjk5MGQzZDlkNzI5NmQ3MDQ3IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJkZTMwNDY4YmM3NjdmNDQwODQ2NzFkYjk1ODRkNWI5M2UwZmEwOWNjMWI2Njk3YmY3OTdjOWE1ODMyYzY2NzUzIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L25-L49",
+          "version": "repo-lines-v1:sha256:3564a587e38cb8d62a39203129794af4ec0b9f2bf727139e652d1713e2025f83:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYjBlNTA0M2ZkN2I4YmY2N2VlYWIyNjczNGE1Mjc0OTIzYzIwZGMyMDQwNGE5MzY1OWMwZjZiMjE3M2ZhOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgyYmZlYTc5NzRiMmUzOWQ5MDY1Y2NkODc3N2U4YmI3YmNkMzc5MmY2NzA5MDRmZjIxNTRkNTBiMTM5MTg4ODIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0ZjkwNDk4MjNiYTRmYTRiYzE2OGFjZWFhNDA3YTFkMmVhOGJmZjRlMjE4MmNlZjJmYWY4OWVlMTNkYjkzNGEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L905-L930",
+          "version": "repo-lines-v1:sha256:fd730e07d37730934758dd2ee3cda0d9830ca338595aac38bbf2def382c6d898:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkNmJlOTEyZTEzNGU3MmMwYWIyNmM1ZDU1ZjBkYTgyNmJlMGVjM2VjYmJiY2QxYTA5ZmVjODI5M2NkNGI5M2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJhYWFmYjI3YWE0OTFlYzg3ZTQ5YjY0Yzk1NjVhNzgwYjgxZThkOWQyODFjNWViYjEyMDhlNjBhZjdkYTAyNDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg2NWZjZGE5MzgzNzJjNmUwYmZlOTI5MmYwN2IwOWFjYjNiZGJmMmFiZmNkYmIyODZiNTEwNGYwMGE3ZDRjODYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d3c6e1d16d6b4b07a6b49d6f6474b8ea",
+      "statement": "Independent prepared history sources and same-grid prepared market history remain read-only research views and cannot replace execution quotes; same-grid preparation must preserve execution keys and execution time/calendar/grid declarations.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L348-L382",
+          "version": "repo-lines-v1:sha256:334df4ac50b285c2727e5fae8caa6dbac16eb31e5070d047c9813d680a571f6d:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxODJkNDVjNzFhMTVkYzE2MjdkYjlkODFmYzU3YjdjZTM1YjA2Mzk5ZjIxYzFjZjFmMzg1NmEzNjVkYTE4NDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE5MzZkODYzZDBhNjg2NGQxNDA4NDg3NjYxZTI2MTUxM2M3NzQ4NGRmOWU1OGM3OTQ5ZDYxNDc0ZTJhMGY1MWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY1MTU1OTkwMGVmYmRmNmM3YWJlMWRhY2JkM2ExNzRmYTM3ZmE2YjYyOTliZmQ1NzM1M2UzOGNmODYyZWE1NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxMjBhMGFmODkyZDEzMjU4NWQyMDY3NDI2ZmFmYzYzY2JmMjc1NDg0MTJjZTcwNDM3ZDMwY2RmYTc5ZGUxYzcifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L905-L930",
+          "version": "repo-lines-v1:sha256:fd730e07d37730934758dd2ee3cda0d9830ca338595aac38bbf2def382c6d898:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkNmJlOTEyZTEzNGU3MmMwYWIyNmM1ZDU1ZjBkYTgyNmJlMGVjM2VjYmJiY2QxYTA5ZmVjODI5M2NkNGI5M2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJhYWFmYjI3YWE0OTFlYzg3ZTQ5YjY0Yzk1NjVhNzgwYjgxZThkOWQyODFjNWViYjEyMDhlNjBhZjdkYTAyNDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg2NWZjZGE5MzgzNzJjNmUwYmZlOTI5MmYwN2IwOWFjYjNiZGJmMmFiZmNkYmIyODZiNTEwNGYwMGE3ZDRjODYifQ"
+        },
+        {
+          "resource": "repo://tests/test_history_sources.py#L49-L134",
+          "version": "repo-lines-v1:sha256:b29a88b7226f5f9b2a1792d5fce9cb1080be5accc373d71f24338c791574c7f4:eyJzZWxlY3RlZExpbmVDb3VudCI6ODYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhOGMzY2JlNjc3NGZkNjM3YTIzZWNlYmQwMTM0ZTZhMmMwMGZhMzAwZjdkN2I3NzEyNjZiNzUwMjE4MzU5ODQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2M2Q1MzVjZTM4MDYzZDZiNGM1MWQ4YzM4NmE3ZjliM2U1ODBhMTRhMTBjMDdiMTk4ZGZhZjE5YzkzYTNiZmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlZjNjMmQwZmNmNjg4ZjUwZDNkNmI2MTZhZTI4MTA0ODAyYmNiMjlhNDE0Y2FmNjdhYTI3M2Q2M2FjMTNkN2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVkYjc1OGY4ZTliMTAzZjEwMzg1NDY3ZDFiOTQ0NDg1MjJjN2ZhNTkyNmE5NDMyNjBmYzEyYjg5MDg3NTAzZWQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d5386edc4f494f5fa2db4087f94b9bbc",
+      "statement": "Observation, elapsed, session, and expected-bar history have distinct selection semantics; session and expected-bar windows require a declared calendar, and expected-bar windows preserve missing grid points as null while rejecting observed off-grid timestamps.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_history_clock.py#L24-L203",
+          "version": "repo-lines-v1:sha256:d00c39ddb800925d2a120a8576af486781dcb4a1a80bc3b9624b2a04173c83fb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJkN2FkYmY1ZDU5ZDU5NjQxMzgxOGRmNjVjMjNkMjg4Yjg5ODU2OTQ2ZGE2OWJiNmNmZGVlZmRiMDU2NzMwYTIxIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmYTExYzA1NjdkMGE1ZjllOWIxMzVmNjVjZDI1MzcyZGZkNjI4Nzc1ZjdjMWVkMjUzZjhiYWQ0MmRkMmQ2NjY5IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIxZmU2ZTg4NzQ4NGEyNmNhNGNiYTViODA0MWM5YmJjMDI3MjkzN2FmMWFkMDY3YjkyYjllNGUyN2EwMzg3YTRlIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L397-L498",
+          "version": "repo-lines-v1:sha256:2b7bf3515d3ded17b22e6800f84e15ed765acc7da766c66d649bb55ce14b2095:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJiNWE4ZTQzMjllNDEwMWI0YjQ5YzZkMmY4NzMyNjI3NDk2NDU3YjM2NTU0ZDQxZGEyNmYyNTBlYzNjYThiMGVjIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI3ZGUzMTdhMGU3YmYwOGYwNjIxODE0Zjk4ZDVmOGE2OGFkNDlhOTViOTZmZTlhZDExY2IyNDE2ODdkMDQyZGEwIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI2MzQ5MWE3ZGJkNGJmODA3ZWU2N2UzYWMyNWRkMTY3ZWRlZGY2OTMxYTEzZDM5ZjllOTg5MzU4YmRlZTZmMWZkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI5ZTNkMGZjNzRjMTIzM2ZjODJjZmZiOWMyNGNmMjY2NTAxMzE5ZDZlZTFjY2Q2NGViYTMxYjE5YTI4NzhjZTk5In0"
+        },
+        {
+          "resource": "repo://tests/test_runtime_windows.py#L220-L254",
+          "version": "repo-lines-v1:sha256:5c6760c5d59332fbeb679b5c812e2b8ed8a0c873722c46fe4a0e7de5dd442fd3:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZiNzY1MTk1MmRlOGYwYjkxN2NjM2Y5NTIyMTliMTg1M2M0MTJjMjM3ZTY2Y2EyY2ViOTIzNTVjMGRmMTFlZTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUwNzE3NWRkZTA1YzlhMmNiNTQyMjI5ZWMzNTUyOTA3ZjMyYjdiYmRlZDhlYjMyYWE2ZGIwODliMTFjZTZkMDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg3OTdkZDdjMGQ4ZTEzYjY4OWQxM2EzNjk4ZjE5MDE1NDdhM2ZmZTNlNGU3MWQ5ZTMwODE5ZjFiMjU0ZmRlMmIifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_windows.py#L42-L67",
+          "version": "repo-lines-v1:sha256:abbcb02d2f1669a4adfc63097a90efba4c04db1d44f9327558fc196c0fa9adae:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkM2IzZWQxZGRjZjQ5Y2JjOWE5OTI0NmNkODdkNDBiOGU1MjI5MWM0YjNlNWVmNDFhZThhYmFiYTM4NjJhYTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2NmM2OWM4NTdhMDg3Zjk1YTc3ZjMwOTgzMTA0ZTBmNjA5YTBjMzMwMjZhNmViMDYxOWE0ZTliYmMzZDE3MTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI3NjEwZTI1NTY4OGZlZWNkZmMyNzgzM2EzMTViZjM0OTY2N2I0NDVmMjkxMDk3ZTE5YTRhMDc5MTU2MmY2ZDAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c5cfec0e17544bafb020dae9f9e92c66",
+      "statement": "InstrumentView delegates identity and lifetime selection to the declared causal source at the current as-of cutoff and acts as a broker trading control that rejects inactive orders and quotes, cancels newly inactive pending orders, and optionally requires inactive positions to be flat.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_instruments.py#L39-L248",
+          "version": "repo-lines-v1:sha256:73a5688e7b4744b8763bc5d889fb5ccdcddb3d968484e9f793af365a585367f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIzYzg3MmM4MzJmYWY0NTdlMDBlYzg2Mjg2ZDliNjk1NzlmYjA3OWVlNDdiN2ZlNjI4NGUzYzUyNmIwNjk0Y2EwIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJhYjY0YmQ0MzRkMWM4Mjk2NDk1MDM0MTFiOTA5M2Q2ZjUzNzBiMzUxZDMzYTlhYmJlODBkZjM0ZjA3ZjI4YWQ3IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIxNTRkYzY2ZjBlYjY2OWJlODkyYmJjY2NiNjc0MGRjOWM2ODQyMDg4OGE1M2E5NzA0YzAzYzU4Y2NkMDE0NzAzIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L1065-L1105",
+          "version": "repo-lines-v1:sha256:cb55f4440c318870cd29ccdc38bd30c10508c932f1e64b0f35c7257f5d6a9dec:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiYzlmNDEzOWQxY2Q1NGY3NTQ2NWJlZjc4NzY3MTIwMjJkNjA0NmU0ZTdlMzlhMmU5MWY5ZDgxMjFjYzQ5YWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZGUxMGU5NzA4MzdiNjcwYmY5MzAzNjE1N2E1YWQxMmRlYmZlOTBkY2MzMDgzNDU2NjM3M2EyZjFmZTc4NTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA4ZDQwY2EwNjRlNmVmNDRiNjUzN2U4NmI1MjBjNDA4MTkyNWVjOGZkYjMyY2U2YmZhM2ExY2QyMmMyYzEwMTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgxMGY0MGY3NWVkOTUyMzIxMjFiMmQyOTRjZjFmYWI2ZGJmOTAwOTY2MmI1N2I1NGQyNTlmMzYwYmU0MGQyMjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_da9004fb8b7e42d180b379afe6e1e2f6",
+      "statement": "SessionScheduler derives callbacks from declared physical clocks and calendar endpoints: pre-open and explicit clock callbacks run with the current observation excluded, explicit clock callbacks create no quote/fill/account sample, and opening, bar, or close callbacks require actual matching price events.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L531-L545",
+          "version": "repo-lines-v1:sha256:9c9dbfcc05493247e090e2815befd8396c8e890704375a31e6b634ab00e35851:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4YjgwMWZjMGExNDRhOWU2NzIwMzI1MDQ2NTE2OGZkMWY4MTE1MzkxNjQ4ZTlmYmEyMTI5MTA2ZGIwYmM0Y2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxNTdmNWNiN2EwOTJiMjNiMDRkNzMxNDU4YWMyYzkzMzg2YWEzNGQyM2RiNTU3MzEzMjMxYWM4ZGVlMzlkNjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg1M2ZhM2JjNGIwNGJhYjU0MGI4YjYxMDU2YWYzNjU3N2M1ZmI3ZjY0NDQ0NGJlMDQ1MDc1ZjA2N2U4OTBlYzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE0YThhMWNhNWI3YWFlMTY4MDQ2YzMyOWJkNjQ5YzNiMTY5MGVlMTdjNWRlMWM5ODc3MzIyNzQ5MDE3NjE2MmQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L631-L714",
+          "version": "repo-lines-v1:sha256:4b69703aa40cca4b2f68bd679abf43f52ac762ddc7ec8156b820ccbcb78c6212:eyJzZWxlY3RlZExpbmVDb3VudCI6ODQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0ZTQ1MjY5MmI0OGU3NmRhZDYwZmQ0OTdlNGQ3ODc1ODEyNDNmODRkZGY4YzI0MmI3MjRiYmExNWQxMTI1ZDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY1NWZkZGU2M2QyYTA3YzE1ZGU4MDMyNzJkM2FjNWIxODgxNjQ4YTViNWY5ZmI4ZGYxYjE5YTdlM2JjOTJkMTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc5MTJkOTNhZGU1ZTNjOGI0ZGY2ZDk4OTNhNTVhMGM1ZWI4NTc3M2FhOGI2ZmVkOGMyYWFjMWZlMGY4MWE3ZTQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/callbacks.py#L31-L360",
+          "version": "repo-lines-v1:sha256:b100133b152b7e09c5415cc7f29558cf5d714c28765ca913bc1902b5da2462eb:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIzMThmYjY1NDYxMTFkZDJjYjJmNzNjYzdkMGIzOWU3NjFkZjE4ZTg4OWNmMmU1OGQ0ZGRlOGQ1MDQ0NWUxNGM3IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIyNjQ3YjM5N2VkZTg2Y2E3N2FmNDRjMWViMTQ0ZWYwNDAwNzQ4N2M1OTZiMDI1NTMyZThkNzA4MTIxYzQ0MWVjIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1NTQzNmVlZTVjMzA4ODc5NDhhYzc1OTFkOWU3YjM3ODViY2I5MmU1NGVkYWUxY2I4OTlkMWNmOGYxMTJkNWY0IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://tests/test_runtime_event_windows.py#L82-L129",
+          "version": "repo-lines-v1:sha256:4937e61dfe0ecef0af1c69b0f808bde957c132bf2e12877c1875519898158c19:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg0MGFlN2RlOGI0ZDUzNDBhZWEzOTgxOWQ5Mjg2NjI0OWNkNzI2N2I0M2Y4MmU4OTViZTI4NmNmMzVjNTUzZjQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA0YjUyNDZkMjljM2FlM2ExMDJjNzAxMjZkNWI4YjI1ODI5Yzk5MGRkYzEyZDI2NmY0ZDJlMDk0OTdkMTNjZGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU4NDgwOTQzYmYzOTlmMjA4NzNjYmEyYmI5NmNkOTBhZjZlZGFmZjRhYWUzYTIxMzc5MDNiMjBkNTkwZDZmNDAifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_schedule.py#L77-L184",
+          "version": "repo-lines-v1:sha256:d3fee62c50cfe89268ae7f2d12f8894d1c81fdef3500e8812053b463c78ada63:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4M2YyMDc3MzQ3MjhjODg4YjI5OGE0NzgyMzY5ODhjYjgzYmU1MzUwY2VjMmQ1MDViZWNmZDkzNjI5ZWQyODM1IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI5OWQ2NjY1NjAzYmEzOGM1Yjc4MWEwZjUxNjVjZDVlNTk5NjdjN2UwOTkxOGFkZGU4ZWU2YzlkMGQ1ZmVlZTZmIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4ZGIyNzU0YTVjZmNiNTgwMzA3NDJhZjY2NTU0MGUzZDY2YzAzMDdmYTcxOTU1MDVlZjY2MTZlMTA4ZWRlZDY4In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_5e69ed9608c64a4e8078cfb09680548e",
+      "statement": "Scheduler registrations are stable-ordered and fixed before market execution; run-added registrations and all computed schedule state are cleared on unbind so reuse does not accumulate run-scoped callbacks.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/execution/callbacks.py#L344-L360",
+          "version": "repo-lines-v1:sha256:7c1afcfb42765c280b8e361e04c630217e12eec1e3b096a044496cab48a0fad1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhiNDE1MWU0OTc1OWIwMmYyNzhiNDAxMjFkZmFiYzMzZTJmZjY1Yjc3ZWQzZWJlODIyOWY1OWFmYzQ2MWNkMTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2NDdiMzk3ZWRlODZjYTc3YWY0NGMxZWIxNDRlZjA0MDA3NDg3YzU5NmIwMjU1MzJlOGQ3MDgxMjFjNDQxZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEzYjkwYTY2N2VjYTY1NmFkMzQ5Mzc5ZWVkM2JiYjA5ZWMxYjdjMzAzNzZjYzc4NGQzZmY4ZTAyNmFmYjBmZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/callbacks.py#L56-L141",
+          "version": "repo-lines-v1:sha256:12821616a92257dd2ebc654729adf9a1363dd9ac0f5ca345f1a40346cd1ab2b5:eyJzZWxlY3RlZExpbmVDb3VudCI6ODYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxYTFlOWEzNTY2M2QzNTQ1M2UyODg4YWYwY2M3N2IyYTYzMjI0NmI2MjJiYWQ2NmJlNDMwNTEzZTkxOWE4OTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyMmE1ZWEyNGI3ZWZhODRhMTQzZDM0NTZmNTY1ZWM4OGNlNmFmNjYwODUwNDA4NzZkMzM5MTkxNjA1YjM2YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJjZGUwNjEwNmZhZTdjZTNlMGEzNTJlNTkzMjhhZjdiOTJmNTViZDJiZTlhYjhjMzIzNWU5NTJhMTNhZWM5NjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4NmY5ZTM1MjBlMTQ2MzI1NmQ2ZGM0MmMyNzNkMDI2NTk0OTQ1YjczM2EwNTlkOWI5MjJkMzFiZmNjZWQwMjcifQ"
+        },
+        {
+          "resource": "repo://tests/test_runtime_schedule.py#L353-L373",
+          "version": "repo-lines-v1:sha256:ebb01de4a00c3c5b9c1b151420114b97a871c5271f5f3af2a24f64ef138b050a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkNzQxMGRiZjkzYmMyNGFhMmQ1MWFmM2E4NDM5NTU1M2I2ZjEyNGU5Y2QwODllOWU0ZWE2Y2RkM2Q3NDhjMGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2MzlmNTYyMGM5NzkwZDE1NTk1MjFiNTVkM2JiMjQzODY1Y2QzNzBkODNjZGJlOWYyMjk1NGRiZmYxZTZjZWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE3ZmQ2YWM4MWVjZTAzMGMzY2Q0YWU1NTQ4NGMwYmIwMDM4ZjI0ZTY1ZjViMjUxMWQwNjlkM2RjY2Q4NDc1MzMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6f4892f510394606a26f2fea2f6028e5",
+      "statement": "Built-in runtime services do not discover or fetch remote data and use only explicitly supplied feed, frozen auxiliary, history-provider, and instrument-source inputs; because provider protocols are caller-implemented rather than sandboxed, maintaining the no-network guarantee requires offline implementations and contract violations abort rather than falling back.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_instruments.py#L16-L36",
+          "version": "repo-lines-v1:sha256:c05efd28b8ebe97d232c342771442615bdd59edff7f4c6b771f922da91b8f569:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjMDk4NmE5ZTlkMDZjYmUxMzZjZGEzMGJhODI0ZDM2MWJlMWZmZjQxMzFlYWNlNWViMzE0MmNlOTM2Mjk4YTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyZTg3OWI3M2RkYjc4MWVlNGYxNjVkYmIzNTQzYmMyYTVhODk1NTE2ZWZjOWQ1NThhOWQ3YWY0NTE0MWFjOTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlNjUzZDZhMjZkYzZiNDMxN2ZlZGUxOWM1YjU3ZjFkOTI5OTQ2NWU0OWI4MGVmY2Q5NGZhNWI5MDc4M2U1ZDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdjZjE1MzQ3NGVmNTJkNmMzNzFlYjc4MThlYTI2ZWVmMGQ2NTU1YzYwZjE5NTZiOGM3ZGY2MGJjOTZlNWU0ZmYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/auxiliary.py#L15-L25",
+          "version": "repo-lines-v1:sha256:bbebeaa0cfb3504c7b717d53d20087c695314b3d68709cbfce758b929ff18738:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmZDdhMDdhODNkZDE5OTZmYjUxNjg0YjQyYWVjYWY0ZTkwZmI3OGJhNzIzMGU1NDJlZDdiZDAxZDQyMzAxYmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE4M2ViZTVmNjA5NzI4ZTUwZTIxZjg5OThkYTExOTJkNTRmYmVkNjU0ZTViM2NhNjAxYmNkOGI5NzNiYjQ3NGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA1ODA2ZDVhZDI2NjlhMWQxODA3MDEzMzYzYmQ3MThiY2MyMGM5NWMwYzAyNWFkZmE0MTMyZjZhNWRmZGJlZGQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L25-L49",
+          "version": "repo-lines-v1:sha256:3564a587e38cb8d62a39203129794af4ec0b9f2bf727139e652d1713e2025f83:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyYjBlNTA0M2ZkN2I4YmY2N2VlYWIyNjczNGE1Mjc0OTIzYzIwZGMyMDQwNGE5MzY1OWMwZjZiMjE3M2ZhOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgyYmZlYTc5NzRiMmUzOWQ5MDY1Y2NkODc3N2U4YmI3YmNkMzc5MmY2NzA5MDRmZjIxNTRkNTBiMTM5MTg4ODIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0ZjkwNDk4MjNiYTRmYTRiYzE2OGFjZWFhNDA3YTFkMmVhOGJmZjRlMjE4MmNlZjJmYWY4OWVlMTNkYjkzNGEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L771-L779",
+          "version": "repo-lines-v1:sha256:46a3e0c4faed28ce51669a551c9dd5d598e84b20b9119b7dafbab83f1990f7e5:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWUzOTM4OTM2OWE1YWY4N2RlNTNkMzk2ZGE5NzM3ZWVhNGZhYTczNmEzYmRmNWNkZmIyZmMyNzIzMjBkMzljNyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMGFlYjU4NjY0Njk5YjcxNmUwNTIwNjFmN2JmMzY0ZDE5MmQ4NDdmNjAxMjY3YTc3NjE1NTg2NjQyOTdiOTMyMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTQyZWNjN2I5OTk2YzkyYTIxMGUyMjc3OTg3ZWIyZjVkY2NkODQ4ZjVlMDZmMmNhODM4ZTg0NjE1MjAxZmI3ZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjE1ZWQ5NGYwYWFjOThlMDIzNzQwYWRmYjBhYjgzMWU3ZmZiZGE0YWYwNzA3N2EwMTc0ZGViZmUxZDg4ZWY1YyJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L944-L980",
+          "version": "repo-lines-v1:sha256:7b439209ff12a72d99026ddfc129afbfb97afd484f5eb812aa3ddf0e2e49be78:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkY2RhNzMxOGQ4NmY3YzllMzI2YTdkMzU3YzgyZmVmMTQ4YzE5NGJhMDE1NDM3ZGE4MWE3ZjI1MjY1Mjg5ZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4YmFmNDM3OGQyNDNkNDgwYTZlZTQzZjI1OTcyYTY2OTA0MTBhMjkzNDc1NDRlMzVlMzE3MTBlZWRmMzI3MDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIzMTIzMWFkZDQ0Yjg4ZWNiMzgyNDVmNTc4NzVkYzBiNDVkZDM1NzQ1OGQ5NjAzY2ZiOTAwNjAwNjk1OWU0MjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQyZmY4OTZlZWNkOTdhZmQwMjAxM2NlMjcyMTk2YmE2OTM1MmY5ZWMwMDc2ZjI3NTllZDMyMTkwOTIyNzJmMmQifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:31.122Z"
+  }
+}

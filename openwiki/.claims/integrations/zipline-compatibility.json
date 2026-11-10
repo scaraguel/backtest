@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:bdc4a87fd6978db6034dd6cdabbbe81eb249ba1c815d4fc1e2dc46e830749c73",
+  "claims": [
+    {
+      "id": "claim_3ea05e85a6b14fd4a6676ff84b26b1d4",
+      "statement": "The Zipline compatibility runner executes imported callbacks through one native Engine and Broker, and MigrationContext account and position views read the native broker ledger rather than maintaining a second compatibility ledger.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L1067-L1105",
+          "version": "repo-lines-v1:sha256:ff3d5bbd973da1c757639ca69ab4935b9530db03140c33d7322e09251f11efb2:eyJzZWxlY3RlZExpbmVDb3VudCI6MzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmNWYxYzRkZDVkMmYxOWYzNTdkNjZmNGRjNDA1MWYxOTJjYjhiYTc0ZDkwMmMzYjNlZGY5M2JiZWFjMzZmMGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA5MmQ3NTlkNWI3ZTFmOGMwMjNlYzQwMWVlZmRiMWE3NTE4YWI4MmMxNjZkY2ZjODBmNDY1MDUzNWQyNDI5NWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE5Y2U0ZDk0MzA5MmMwN2M5ZDIzOTkwMzU3Njc1M2ZmMjU4OGVlMjY4ZTYxMzFlMTkwMWE5MGM1YTE2ZjlmNGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVkNTI0NWM0ZGIwODU0ZTFlNzY4MDY5MDE0ZmU2YzI1ZDI5NjY1YTdmMGZiNjdlYzgyZjZmZmFmZGY0MjdhYzQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L55-L127",
+          "version": "repo-lines-v1:sha256:fc181aa1125156411ab93df492e9ca10f381450fe23a9b2e205c1c4e92d97bc7:eyJzZWxlY3RlZExpbmVDb3VudCI6NzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzODgwODc0YTc2ZWY5YWYxOWI2MzIzMDg5MDU3YmU4MDlmZDg1YzZlMTc0MDI1NjdiMTgyYmNmODBmYmFjYTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExMGQwZDMwYmQwZDYxMDY4ZDk2NTcyOTQxN2IxZGU0NDE3ZmJiYjk0OTRiODhmMTE4MWY3OWRmODg3NzZhN2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJhYzFmOGI5ZjBkNmJhNTMxYjQyMTc1ODFiNWNhMDM1ZWJiMzIxNGJjZGRiNWY5Y2MyZjJiZmFiMThlMTUyNjIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ccba5c7199f648418e5d476a84eb02e5",
+      "statement": "run_algorithm requires an explicit DataFeed and declared assets or PreparedAssetLookup, uses bundle-free prepared inputs, invokes initialize before constructing and running the native Engine, then projects the BacktestResult and optionally calls analyze.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L1038-L1111",
+          "version": "repo-lines-v1:sha256:7e346f1f64d5b7e2cf4bf07d343eff9a36c69d2502cc303db3b8dba3ea2674cf:eyJzZWxlY3RlZExpbmVDb3VudCI6NzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5ZTM4YmZiMzhhNzE0MTA1ZmRjMmQ4ZmIyNjJmY2VkYTZkYTNmZTgwYWNkMTc4NjkxZGI1NTIzYmYwMjdlNjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwYmIzNmRjZjg1OWNmYTAwZmFlOWUwZjlkNjNhYjRjNmQ4ZWRmNjlhZWVhZTdlZjJmNGUyMTQ3M2EyNzdlZGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjliNWJiNzc3ZjQ5NWU0M2Q3YjNlYWVhZWEwY2Y1YzgyYWViNDA1YWU2YmVmMzA1NjAwNTQ2Y2U3ODAzZTRjNjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L875-L907",
+          "version": "repo-lines-v1:sha256:e421bee34f38cb48c9c126eecc037921f2bffcfebb7f056e9cc8597f11e0e5af:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyOWJlMzIyMWYxMWJmZDY4ODkzYmQ4NTU1YmQ5ZmQ4NmIyZmE4N2Q0NzNiNWIyYWYyZmIzODU1MmE4NTBlYWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlZTRlODc4Yjc2NDdiMmY0ZjhmMGYyY2YwMDQyMDBjZWNiNzU1YTg0ODNhZGM2OTVmMWFiMWE5ZjQxYzg2NDIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI1Y2Y5Zjk4N2VjODI5ZDYwODgzNmU2NzdjZTQ3ZGY4YTFhZGIwYzhjNDQ3Y2I2OTk5MTI5OWRkYzhjODg3ZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkNzI0MWNjYTY5Y2QzMzM4MTM1ZDYxMjdlZjI0YWRlOTMwOTgwZWZkYTY3NWQzM2ZiYzAyMTBlMzY3NDUzNmUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L909-L923",
+          "version": "repo-lines-v1:sha256:3a9401e939dc3306f11ac58c97107fa6f0e49a9521fc0f9ad3e1bf0d22de6805:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3NmUxZTUzOTc4NjQ3OTBiNWRlZDQzMDJlMzliODU2ODZhNmI5MzU1MzIwMjA4YWI1NTliMzJlNTExZTk2MzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4N2JhYzc2ZDY0NTAyZTk3MjNmNjc4NTYwZTk3MTUwZTg2N2EzMjhlNDViM2QxMmZkY2I0ODg2ZWQ2ZjEzMDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1OGY5ZjQzNzZhNzdhOTY2YmIyYTI1YzJiYmE0NmQxYzBlZmMwOGFmZjVmNDRiNzdmZGU4YTUwMTc3NTE5YjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4MTZiNGM1NmM2Y2YzMzQyZjEyZTY2MmMyYjcwOTg1MmM0NGQ4N2UzNzY2MGNiNzEwOGYxMTRjYjllNmQwY2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_150d20ca09514556b6d988dbaf375ec1",
+      "statement": "The callback adapter's migration defaults use next-bar close execution, FIFO fills, shorting and leverage enabled, skipped cash admission validation, partial fills, and the zipline_3_2 corporate-action policy; these choices are scoped to the adapter rather than changing native Engine defaults.",
+      "evidence": [
+        {
+          "resource": "repo://docs/user-guide/migrate-from-zipline.md#L276-L287",
+          "version": "repo-lines-v1:sha256:4a4b5b8b2d7ecce24356e1d5c397c8379b94393405a97bb33170f5904ffb8ec0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2MGJiY2UwNmJiNDZkYjcwM2YxNWVjMmMxMTFjNWFlYzUwZmM5YTJkZTdkYzg3ZGNkMmE4OGVjNDQxYmNiMTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdlM2I0ZDVhZjU0ZWUxZjA5ZWM5OWNhZTRmMzg5NWVhYjI4MTkwY2RjZTAxNzdlNTY1ZmEwNzU2NzhjNzA4ODciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ5NTYyODdhYWRmYjU3NTcxOTI5YjgzOTBkZWYwZDcwODY1ZDIwMDE5NzBiYmJhMzc0MWVlZWQ3M2E4NGE4NWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJmNGMwNjg4M2MyZjVlY2ZhMTg1N2NkZjBkYTQ2NzllYzE3YmQ4YzllNGIzMzMyOTk3ODI1ODFiN2E2YTIxMTIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L924-L945",
+          "version": "repo-lines-v1:sha256:8faa0f917cbabf4e820ca1b2b7d18d5d3a0fd0e583319bfa33914fa3840b484d:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhZDlhMjI4ODY3NjAxZWUxMDg1NjE0NjVmMjFlNzRkMmM0YzI3NmNjMWRkOTcyYTg2Zjk2NWRjZjYzNDRjMmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyOWJjNTA1Nzk5NTRlMGI1MTI5YzM3ZWQ5YjNjOWRlYzk1YzU4ZGUzOTBmYzA0ZTUyMzZjMDlkZDY1ZWNiMjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVkMDIyMjk3NmQyNzRjMzEzZjI4ZTA0ZmFmNmQ1OGFhYzY2MjBkYzA4NjNmY2YwZGIwNzYyZmFlNmU1YTA5MDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIwMjk0YmZkZDUyMDM3ODU0ZTFhOWUwMzU5MDJmOGRhZDg0M2E1ZmU0NDM4ZjViZGQ1YzljMjkyZDQ2MTM1ODYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2ca204da2a11401e9b44e3beefaf477e",
+      "statement": "BarData projects native causal reads into Zipline-like scalar, Series, DataFrame, and MultiIndex history shapes while requiring explicit supported history frequencies and warmup coverage.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/data.py#L264-L329",
+          "version": "repo-lines-v1:sha256:79d75795efd00197cb1e4fa55601ddf28b2291a2a952d7ec0ba753c98fa7e0bc:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImExMmVhOTRlNjU3Nzc5MWUyNjY3NzU2ZjJmNGExMzE4YTRiZGZiNzY4OWY0ZmY5MTZhYmRhNDY0NDJiNDQ5MWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjMGI1NDJjY2MxM2ZjMDY5N2U2ZGM2MWIxNjZlZWI0OWI5NGYzYjU0YzI4ZGJjODUwNDZkYmQ1NDU0NjkyYjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk4ZGJmOTkwNTY0MGE5M2E5ZWY0NGNjZjU1MmM0OTZhMmRjNzA0OTkyMjBkNjJlNWIyMmVkODM2NDAzMGVlY2UifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/data.py#L381-L459",
+          "version": "repo-lines-v1:sha256:7bda0da94c3821dd78ce8b468f00c24570ce2bce5aadb975b21d3fc11e25bf9f:eyJzZWxlY3RlZExpbmVDb3VudCI6NzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiMjMwZmViMDc0NDcyYTIwYzM5NzY5NGExYzY3MzY3ODExYmYyYmQyOWRhYmJiMDU0M2ZmZDk5MDBkMDAxMzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAyNmYzZWU4NGNjMzA5NWM3NTk0Yzg2NGFkNGRhZjVkNzkyODdiMDM3NTcyNTc2ZGU4NWNhOTVkNDBmNWY5NGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU0MzgyODFiYTg3YzcwZDI5YmEyYjNlMTBjMzg4NGYwMmQzZjMwNmIzMWM4NjhhMGYwMDkzZTBkMzlmMWU4ODMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/data.py#L460-L501",
+          "version": "repo-lines-v1:sha256:ee66fbbb0133ffa824322753f5c9a3d397282846968d3135dcb8719b1eb39de8:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTc4NmM5OTI5M2QyOWJlMGU2ZTU5ZmQ4M2IwOGI1NzQ1ZGQ3NDhhMjczZjNmNjkyOWEzYmY4YWNkYTE0ZWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk2Mjc5Y2UxZjJkYThiZThmNzBmNTcwODcwMjBiNjkyMzMyNGE0NzIzNmJkZWJhMzI0ZjNmMDI1YTRkMTg4YzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmZWI5Njg1ODgzODAzMGEwNmZlNjQxYTA4NWUxYmY1ODA4M2U1YjgwZjQzZWVjNjM4NTM2YjllY2ZmMDY0MGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2fd660ca58a8460b9acff2e11292aeee",
+      "statement": "Session scheduling compiles Zipline date and time rules onto the native scheduler, requires a declared calendar, requires daily or right-labelled one-minute observations, and creates callbacks only for observed target instants.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/events.py#L127-L181",
+          "version": "repo-lines-v1:sha256:0beb78053599edb6bc0fa7fc94aebbd2d34569178727f7d64636bef65f867df9:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwZWQyZWIwMTk4ZWVkNGQyZTg5NTg2MWY5M2ExNDg2NWRhODE3MTNmYWE0YjYyZjBmM2I3NDNiNjk2YjUwZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjOGVjMTI0NjZjOWNhZDM3M2JkMDg3NDc2YmE4M2Q3MGM4YWI5OWNhYjdmNDQyNmNkMzU2ZTFhNGE4Mjk4MjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY4NzA4NDlmMWVjNzkyOWUyMmY3NTlhOTU4OTI5NGU3NzBhOWIxYzczOGM4MWM0YTU1ZTM0YmM3YTYyMWY1YTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFlODZkMzJlYWE3YmUyNWYzNDUwMzU5NjM4MmQ5ZTg0MDc2MDk3ZTIwZDQ5ZTNlZjQwNTM2NDFhNzgzNDQ4Y2QifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/events.py#L203-L284",
+          "version": "repo-lines-v1:sha256:8af2264873e9126ceb49852e764171fa1d951aa99dcbf002938ffad88f83e8e1:eyJzZWxlY3RlZExpbmVDb3VudCI6ODIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlYTI3ZTM4NDdmZTM2NWIzZjlmYmEyMDQ5OGNmZmQ4ZjVlOWQwYTI4OThkNDRlNWYwZjc3ZGE1ZjIwMjYzOTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc3NTZlMGZhZjg2NzI1OTVmNTEyNzQ1YTU4N2IyYTY5MzUwMjk2NDM4NTM2OWM2NmQyM2E3YTk3NzQxNTBkNmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e2fcf6006ac44e08b1863aac7ea0389a",
+      "statement": "PreparedPipeline delivers upstream-computed feature panels through native auxiliary data at before-trading-start snapshots; it validates timezone-aware declared decisions and explicitly errors for missing decisions, unmapped assets, premature output, and unsupported legacy Pipeline or chunks setup.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/pipeline.py#L16-L79",
+          "version": "repo-lines-v1:sha256:30958456f45fc9285b8abe8a2659f041315b3bee731b217e4a1007c6d156937f:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA1NDQyYzQwZGE4ZjkxMWM3Y2M0NjA2Y2JjMzcyNmU3YjBjMDQ5ZjRhNzRjNDQzM2I5YWVjNDVkMmQ0M2VhNjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFmN2E3Mzk5YjBhNmRiN2UwZThjNjdiYmYwZmEzNDJhYjAxMmRiMTI1M2Y2YzJhYTIwYzgwMDY4ZDk1M2RiNzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIyN2MwMjcwYTA2MWEyNDBlOThkYmYxNTMwYTg1NzM3NzI4ZjVkMDNkOTA4NTg1Njg2MTI3NjYxNGRmMDJhZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQyY2MwN2VlODBkMmY2YWVmMzI1ZTE2MTM5ZmU0N2RkMTZhNzNjMDZhMjRmYjFjY2E5ZDkxOTU1NjM1MzY2MzQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/pipeline.py#L96-L163",
+          "version": "repo-lines-v1:sha256:d5977ecdb073297bdef9b5c1747e7cbcc0ae0844132ccd1bbb1626e1c573d047:eyJzZWxlY3RlZExpbmVDb3VudCI6NjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU2YjA0NDkxNDY5NzIyZTgzNjNhOTRlNDA0NDUzOGUwMTNhMmEyMTdlMzZiMWU1NjhiYTYwYWNiN2I0YzhmMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0ZmFmM2ZlNTM5M2ZhYWQ1NDg0NzEyMzRlN2UwNGFkMTY3ZjZkNDYzYTYwNjQ1NTQwMzZjNWJmZWM4MjliOTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEyYmQ2NTk0NTI0NGQ0M2E4YjhiNjhhM2E1NWQ2Y2Y3NzdhYWZlOGY0ZGUyNTY0ZDYwMmExZmQ3OThhZDdkZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L170-L196",
+          "version": "repo-lines-v1:sha256:bfa07d112a6f7a7ee6a50c1d6ef6674ba766006a6361496aac51f6a690baaa28:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIwYTMwNWNhZjlmNTIzZTQyY2E1NGJiNWZhOWYxMzE3MGZkNTAyYjg4OGU1YjgzMGM4NDk3ZDRiZDUzNGEyNWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlYzkwZDljYTkxMGRlMTU2YWUyNzU4ZGI0MTc1ZjcwOWZlNzFjMmM1NmMwYTk0NWZjYmMyN2U4OWU0ZjRkY2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAzMjUxODVmYWVlMTMxYTI2MmIwYTFmZWNhMmQ1Y2FmYjRhZjg3YmI3MTA3M2U3OGYxNDU5ZjgyNjJjYjFmYjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZTc1MDA5NTBjZTk4NTg5MTIzNjA1ZjI1NDBiM2VkODE3NzZhM2E5YmY0MzQzNWJlYjJlODk5ZDI1NDA1OGUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0675aaa4644841919400fda4ee0dc76b",
+      "statement": "PreparedCSV requires caller-loaded Pandas data, separates observation time from a required publication column, freezes the prepared payload as native AuxiliaryData, and performs no execution-time I/O.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/csv.py#L154-L222",
+          "version": "repo-lines-v1:sha256:f77ec9375f36c497821a4a32b4d78b0489c41fe3a8866c31a15d958a25cb175c:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlNGVmMDUwMzkxM2E5MTc0MmY1MjE4M2MxZTlmYjQ1YWYyMWNiOWZiMDYxZmQxZDlhMGRhYjJmOTg0YjIxZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwOWFkZjZlZTk3NzAzNjIzMDBhMzA2NWRjNjhiMmFjZjg0ZTM2YzAwZTc0OTZiNjlmNzYwOTA5ZWU5OWM0OGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVjMDkxMjI2YzAzNjY5NzI5ZjVlYzdmZWMwMTE1ZDdkMzQxMzU5NjFjYmRmMGJjZGEwMTk5YTJkNzY3MDFhOTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/csv.py#L21-L60",
+          "version": "repo-lines-v1:sha256:73b463326bd9ee56eb5592d9e20f731c82a4ab03ceb0320f0feb71f217a03aed:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcwMTg4MjMyNTFmZTJhN2NkODk3MmI0Mzk5YThkZmJjMDIxYzM3MzRkOGQ3ZWNiYzkzMjRlYWVhNjUyOWZiMWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxZjNkNTkxYWM1NjM2ZDc1NDdhYWJiYmNmM2M3ZGFmOTA4YWI4YWU1NmM5M2VmMWU4NDRkY2ViNDY4MDcxNTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQwM2E3MGUxMDJjOTRkOGZkZjQ0NzExZjg1MTMzNTJhNTQ1ZTIxNjA1ZWZjMmRhMDE3MmU0MzljOGI0ZjUwMjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJhYmEzZDA0NjFhZWRhYzRhMDM4MzQ5YTY0ZWZiNWVlZWRlOTk1ZDY4YTc5ZDI5MzY4ZmNjNWQwOGIyNDY0ODkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/csv.py#L61-L153",
+          "version": "repo-lines-v1:sha256:3db794dcc56a83f30119479557112095af97231f36cce8e5261ad2da0aec7381:eyJzZWxlY3RlZExpbmVDb3VudCI6OTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlM2U2ZjM1ZjI5OGQyODdlYjcyMzk5NDMxYzkzOGRhNmQ0M2I4OThhMTlhOTBhMDU4ZDUxZTk2ZGYzNTM1ODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI1MmJlNTExNTI4NmM0ZWYzMzNkZjAwZjBmNzU1MGUzMmJlZDBiZjYwMmU0ZjE2ZjU4MTQzZmFjNWY0YjEwODgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzMTcwNDg0NjY5NmUwNjAyMjUzOTBmZGQxYzY3ZTlkYTlmZWRjMTFhNjc2MTYzMTc0MTdmMjgwYzVmNTk5ZjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_37835a355d984d66b676f25c567e083c",
+      "statement": "Trading controls are native pre-submission validators whose fail policy raises and whose log policy logs then allows processing; leverage controls are native account controls and explicitly fail when required session-close observations are absent.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/controls.py#L20-L40",
+          "version": "repo-lines-v1:sha256:2d87f34e36122f5cc882381d23f872f1769a5a39ac113c35842838749db62381:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY2OWExMzk3NWMyNTZlYzgzMjBlMjAxNjA4M2M5NmRmNjM3Y2EzZDM1YmViZGUyMzE0YmVlM2E0NzExYjU2Y2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRmYzkzYzljNTU5N2U3ZjE1NGYwNTE0NzljNmE3YWRjMGE3MzUwZWMyZDIzOTY1NzRmNDM5MTZjNzk0ODJhNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ0ZTVmNjdmNTNiYjc1MGY4NmYwNmJjNDRlMTAyNWY4NGIzMDViYTg3MGQ4MGIzZWM5MGVjYTNhYzI5ZTVkMDMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/controls.py#L42-L115",
+          "version": "repo-lines-v1:sha256:bd3fd6316a5a3737e15beb2580fb6bc24ca554f08a3c9170995d5c62a5f3098e:eyJzZWxlY3RlZExpbmVDb3VudCI6NzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2ZmJhZTBiOTFkNDRmYzBkNDlmNWRlNjkxZGE2ZmM0MzFmMjYwMTM0YmY3MzFlMGUyMWY3NjQ4MDk0MzM0Y2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxMzgwNTM0ZmNkNGFkNzBlZjE4NzdhZjBkNGEwNzhiN2ZhZDFlNDFkYThlMzdmZjU5NjFkODhjNmRjMTdlZDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE3NGFlZGU4MzQwMTk0N2VhZmNmZTJjMDY1YTVmMzNhZTQ0NTBkZTgxZDY1Zjg3ZDUwNjdkNTI4MDZjMDRmOTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f03199dd430445fe94a9e306c9daef20",
+      "statement": "ContinuousFuture is a non-tradable research identity, while PreparedFutures requires a causal provider and explicit dated Future mappings and validates cutoff, roll method, publication timing, expiration facts, and normalized contract units before selecting a dated maturity.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/continuous.py#L16-L69",
+          "version": "repo-lines-v1:sha256:6ad14b3a1bd14b00184d1333e24768397c7cec1d2fcdbcaefea621a90a3d95e4:eyJzZWxlY3RlZExpbmVDb3VudCI6NTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwNGEzNGJmOWZlMDg3MGVhNTM4NTc5NzU3OWNhMjE0NzIzMzRjOGUxNGJhMzc3M2MxY2M5YmM0N2Q4M2NkOTIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxYjkwN2YwMzc3MDRmMTViNmFkZTIyOTRhM2YzZjNmNWYyOTRjMWRiY2FiNjMwMTU1NTAwZDFmMmI1YjkwZjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI4MzQyYmRjOWEwMTY3NmNlZmM4OTY0MGExZTVmMzY1NWUxMThjMjkzMzAzODgyNzI3MWE4NzI1ZWVkMDgxMjYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/continuous.py#L70-L162",
+          "version": "repo-lines-v1:sha256:9b03c5a423b512ec8033f3b8623423c253642f0b12da506539a9aea4a6a48170:eyJzZWxlY3RlZExpbmVDb3VudCI6OTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmZjBjMGNlOWVmYTIxYWUxMzVlODc0OTFmOWJmOTk1MWQ3ODAxYzM1ZDBiZjg5MjYzMTIwMGI4MmM2NGJjNTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2OTJjMGFmNjFmYWM3NWIyZWEyZjM2NzBiMDY2ZTAwNTc5MTQ2ZTI1NzY2ZTk3ODc1ZWZiYzEyMTY1NDczOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY0MmM4NjAyMjQ1Nzc0MDA5OTA5NGYzZDU5ZTk1OTk3MjI5NTZlNzNhYWJmMjc1ODMxZjAxOTRlYmY1YmZhMzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L246-L251",
+          "version": "repo-lines-v1:sha256:2d0f3fe57a370bc4eabf0d025d9149d49bcba0b440cb47aaaeb73aeec5a2ab6b:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjlkMzY1MGJjZTQ5MGI1NDA3MDg4ZWYwYjgwNmM2OTcxMGFlMWY1NjkyYTcwZDllOTZhZGZhZGUxMDlhZjdhOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGZhZDkyZmVhNGU3NzA2ODU2YjVlMjA5YjE3ZmFkZmExM2I5MTYxMmU2NGQ3MjQyMTBhZjFiNjRiZjcwY2QxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTZmMzdlZjNjZjhiYTBiZDA0NjAzY2YwYTJmNzdjNzIxMTk5YjFlNDJkZDgxNDRlNWRlNTVmYTQzMzBiYTM2MSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmE1ODQwNjJkMjhjMDYyMzhhMmFlYjViNzMyNzczZDkwOTY5YmY1NDE2NWQ0NTA2ZmVhYjdkOWFlZjVhOWY4NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_11fa2b4b86af49219e6b0dbda38974c0",
+      "statement": "to_performance_frame projects native account observations, returns, actual fills, benchmarks, and recorded variables without rerunning strategy decisions; it preserves native observation frequency and attaches the authoritative BacktestResult in DataFrame attrs.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/results.py#L13-L25",
+          "version": "repo-lines-v1:sha256:057333dd77badca04ddd4559cc7d5270860632168fa85439b7da6601dc97f1ba:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlZGIyZjJkZTRhMGM3YWQ1NjA5ZTkxM2M5YTk4YTgyYzZhZjYwYmE5MjI4ODYzNjI0Y2U5NWUyMzQzOTUzYWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzOGQ5N2E4YjE5MmFiZjdmYzJjZTgyNzM4NjQ0MTVjYzIyYWNmYjc2MDA4NWJhOGE1OTdkNGM4ZTk3NTM5ZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIxMzc0OGJhMDk4ZGIxMjIxYjg1YWFjM2NhY2VlMmM0ZWZlOGM1N2ExMWQyN2RjNmEyNzIwYTNkZTdkMzdhYzkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/results.py#L48-L118",
+          "version": "repo-lines-v1:sha256:56903d375a74bf545bc6b0a6008f4626d4b5401e2dc9a81081712daf0bf6cf2d:eyJzZWxlY3RlZExpbmVDb3VudCI6NzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwYmIzNmRjZjg1OWNmYTAwZmFlOWUwZjlkNjNhYjRjNmQ4ZWRmNjlhZWVhZTdlZjJmNGUyMTQ3M2EyNzdlZGEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI2NmU0YzJjMTg0YTVlM2NhZGFlOTBiMzM4ODQ5NDBlYzIwMTRmNDdhZTBmODY5ODgxOTJkYjQ3NTkzZDgwMDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_bff74577b23344e09e787c77e3d7c5b0",
+      "statement": "Projected transaction rows preserve signed quantity, actual native fill price and commission, a scoped migration order ID, and the underlying native_order_id rather than fabricating transactions for observations without fills.",
+      "evidence": [
+        {
+          "resource": "repo://docs/user-guide/migrate-from-zipline.md#L391-L416",
+          "version": "repo-lines-v1:sha256:5a083899f8e62b58807c9657d506ac86f2cfe7bea550781d999f82610a32bb57:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkOGI3YWNlZjQ4MDllMjRkZjQ4MDY3OWQ3Nzg0OTlkMWEwMzRhYTNlZTYwMjdiMzlhNzlmMzQ5YzYzY2U2NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ1MzE1MDE4OTI3MjY3MjA5NTlhOGQ5OGU3NTBhZWZhMzU0MTQ0MmJmYTFjMmRjNGY0MzkyOTgwNmRkYmE5NWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYwYzM0ODlhNmYyNDE5N2YyZmZmZTYwNzIwOTdlOGM3NjgwZDY2ZmJhMTBkODAzYTkxMmE5NzQ0MTU0NDdhZjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgwNzgwMzUxZTY1OTdmMTY0ODMxZmZhN2IwNDkxYjQwZmNkYTk3YzRkZDg0NjdjOWJlOTJmOTdkMDc0MTJhNGYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/results.py#L80-L104",
+          "version": "repo-lines-v1:sha256:3313179f25e15b7386a57b543f16f17770611c09a4cdf1f216d665a9c5c5d9d9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyZmQ4MDFhZmI0ZjYzNzMxZDYwNGEzMjIyZGViOWIzYTFjZTYxMGUzYWVkYjE4YWJiYjIwMWE4Y2ZhYzhjN2UiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNlNjc0NTc3NGIyOWQ2NjNiYTQ4YjFmZmUxN2YxM2JmZDdjNzQwMDQ3ZDFhNzMzYjdmNDQ0YTAxYjRiMDJlMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFiZGYxOWMwYzU1MjViYjMwNWZiNGYyOTk5NjMzNjI1YjQwZGNmMWUxYTg3MGFlNzExMTEwYmYzZmE3ZmI2YjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmZGFjYjYyMjkxODIzZTFhNTdiNTczMGRlYWFhNmVmM2YyNDU3Zjc1MTY2NTdmNDhhZTVhZTZjMDU0YTY3YmIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4f2bc3ab321043cabb0345d4c285c0e2",
+      "statement": "The offline migration architecture prepares immutable data and feature inputs before simulation, executes them through the existing Strategy and Engine, and stores native account, holdings, fills, configuration, and provenance for downstream analysis without introducing a second execution engine.",
+      "evidence": [
+        {
+          "resource": "repo://docs/user-guide/offline-migration.md#L1-L8",
+          "version": "repo-lines-v1:sha256:78c5e0b63364b69a6426e501f82619d9516c78149e0bd2b7d5dd2e9183f1ba39:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiY2M2MjE3OTI2Y2ZiNjA1NmY1NTRkNzgzMzA2MDQyODJkMDEwYjBmYWMwNTg5MmU2YTcyNmZjMDZjZjM0N2QwZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNGFjZDMxMjc4ODgwYTdkOTllNjcyOTc1MmVmZDViMTAxNWE1MGRiYzNiYWZiZjFkOTZjNDU5YjhhYTJhZGE2OSJ9"
+        },
+        {
+          "resource": "repo://docs/user-guide/offline-migration.md#L142-L170",
+          "version": "repo-lines-v1:sha256:2c94edfa17bf118d4073c587f5b8ace5254bd0c49112794b51a95ace186c7bca:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI5YjAzY2Y1MjM5NTk4YzgzNDg0MjBlOWNmNWU2YTcwOGJjZWQ5MDkyNGRjN2ViZDU1MTY0MmQyYmE5NTNjNDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwYjRhOGQxZDNkODFjNTU4YTYyMjQwMDE1ZTMyODAwMDBjMzdjYzgwM2Y0Nzg4Y2M1ZjhkNTFhMzE1OGEwNTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2ZjZjYjU5ODQwNzE1NGEwYTY1YzQ0YTViNGE0N2MyMThjNDc2NGJiMGJhMTU5MTU3MzFmNDVlOTc2MDI3ODEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5MjJlOWQ0NmQ4OThhNTg2MmI0MDI5ODJkZmNjYjdkMTc2MDgzZGM2ZTVkN2RkYzg2NTc3MjNkZjU1MTRjODMifQ"
+        },
+        {
+          "resource": "repo://docs/user-guide/offline-migration.md#L79-L101",
+          "version": "repo-lines-v1:sha256:aada6777660c4df49cd7e5568b5e2cb9e96b41aa29f5530edd95b16c022e89be:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkMTViODVhZjBhMmUwNjgyOTRlOWUzZWFkZGU1N2RiZDFlYzNjZTI3YWZiNGY0YTQwYjZhMTdmMGIxMTEyZTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc4ZTc5NDE1ZDUzODUxNjg3ZTIyMzQzYTAzOGY5ZGViZTMyM2Y2NmFhYWZiZDg3MmNjMjk2YmRmZTg5MWY2ZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ2OTA5MmUwMDBkNTFhNzA4ZTNiZTRjNzcyYTM1NTI1MTdkMTI2MDI2YzBkZDgxNWZlZjdjNzhkYmVkN2Q5MTcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d961893e4970466e8249142ef03aa6d2",
+      "statement": "Unsupported and setup-only compatibility behavior fails explicitly: unknown frozen CSV identities, non-prepared Pipeline objects, non-null chunks, session callbacks without a calendar, conflicting asset declarations, and missing required inputs raise errors instead of being inferred.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/events.py#L127-L140",
+          "version": "repo-lines-v1:sha256:50d9b2436cfd983170011dc6e0959b2832d3fa87bffe1b7531a746ceeb05bb9d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwZWQyZWIwMTk4ZWVkNGQyZTg5NTg2MWY5M2ExNDg2NWRhODE3MTNmYWE0YjYyZjBmM2I3NDNiNjk2YjUwZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjN2RjNWVmMWQ3NDQ3YTY2OTZkOTdhNjA0NjIwOTQ3NDU4Zjg2ODQwMWRhYTZkMjliODExMGExOTAzNGU2ODciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY4NzA4NDlmMWVjNzkyOWUyMmY3NTlhOTU4OTI5NGU3NzBhOWIxYzczOGM4MWM0YTU1ZTM0YmM3YTYyMWY1YTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRiMTk2NDczZjIxMDJkZmNmOWNkNjZhMmE2ZTkzNTQxODU0YmRiOTQ2MjRiNjc4OTJhZmU4ZTIwZGMzODI5ZDQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L160-L196",
+          "version": "repo-lines-v1:sha256:2b525dbf9280e0c9a71eee8fb3fd7f73d82ee48378893aa4acf4234d43a1c348:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyODQwNDE1OGMyN2UyMDRiODliYTcyNjNkZGE5ZTY3MDkxNGM4NDAzYzE2ZTgwNjBlNjdmMGMzYjUyMzYzN2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlYzkwZDljYTkxMGRlMTU2YWUyNzU4ZGI0MTc1ZjcwOWZlNzFjMmM1NmMwYTk0NWZjYmMyN2U4OWU0ZjRkY2UiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBhMjE3NzcyNjk5MmZkZmM1NDkyMWY4MzkyZDk3MjEwNWU1YjdlMDMyM2MyMGE0MjFjNGUwMDNjOTkzYmU2MjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImU5ZTc1MDA5NTBjZTk4NTg5MTIzNjA1ZjI1NDBiM2VkODE3NzZhM2E5YmY0MzQzNWJlYjJlODk5ZDI1NDA1OGUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/compat/zipline/runner.py#L909-L923",
+          "version": "repo-lines-v1:sha256:3a9401e939dc3306f11ac58c97107fa6f0e49a9521fc0f9ad3e1bf0d22de6805:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM3NmUxZTUzOTc4NjQ3OTBiNWRlZDQzMDJlMzliODU2ODZhNmI5MzU1MzIwMjA4YWI1NTliMzJlNTExZTk2MzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ4N2JhYzc2ZDY0NTAyZTk3MjNmNjc4NTYwZTk3MTUwZTg2N2EzMjhlNDViM2QxMmZkY2I0ODg2ZWQ2ZjEzMDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1OGY5ZjQzNzZhNzdhOTY2YmIyYTI1YzJiYmE0NmQxYzBlZmMwOGFmZjVmNDRiNzdmZGU4YTUwMTc3NTE5YjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY4MTZiNGM1NmM2Y2YzMzQyZjEyZTY2MmMyYjcwOTg1MmM0NGQ4N2UzNzY2MGNiNzEwOGYxMTRjYjllNmQwY2IifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:31.122Z"
+  }
+}

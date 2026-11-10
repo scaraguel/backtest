@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:91602c4ebb5f8a543d85da94e7cab33a4be96f66c40ce569f59ae56455ec4166",
+  "claims": [
+    {
+      "id": "claim_6498238be87f427ba285bf0a0501549a",
+      "statement": "The repository implements event-driven backtesting with explicit execution, accounting, and risk semantics, adapts runtime-neutral lifecycle and order contracts from `ml4t.specs`, and treats package-level `ml4t.backtest` exports as the stable user-facing entry points.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L1-L13",
+          "version": "repo-lines-v1:sha256:ad33a9b7f4b0089666a8561c68a58e7529ea0600bed9f206e9bcc0a648bd51a8:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3YzJkOWU2ODU3Y2EyZmU3NTJiZGRmODI4OTYxYzM2NzI4YTI0M2UzNGE0ZDFkZjUwOGI1MzIxZTBiYzE4YjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZmN2Y4MDNmZTVjMDI1NmJhN2Y1OWE3Mzc0NDk3NjY5YzA1N2VmZjEwYTM3NDY4NjI0Y2Y4ZTNmNDc3MTk2MDkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/AGENTS.md#L3-L17",
+          "version": "repo-lines-v1:sha256:b7e9c60eda086c5664fa56604825b83d467be750b5749eb6889420bce24ad2f5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkOTc4Y2E2MWQ3MjE1OTZkOTE5MGRjODNlYWEzZmQ0NmViMmNmN2FlMjc2ODYxMjc4NjQ2MzQ1NTJkYzFmMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyYzJkMzM0ODYwNDNmNWI5MGJlZWFhNTUzZWVjOGU4MjAwMWMxOTllNTRkNDc0MDM1ODlmNGUzZGFmNmIzZjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyMWNjNjBkNTY1ZWRhNjk1OTQ0MWFkNzVjNGFjZDg5Y2M4YmYxODM1OTU2MjZkZTIxMTgyYjEwMWMwY2ExYmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/__init__.py#L1-L143",
+          "version": "repo-lines-v1:sha256:73160cd435a3e8dabb9a830dfb1bb85d1c55aefac183b6a41274066ff2652d0c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIzZmE2NmFlMDc5NzRiYTA5MjllMzM4NTFmN2VhYWJiMzUyMDEwMTEwMDA1MGE3YTRiYzg0MDE2OTgzYTEzMTg5IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJmOTQxNmUwOWY3OGJhMzE2YzAzMjU2ODIxM2I4NTVlZTc1NmU0MTU2NWQ5MThmMDk1MTljODFmZDYyMGY0MDYwIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MCwicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_a5a9173b34c0423380ecca16c41f6ec8",
+      "statement": "The project requires Python 3.12 or newer, uses `uv` for its documented locked development setup, and defines lint, formatting, type-checking, test, documentation, and pre-commit quality gates.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L40-L50",
+          "version": "repo-lines-v1:sha256:e030b1acf0f51c57f9ef957186c18ab2615c9e6b9577f1bf2955297fefaa0710:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmZTc0NjliN2Y1OWJjZTIxYWQ3M2I0NWRhODFjYmJmMjVkN2ZhMzEzZDliYmIxN2RmM2VlNTU5MjE1NjMzYTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1NzIxYjVjM2Y1YjUyOTYxZGM4NTMwODA2OGI4ZGJhMDNiM2Y2ODhlNTJiOTViZjcyYjNhNjlkY2U2OWE1ZTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxZjNhMjAyMzI2M2Q1YWU2YTc1NGViYTVkZGUwMjIzZWNiYjlmMTZiNDJmNDc2Y2M3ODIwNzUwZDNmODkwZmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA4ZjVmMjJmY2MyOWQ5ZjA1MDU4YWZlY2NhOWM4NjVhNTIzZWYwNDdmZTgxOWY2NWJjYzI5MjU3MDFiNThhZmUifQ"
+        },
+        {
+          "resource": "repo://README.md#L464-L480",
+          "version": "repo-lines-v1:sha256:8af69a923cbd7de5827d82597d9748b723fad5ca72de56c9b9bc68d3e3323c9d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIzYTE2NTU1YjZkZWFkZDI2MGNhNzJjOTJiZDc0NmY2YjBjOGY2OGJiMTY5ZGFkYzQ1MWI3NjUxNGIyM2JkNjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJiMWIwYWQ5ZDcxMGRmMjNjNzMwMGM3OTMyZTFjMDQzMWQ4NTE5N2JjMTZkYmExMTBlMjRhYWY5YWRmMzJmOTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0ZWYyNGFjODY5ZDMyNzE5N2VjMzZlNzhhNGE4NmYzMjcwMTQxNmQzYTA5N2YyZDQxMTk1ZDNkYjNiZGZkZTAifQ"
+        },
+        {
+          "resource": "repo://pyproject.toml#L31-L75",
+          "version": "repo-lines-v1:sha256:6692c7bb8fa7157ca17b049b87af1bc6bee1c78f23676a565b25961994963f6c:eyJzZWxlY3RlZExpbmVDb3VudCI6NDUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljOWQ2MmE5MDZjNzAwMTU0NTlmMjFhZmJhZDU4YmY2NGNkN2Q1YjM1M2Y4MWQxOTQ4NjgxZWFjMWIzOTY2MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4YzkxNWVkM2IwYjJlNDY2M2MyY2IxOTEwNWY3ZDU3NmQxZWIwZDZmNTVkMzdkMTRiZjUwMjNiYmM0MmNkNzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlMjI0YTRkOWM0YWU2YTBiOGI0ZjliYmU2Yjg1NmNiYTM1YWMwOGVhMWI5ZWY1NTc4ZjllMTEwZDU3ZDgzMmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNiYWIwMzlhMzg0ZDQwMmE1YjJmMjk3M2NlYTg4NTM1ZTU4ZjYwZmU4MDRhNDAwYTQ1NDUwZDA3NGYyNGUzNjUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a27ade7b00614b3b9f6cb0e9a0084fa9",
+      "statement": "The default pytest configuration discovers tests under `tests`, enforces strict registered markers and package coverage, and excludes private and optional cross-framework validation suites from the normal run.",
+      "evidence": [
+        {
+          "resource": "repo://pyproject.toml#L129-L166",
+          "version": "repo-lines-v1:sha256:999e9b8272474bf36273b829499acc37974f2dbe024e6c35250c1c7739a54db0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY5NDE2ZTA5Zjc4YmEzMTZjMDMyNTY4MjEzYjg1NWVlNzU2ZTQxNTY1ZDkxOGYwOTUxOWM4MWZkNjIwZjQwNjAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQxMzU2MjI4YzcyNmJmMmU1Yzc5ZjBmNWU0MzA5NzQwMTgwZWM2MjlhY2ZhNmRiYzk3YmNiM2ZhYWQ3NDJhYmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU3MDIxNWEzNzg5OGE2M2EyNTlmYWUwNTQ2OTYyMzA5ODA1NWJhNjYzOTE5MzQ4NmMzZjc2ODc0YTEyMmQyMWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_e4aa2daa68e84728abfceeef18d0b233",
+      "statement": "A strategy must implement `on_data` and may use `on_start`, `on_prepare`, and `on_end`; preparation receives causal configuration without future feed data, and end-of-data does not trigger automatic liquidation of open positions.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L53-L76",
+          "version": "repo-lines-v1:sha256:3ef653336c8f5422279ce7a1cb8055d353c13663c2399c2caa38c7bfb143bcbe:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkZGM0YjFmYmViNzJlYzlkZTJkNzYyNmZkZTU2MGQ2NmU3YTM0MjUyOGJkOGM3NjA0YjkwMTY5NmIxY2YxYzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2YmZjM2NlMWZlNGI5OWY0MGNiODBiZDgxNzA5MGIwZWVkYzhjYWUyZTU2MDhhZTczMWVlNjhmN2U5MmQxZGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmN2QwMTI5Y2YzYjBmZjkyMDZhZTVmYWUzOGM4MTJjNDJlYzM2OTJjNDA3NTIzOWE3ZmFkNjZkYTQ5ODc5NzUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/strategy.py#L8-L48",
+          "version": "repo-lines-v1:sha256:541d148f6c017c2d310a0cd378d667cb74d7efefc054b08a73866c5d228505ce:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE0NWQzMTJiNGZkZjE3NDg4ODA1ODk5ZmY4ZDhlMzcxZmExOTJiMGE4OGI0ZTdhODRmMTBjOTc5YzFjYjFjYTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlN2M5NTdiY2I0NGZiNjczYzk4YjAwNTBhNzVkMzgwODJkYjgxZDkxOGRlMzEzYTNmMDdjMTIzNTMwNmQ3ZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlkMzdhMzNkMDczYWI4ZGEyOWRjNzRjZTZhODkxMzE4MThhNTJhNWMxNjVkMTZmMzFkOTkxOTk3ZjBlNjZjZjciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_31d3014bf00c4c0ea62fc0c10c01b9e5",
+      "statement": "Engine instances are single-use; the engine owns event and callback ordering, while the broker owns orders, fills, positions, cash, and collaborator state.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/AGENTS.md#L3-L12",
+          "version": "repo-lines-v1:sha256:274a5df0897c903574f7d1964b7298bbb59af41159f3177895df97d0bbd6f3e4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkOTc4Y2E2MWQ3MjE1OTZkOTE5MGRjODNlYWEzZmQ0NmViMmNmN2FlMjc2ODYxMjc4NjQ2MzQ1NTJkYzFmMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyMWNjNjBkNTY1ZWRhNjk1OTQ0MWFkNzVjNGFjZDg5Y2M4YmYxODM1OTU2MjZkZTIxMTgyYjEwMWMwY2ExYmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjllNzNhZDNhMmQ1MjM1ZGExN2M4YWVjMWQwNDJiMDVjMmUxNzEyMTI1ZDdhMzRlZGU1MzExZGNlMGY5NzM1OTkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L53-L76",
+          "version": "repo-lines-v1:sha256:3ef653336c8f5422279ce7a1cb8055d353c13663c2399c2caa38c7bfb143bcbe:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZkZGM0YjFmYmViNzJlYzlkZTJkNzYyNmZkZTU2MGQ2NmU3YTM0MjUyOGJkOGM3NjA0YjkwMTY5NmIxY2YxYzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2YmZjM2NlMWZlNGI5OWY0MGNiODBiZDgxNzA5MGIwZWVkYzhjYWUyZTU2MDhhZTczMWVlNjhmN2U5MmQxZGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmN2QwMTI5Y2YzYjBmZjkyMDZhZTVmYWUzOGM4MTJjNDJlYzM2OTJjNDA3NTIzOWE3ZmFkNjZkYTQ5ODc5NzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6f3c86100cb0412f806ecc19bceaf3bd",
+      "statement": "`run_backtest` is a convenience entry point that accepts price, signal, and context DataFrames or paths, resolves a string configuration preset, constructs `DataFeed` and `Engine`, runs the engine, and returns `BacktestResult`.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L1256-L1354",
+          "version": "repo-lines-v1:sha256:39f6102ebf0f03db8a1a03079d9a18f5f271f3175ce875589c074b4cbfffdaff:eyJzZWxlY3RlZExpbmVDb3VudCI6OTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZiZTIyYmQxYWU5NjcxZmI4ZmExMGIyY2RmOGYxYTkzNmVhM2M0Mzk1YWM2NTI3ZWExNDlhNWIwYTkwOGE2NTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZTgyNjc5OTFkYjkxNTFkN2Y2MDY3NTQ5NDYwNTZhYTRjNjYwNmVjZjgzOGQyYjU2YjM4YmQyNTcyNDRjMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc3NGYyMmNlZDQ3MmViOTY4ZDMxZTljYWE1YmUxZjdhZWM3Mjk1OTJiMDVmMjYyNmRhNmM2MTVmODRiMzBjOGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6355410704044a839c6cf3bc0d444d6a",
+      "statement": "A completed `BacktestResult` exposes fills, completed trades, equity history, and summary metrics for inspection, and open positions remain marked rather than forcibly closed at the end of a run.",
+      "evidence": [
+        {
+          "resource": "repo://docs/getting-started/quickstart.md#L35-L80",
+          "version": "repo-lines-v1:sha256:d70fcdd141e5f27659149dec30e1922e9ecc5c14b892214e156373effa225611:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2MTVjYzhmODUyZDc0YWViYmI2ODZmNzc1MzRmYzAzZmJmMTkwMGM1ZmIxNzg0ZTJiZDJiYjQxMmFjYzdjZTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjZjMwNGExNmI2MTExYzBlOTA2MWZlNGMyNGQwNjVkZGM5ZjgzOTMyZjM5OTYxMDZiZmE4OWZhMTU4ODZjNzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE0YmEwYTc4ZGM2ZDA2N2YwNDhjZGY2OGJjZmYwZDFjZWExNGE2MGFjNzNmM2NmNjMzNTA4MTQ4ZDdlNTVjOWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJkODQ0NzkxM2U3MGRjMDliNTE3NWVjYjA5ZjZmZWM2NGVkNWVkMjQ0NjFkOTMzYjExZTlkMTI5ZjVlZjFkZDcifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L63-L76",
+          "version": "repo-lines-v1:sha256:cc51f22a52d9f10f13d8286c6564dde8e61cef9cd724fd8c9bb24deecc960776:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwZjNlNDA5MWMxYzQyMWU2NjQ3MWMwYWVlYjA1YTBmMjMxZWEzNDdhYWI1NTE1NWM0YjFiYjM2M2FkNzIxZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2OGJiODFlYThkZWEwYThkYjQ5M2NmMzUwMWMwMDFjYmVjYTc1NmMwMmYxMGQwZDI3ZGQxODFlMGJjMWMyNzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmN2QwMTI5Y2YzYjBmZjkyMDZhZTVmYWUzOGM4MTJjNDJlYzM2OTJjNDA3NTIzOWE3ZmFkNjZkYTQ5ODc5NzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_780695f863994767a265718bd3afa4c9",
+      "statement": "Execution timing, fill prices, share handling, commissions, order processing, and related behavior are explicit configuration/profile semantics rather than implicit assumptions about external framework defaults.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L32-L38",
+          "version": "repo-lines-v1:sha256:e319c7e60994447c9a1bdd59023aaad63a0b051a7c374f85516f79f1bb05c0fe:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGIyMzRmODBkZDNjYmE0OGJiYTlhZjE4MDIxZWNlNDI3NWFmZWQ4ZTAzN2ZlOTA2ZTVmYTc2OWVlOGFhZTgxYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZGEyNDlkNWY0NzYzMmQzZDAzMDk0ZWQwZTk2OTNkZDNmMTViODBjZTU2ODI0YzFlYzFjN2M2NTc0NTU3NmI2ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjkyOTNiYWZhODY1NmVlMjI1NTRiNzdjMzk5MWViZTZiMzA4ZWJmYTJhNWNkOTI4MzJlYzQ1YThhOTQzNmQ0NiJ9"
+        },
+        {
+          "resource": "repo://README.md#L137-L178",
+          "version": "repo-lines-v1:sha256:e1d42b14cf1681a98b54ff7f68913c8948af3b544028975aa0a89845d7b0869e:eyJzZWxlY3RlZExpbmVDb3VudCI6NDIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0NDA1YWE0YzU1MGYzZThmYWIxZWI4YjZjMDRhYjdjYTVlNGFjZTYzNmZkMDg3OTBiZWU1NzlmODIwZWI0MzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZhZmJhMDUyN2MzOTUzYzRiNmUwZTViNTczOWJhODM2MTJmODA1M2JjZGM5NDY2NzMwMTkzY2QxZDU5MGI0MDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdmYTU4YmZiNjc5ZGI0ZWEzZDYwMzg2ODRiN2NmZmE5MDlmMDgzMjU3OTQyMGY3N2Q3M2M4ZjBjOTY5YzEzNjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhYWQzYmJiMDZhYjRjMTMxNWU4NzBhOWMyY2YwZGVlMWI5MGExZGNmZDE4ODdhNWMxZWM3ZjBmYzU4M2YyYTkifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8dd13cf1825c4a48a77b32a835c078d3",
+      "statement": "The `examples` strategy and migration programs are demonstrations rather than additions to the public API: they cover state-dependent event-driven strategies and an offline data-to-features-to-backtest-to-diagnostics workflow.",
+      "evidence": [
+        {
+          "resource": "repo://examples/offline_migration.py#L1-L27",
+          "version": "repo-lines-v1:sha256:c53ce761af62ec61461d16d62300520e698fca3e552a0a456eab88a891428e96:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE0NDkzMzA1NjFlMWFiM2FhOTVjZGMzOTQ5OWZlYmVjNjYxYmM2NzFjMDg4MTNhZGE1M2I2ZDJkNmZiNTJjMTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFlM2VlYjlhNWQzNGY1YmVkZmNhMjlkOWU2NTc4OTEzYzdjYmZhMWNjNTBiZDIzMjljNGE0N2FkNDBkMWE4NjIifQ"
+        },
+        {
+          "resource": "repo://examples/stateful_strategies.py#L1-L19",
+          "version": "repo-lines-v1:sha256:3e9f67a229d5d8fd197c07c5689994148f2d717ea16eb94edd68eeb35382baf0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDJjNmNkNWVkYTUzMTIwNGZiMjlmYzg0ZjQzMTYxODUzNjcyMDg3ZTVmYTU0NDA5YTg3N2M5ZmU5ODk1NmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUzODRiZmRiMmRmMzgwYjY1NTdjYzdhNzFkMTY4OTE0MTViY2NhYTg3Njk5NDA2ZTIzNmY3NTJjNjQxNTM4OWYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkyMGE2YTMzOGUzY2QyY2U4YzdmODkyNTk3ZDdmMDJkZjFlNGQ2MDBjMWVjZWQ1NTdkYmVhNzk5YzlmODAzZjYifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:31.122Z"
+  }
+}

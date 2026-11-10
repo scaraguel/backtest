@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:c495c939c4acbbff4afad75c74bfb21e9dc0378c28c3de42c943bb8fd4ae1654",
+  "claims": [
+    {
+      "id": "claim_b3fd40cf47e848f9bf4fcf1bd9d357c0",
+      "statement": "Broker is the ownership and wiring boundary for canonical account, market, order, risk, and execution-journal state; its focused order, execution, fill, and portfolio collaborators share references to those state objects, and Broker.cash delegates to AccountState.cash.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L203-L340",
+          "version": "repo-lines-v1:sha256:c8d754a503ca2408beb1672df2324d1021f6eb174c60a6a351475d7148abe369:eyJzZWxlY3RlZExpbmVDb3VudCI6MTM4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI2YWNhNWYyMzY3YmFiYzljMjkxMzJhMzg4ODhlNTNkNmQwMDI4NTNjMTVhODFlNjNmOTY4OTQ4ZTZkYzJkZDY3IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwYzZlZWQ2ZDhkMDM4OWVlNzUwODdkODNiY2RhNDM3YThlMzI3Yjg0NmI0MTU2NTY2MjJmMzdhMzFiYTQ1NzExIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmNWQxOTZmNmIwM2JlYTgxOTU4MmU0YTlhZDczZmZiZGZiZjUzNjZjMGQ3ODJlYjlkOWFkMWE2NDg5MWU2Mjk2IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIzYjE3NmIzMGY2M2U2ODE5NzYyNDZmNGFhOTJlZTBkMzU2NWQ0Yzg5YmM1ZDQ3NWFiODIxMDIzMGE3YWYyNmUwIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L532-L545",
+          "version": "repo-lines-v1:sha256:8cd9040641021c57014bc7f62305b4b0a59333f03de18814518aa3a13763bfa3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYzZDAwY2YyNzA5NjRkNDRhMTNkZmFjODc1MmIwOWZjYzQzNWIwZjE5YjMxNmFiY2Y4MWE3YWE2NGJiMTIyZDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1OTA1ZDIwYmY0N2FiYmE0OTRkMDljYjNhYTE0OGQ2YjFhYmZlN2M5M2MyMjE1OWFkMDMzZDU2NzQ3ZjNmNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJiZTdjNTNhMTBiY2I4ZTQzNDZmZjI2YTg2MzIzZjA0ODcwZWViZGZiMDBlODgyMTFjN2JjZmQ2ZmQ4ZmRiMGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI3ZDljMWVlZDQ3ZjM0Y2MxZjhlMDdhNjkzMDMzNTkzZmU0NzkxZWE0Mjk3ZmE4MDYxYjg2YWY1OGZmYWFhMDQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/fill_executor.py#L104-L139",
+          "version": "repo-lines-v1:sha256:9935cf21daaa3ca860dd81e11eb9e9ae9bb51e16bde9608ba4fcadf09992face:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4MjEyZjI3ODYyMjcyZDE1OWM0NDE1NjY1ODhlMjU4MGIzOTNmY2ZjZTg2NTgyOWMyZWQ2Y2I0M2VlNGRiYjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNjMmNmNmFkZWVkMjgyNmEyOWI3YmRlY2EzNzg1N2EwODRhMGU5NGYyYTg0YTk3M2EyZmU1ZTZiZDljM2E5ODYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxMjU0N2U5OTMxMjY4NTc3Y2U2NWU1NWQzMGM2NTY2NDFiMmZkMjAxMDljNzc2NDAxOGU0N2UxNDBiY2FkMWIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2NWQ5NmQ3MmUzM2NlNzc3ZGRmZDQ0NDNmMGI0ZWJiMjdhMWViMTcyMWJiYmJhNDQwOGY5YTNlNWExNGM3YjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0597fb7443f64152a4d2ced32c34ddf9",
+      "statement": "Order submission validates request shape, records the Order in the all-orders history before later policy rejection, and supports distinct immediate-fill, next-bar precheck, buying-power-reservation, and ordinary queueing paths.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/core/order_book.py#L197-L300",
+          "version": "repo-lines-v1:sha256:bdaa31356f9d1da39208d16fca5f544744cb03157bbc7f3c7d2a8ab1da7f4e38:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA0LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4NzliMWY4N2VkM2U5ZGY3NjQ2YjdiMTAzMzY1YTVjMDM0MjY3YTY4YzVkMjRhNmIwNWUzM2M3YzNhYzYwYTNjIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI1MjNkNzIwMjg3YjQ4MTIzNWZmOGI3Y2E4ZTM3NDZiZDMxNjA2YmU2YWEwMzBmMTU3YzFjZGZlNWViZTZjMTFkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIyYTU5NDFmOGU1Y2VkOGIyOGE4OTk4ZDE1ZDZhNTQyYTk5MzRmMTc3NTM4NDg2NDk4YjdlZjhjYzAyN2YxMTc4IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI2ZjA4OGU2MzQyYmM0ZjkwYzhiZmFlMGI4NDdhNThiYmY4MTE3YzA1YjhjZGM3ZjVjYjNkNjBkYzgwOWZlMDhmIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/order_book.py#L552-L633",
+          "version": "repo-lines-v1:sha256:30d30b963793954925801119260a011b1c0adea8541aef36f0c3a761a08bc6f2:eyJzZWxlY3RlZExpbmVDb3VudCI6ODIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1OTMxMjIzNWY2ZjM1Yjc4NWZiYTM2NTVlYzZkNTQzNzgwOTJkZjQwODExMWNhOTI5YWFiZjg0ODYwM2E2Y2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjYmZkYmMzZjhjOGYwMjk4NzMxZWM3NDk5NjkzYjNkZmQ0NTEwOTgzNzlhZDdmZmZmZmI5ZDZmMDhiZjI2NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhOTJlMmNlNGQxN2NlMGNiMmVjNDYwOTIwOWY3NWZjYmQwOGE4ZDdlZDhiNjA0NDk3NzM4MmE2ZWI2ZDEzOTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFmZTE3Y2FkZWJiN2Q3OWIwMWRmNjViOTdjZTZhMTBiNTI3MjgxMTRkYjY4MjE3NGViNjJlZDJkNTU5MGQ4YmUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/order_book.py#L81-L195",
+          "version": "repo-lines-v1:sha256:ef50e63e1b89c389a5eba1167eaae76ee6b1dabe6f4f944609488dc4903d5cb1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3ZjUwZjUxMDZlOTk4OTBmZjJlNTNhYWMyOTY3ZWRmMTQxYTBjMzc5MWIxYzZmYmEyMDZmNmVjOTk1YTFkOWRhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwYzY0NTk2Y2E3YzNlYmUzMjkyNWVkN2Q0Mzc5MTM0MmRmMWI0OWM1NTkxZDhlMzUwODlmZjFkNDdjNTJkNmE4IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJjZGIzNDhmYzE0NmYyZmZlYjk4M2RiMjlmNjRiZTJmYWI3MWU2NDA4OWU1Mzg0ZTg2YzY0ZjA2YTE1NWUwZjdiIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkMGQxMTI5MDA0ZDlhMDIyNTM0ZGRhNDgzZmFmNDc4NDhiZjgyYjllZDBkMTc4ZmUxOTRlYWIxMjJmMzI1NGRlIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_7556757ee6474a39850dbb7018f4107b",
+      "statement": "LEAN-style buying-power reservation commits shadow cash and positions only for accepted orders, whereas the Backtrader-style next-bar submission precheck intentionally retains sequential shadow effects even for rejected orders.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/core/order_book.py#L501-L552",
+          "version": "repo-lines-v1:sha256:bb8a47c0e2083e1d357c8d7e7863cbec57a38f82f6c09eff7a17f02af15e45f1:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwZmUyNDVkZGY3Y2ZlNDVhZTc1MDM1MDQyM2FhOWNjNmYwZTI1M2MzNWNlYThiZDFlZjQ2N2I0OTVkZTA3ZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1OTMxMjIzNWY2ZjM1Yjc4NWZiYTM2NTVlYzZkNTQzNzgwOTJkZjQwODExMWNhOTI5YWFiZjg0ODYwM2E2Y2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYyYTBhMWU1YWE3ZmVlMjM5OWMyODYxZjE2MGJkMjU3ZDY3ZTQ3NDIzNTcxNmQzYmM0NTg1YTIyNjc3MmFhNDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZkZDIyZjlkOWNlNTNkNjQ2MGNmYzVlOGY2Y2JjYjQ1NzRiNmU1ZDZlZmFiODkzZDYyMTE3ZTFkMjI3YWIyMTYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/order_book.py#L560-L633",
+          "version": "repo-lines-v1:sha256:9a120294a7a179054eb4bf904e0676401dac8815fe5ef9897b5239686a3d0cb7:eyJzZWxlY3RlZExpbmVDb3VudCI6NzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2NzBjYjhkZTZmOTRhMmY4OGEwMzdjNWM1MjY5MTYxNmQwYzM1ZGRkOTQ1ZDBiNDVkMGViZTBiNDI5ZDQ3OGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNjYmZkYmMzZjhjOGYwMjk4NzMxZWM3NDk5NjkzYjNkZmQ0NTEwOTgzNzlhZDdmZmZmZmI5ZDZmMDhiZjI2NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNjOWZiMjY4OWEzNmY0ZDA5OTZiMjJlYjBjMjdkNTU2N2NlYWY2Y2Y4NzYxNDk4NjYwMmNlNjRjYTExY2JjNzMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFmZTE3Y2FkZWJiN2Q3OWIwMWRmNjViOTdjZTZhMTBiNTI3MjgxMTRkYjY4MjE3NGViNjJlZDJkNTU5MGQ4YmUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_07851ec8690744edbdd2d676e73a10d9",
+      "statement": "Execution eligibility and fill sequence are deterministic and configuration-dependent: ExecutionEngine filters pending orders by temporal and order scopes, then applies exit-first, sequential, priority, or FIFO ordering; exit-first reclassifies exits at fill time after earlier fills may have changed the position.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/core/execution_engine.py#L34-L79",
+          "version": "repo-lines-v1:sha256:343364e7048f65a0f9c4347de93814e9eb2f8cfa59bdb94b96e8d8dbf33f965f:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYzOTQ1MjhkYTdkNGQ4ZGIyZjZkZjgyNDJiOTc0MmQ0NDJhMjg2MTM2OTI3Yjg2NTRiNWZkNDFlYzgxODM2ZTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwOTI1NTRhYWY4Mzc4MzU5OGVkNTJmYWY4NGZkNmI1NzdlZGVjNTExZWI3M2E1NjM5OTI2YzIzNTE1YWVkMjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjYxYjQ5NTZjYjEwMDk4ZDgxZWI0ZGFiYzhjZDNmMjc1NWFlNzYwNGIzMjJmZDhhNDkxODJjMjgxYzg1ZDJiM2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkYWRkNjhlYTY2ZjA1MmU5ZWE3NDBiYjEyZmY2NTc2NmMwZTliNmZiNWQwNTRmNDM0ZTFmMzYyNmYwOTI2MmUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/execution_engine.py#L681-L714",
+          "version": "repo-lines-v1:sha256:1abd67216ac025ec351266da6a32f68eee16fdf4842694d9c84d1a77a46f715e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkOGE5ZTljMzI1MjgyMGM2NWE4MTY1MjBiOGRiNDkzMjI4MDg0OWVjOGM3ZDJlYjYyNzJhZmRmZWJlMDU5YzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExM2EwZDE4ODYwOTY5ZmM1Njg3NmJjMGZkNTY4NGQwM2NlY2ZkOWE3ZGQ0YmFjMmEzM2NmOGUzYjRhY2Q3M2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE1NWQ4OTZmYjg5NGZmNTllNDA5ZThlNGExZTgxZmRmZTJiZjBhNGU3NTY4OTk4MjYxZTFhMmEwMjhiYThkODIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/execution_engine.py#L763-L839",
+          "version": "repo-lines-v1:sha256:8aed8e77ac15a92c086032a820d583b36be7ead48395ad23c19e4cedaf8c419e:eyJzZWxlY3RlZExpbmVDb3VudCI6NzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5ODk3MTgyZGVmMmM0NDZhMmIzMDBjY2FmNWEwZGExMmE1YjE4M2Y0ZDI1MmQ0MzBkZTMwZDAwYjJhNGIzNGUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFlOGRmZGU1ZWFkZjUyNDUwZGU3YjlmM2NhYmZjMjMwOTk4MjI0YjhhMzZmYWQyOWQ5MTZiNGJkYTEwY2Q3ZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxOTYyMTkxYjE5NWJiNWJkMDIxMDg2MjllNGFiMGM2MWNjOWJiMmM2MTA5Nzk0NGM4ZmM5MDQ2MjMzYWQ4MzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/execution_engine.py#L86-L157",
+          "version": "repo-lines-v1:sha256:a9cea463cb7bb9b8a9bf4fa33207520c823ee8736ab6abc9f0a008d351c4aa4e:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5N2I0N2JiODFjZTkzY2JhNjdhZmMwODY5OGE4MGNmYTA5M2E4NjY3ZTljOWY5NjUzMzc4MThkNjU3OGQxODUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MzcyMWRkYTZjMmIxZTdiNzFkY2M5Yzc4MWQ3MjNhZjlmMGUwZjJhZjczYjI5NjMyODdiOGE5N2RhNGJlZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ4N2ZmNWFhYjVlNzVjN2Y4ZDI5MjYxODRhYWI2MGY1MWU2NWQxYmJhNmQ3NmVmOTA3M2M3MzRmNmU5Mzg2ZGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI3ZWQyMGU3NTU1YjI1M2Q2MTE1YTdkYzViY2Y5ZmY0MWJhODQ4YzNjYTNmNDcwYmUxNjI0NDcyNDljMWMyNjYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d7c626b62a8246169614cb5ec04525a3",
+      "statement": "FillEngine centralizes source-price selection and market, limit, stop, stop-limit, and trailing-stop trigger semantics, including stop gap-through behavior and conditional-order modes.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/core/fill_engine.py#L216-L250",
+          "version": "repo-lines-v1:sha256:b1612124523a3355b9242293a54255fae41a770eaaca9fbe621ac1593a8b9dc2:eyJzZWxlY3RlZExpbmVDb3VudCI6MzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmMTFlYTExZWYwMWUyZTk2OWU1ZjRjNjI3MmYzZGI2NmRlNWY4ZTU0ZDFjYWFhNGFmZWYyZDIwYmJhMmVmMjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBhMDIzNjQwN2NkYjhkMzY5NzFlYzAzZDNkNTQ0MzI1ODY4NzIyNzhhZjc1NjI0YjQxZTJhYzQ0YmNlYzNhNTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg1YTg4OGNlOWVmODI5NWE2OGE4OTA3NmMyZDRiNDliNzVjMTcxOGZhN2U2MWZhNjI5MjMyMWE4MTFmNzQ1OGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE1ODVmYjQzMTA5MjQxMWY5YWIzMDE5NmEwOTFhMjE5NjQ1NWU5MzNmNzRhMjJiNDM4ODI4YzdkMjdmNzlmZDMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/fill_engine.py#L269-L415",
+          "version": "repo-lines-v1:sha256:f098c7070822493112d266f5867b3fd972a854daf9dcbfc818ed2b096418b6f4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJiYjVjY2ExMDE3YjRkNDNiYjgwNDE3ZTVjMjU5ODdlMDc0ZTZhMzkyM2RkM2RjYzE5YmMwOWUwMmU5MmJhNGIyIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIyYjcxMDEzMGUzNDZlYWIyM2Y0ZWJiNDBjNDVkY2U4ZmY3YjFlNmUzNjc4NTA5ODBhMThkNjYwYTUwMmMyYjRiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI1ZTkzNDYyMzBiNmU3ODNiMzM1MjhiMTlmMGI3NzZkNzk0OTI0YTBhNTJmYTk1M2QwMTI1NzBlYjJmYWJiM2U2IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJiZDIxNjZhMmNkMWMwOGIxZWYzMGNhOWZkN2I2YjM0M2M1OTA5ZWI1NzAxODVlM2M5OWY3ODRhZDdkNzk3MjBiIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_678e9116549244cd83e1fa7d964243a7",
+      "statement": "Gatekeeper keeps account validation separate from mutation: it treats pure reductions as capital-releasing, delegates new positions, additions, and reversals to AccountPolicy, includes commission in validation, and returns stable rejection classifications for account restriction, insufficient cash, or insufficient buying power.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/accounting/gatekeeper.py#L225-L243",
+          "version": "repo-lines-v1:sha256:9d1aa9362fdba86e0ba8bbe0410dd10eb24f33a8792a35cb1ad573f4fc8f0e47:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyZGYxZGFmMmE4MWEyNmZhYjNlYjhmNTYwM2VmNTI2MDExNWViMGY4MmMzNTI2YTQxNjlkNTlmZDAxMGI4OTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgyY2U3ODA0OTU2MDcwZjY5ODYwYmNlMjczODQxMDQ4OWNjMjM4ZTQ3Mzc0ZWExZmMyMWRlYWZhYzhmZmJkMTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFhNDYxN2QxNDQ2ZDQwYWMxZmY2YjQwZDQyNjcwMTM0Nzg2N2VhMDQ0ZTE4NTMyNGQ2NDkxZWYyZDQ0NjkxMmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc5YjIxMDBiMTY5MDllOWE5ZGViNWJjODQxZjNiZWQ2MmQxYmM2NjUwNDUyOWM0ZDllZjRmNzgzNzU2ODQyNzEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/accounting/gatekeeper.py#L61-L223",
+          "version": "repo-lines-v1:sha256:1c754171f95efd757e1ed47b4fb790d39d07af1932385b64b2134f89e6ce3122:eyJzZWxlY3RlZExpbmVDb3VudCI6MTYzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyZTdkODAwNDYwNDQ4ZWY4N2NmYzkyN2M1ZjQ1MzFlZTZkNjVlMzhlOTEzODgxODk2YWIzNmY4OGYyZWM5MjFlIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3MGE4YzM1ZjYxOWI4ZjdkZmU4MDllZDY4YmI3ZjVmYzU2MGJiM2U0MmE0OWY3ZWVjN2MyZjM3N2MwOTU3NTkwIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIxYTRjZjc5YzUzY2FhYjQzZGY1ZjIxODI4Y2Q2NzQyNjkzYzliNTdlYjAwOTU3NGI0NDljZGVhZGY1YTZhMGM2In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_7844c901ce0a40cea8a139cc3be4e6dc",
+      "statement": "UnifiedAccountPolicy parameterizes cash, short-enabled non-levered, and leveraged margin behavior, supports locked or reserved short proceeds, and calculates margin from per-asset percentage schedules, fixed per-contract schedules, or account-wide rates.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/accounting/policy.py#L208-L290",
+          "version": "repo-lines-v1:sha256:b7d9651206c5d1b55171ed1d5716785aba9361f4a25ac4914f9c5fc78b8cf1a6:eyJzZWxlY3RlZExpbmVDb3VudCI6ODMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2ODgzZjU2M2Y3MTBkNTlkNjk0MTk1YmYxNmI0N2Y5N2M4NjRlZTQ2Y2ViMDZmZGNkNWNkMTdhYjUzZjUyNjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI2MTk5NjQ0MTllMWM2NzhhOWNhYzJlMDQ3ZDVjNDhjNzRmMTk3YzUzNDY1ODdmMDhlNGUzNTQ3ZjI3YTdlNGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkY2JhYjFkYzJlNGQ0N2VmNWYxMTE0NmMxMTQ1MzE5YzdiYjU3YzhiZjI3NzQzZWI5NGEzYTFhNjdkNTUzOTgifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/accounting/policy.py#L355-L467",
+          "version": "repo-lines-v1:sha256:42687978bcd5f185ed410e07ab40a3a82f1ba7bddeb6f19671d9d1fd6ad274be:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3YjhkNTg0MTQ3OTU3ZTFmZTQ3YjM1NmVjZjZlMjk4YTIzMzAwNTQxMDhmZTIxYmFhMjRmM2FkNzE5ZjFlOGMzIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI5MWY0MDIxZGZjMjJjNTAwYTMxMTk1ZjBhYmJmNzVlMTI4ZjFmOGFmZjVhYzhiOTI3ZGM1YWUxNGNjNzZiMmMyIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI0ODI0ZTFkNTliNTQ3NjI4NWM4YTRkNjc0MGRlYTExOGU4ZWZjMzE1ZmNlODIyYzIxN2Y0MDU0MjQyZTk5MmRkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI3M2FkOGJhMmUyYjdiMjBlNzUwMzA2Y2FiY2JlYzhjMDgzYTk0YTYxOTQ3MzExM2Y2MDlkOWRjZTA5M2I0NDAxIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_31a06e126187460095adbb1a36543826",
+      "statement": "FillExecutor validates affordability again at the final impact- and slippage-adjusted execution price, can resize partial fills at that final cost, and isolates pre-trade quotes from mutable commission, slippage, and impact model state before committing actual costs.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/execution/fill_executor.py#L159-L256",
+          "version": "repo-lines-v1:sha256:5a16241ea7ae88eec1cbd80d409b5a5fa2cce70b8daa39c8c93115cdc6188eab:eyJzZWxlY3RlZExpbmVDb3VudCI6OTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc2ZDUwZWIxZWNiMGNmYmI5NzQyZDBjMTA1M2FhNmFjMjlkM2RkOGE4MzEzZjBmOGM2NDZiYzA4ZDE2NjFlMTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJlMGFiNWE5MjJjOWU2OWY4OTQ3MGYzMWY0ZGQ3MzhhOTAyZDk3ZTExOGUxYmExZmFkNDY3MDJmMzk0MDljZjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBlMjk3MGRjODQ4MWRkYWVjNGNmYjFhOGIyZjIzYjQ2ZDNiNGNiMzhiNjUyNTc3MDliNzFjMTQ2ZGYxZjc5MGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU3NWQzOGFmMDVkZjU5NDk4OWEzNThkYmNiMjcyNTY1ZTY5MDYzNzI1YzY5NzIxYzE1Y2NiNTk3YjgxN2U0YzgifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/fill_executor.py#L477-L571",
+          "version": "repo-lines-v1:sha256:deb0743ce62c227dbe473389e55ad59bc73b28a5d139b90608740fa870464e13:eyJzZWxlY3RlZExpbmVDb3VudCI6OTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyZjJkMGMwOTYwNDIyY2M3OTFmZjE4MTFhYmQyZTczNDZkZWNhOWE1MTVmOTM1Zjg1Nzk4MjViN2ZjNWZjMTMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkZmFiZGUzMTUzZWIyMDZkM2FlOTlhNzIxYjY0ODU5NzIyNzNmZjZmODJjMWZlMDAyZDk0NTQwYWFmYzI4YjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRmYzQ1MWZkZDE3MDUxZWFjMTA0NWUxOWIxODQ3ZWNhMTFlZTQwYjk5MDI1ZGU3ZjIxMzUwYmI3MjE3NDZhM2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI5NGI4Y2M3OGJjMjgwNWZkM2U0ZDFiODBkNzIyNTZiYjc4MmUyYzZmODY4MWIxOTgxYjVmYjliNWQ3N2JhNWUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/models.py#L212-L277",
+          "version": "repo-lines-v1:sha256:a5adcf0ef5b176e53684e2c3c80083fdf4f90cd984b731a877545285b3062a5e:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc3MTg2YTBkMjE3MjI3MzY1MmQ4NDZjMjQ3YjZhNThkMmM4NjBmYmQ5MjEzNWVkNTE4MjFiNDhjZTgyMWY5NzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRmMmJkZmUxNjYxMWQzOGEwYjMyNjg2ODBmNmVmNWIzNTU2MTUxZmE4ODVjMmEyODdhYTNlODMzMDAzZjY1MDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ2ZWMzZjE1MWRiYTM0NmFjM2M5YjM1ODRiODhlYjM2NGNkYmQ4OTU1MDIwMDI4ZjY1YTQxZDExNTM4ODg3NDYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE5NTQwNjdmYzAyMzcyM2VhZTJjOTMyNjg1MDdmYmI3ZjkyOThkNDg2MmEwNGNiMmIzNWNkN2I1MTA2ZGY4ODkifQ"
+        },
+        {
+          "resource": "repo://tests/test_final_execution_affordability.py#L65-L166",
+          "version": "repo-lines-v1:sha256:10dcf6158ec74f044a51b87d796239e395da572e12c887da163d755d4d72d9cb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI0NWU4MjY3OTkxZGI5MTUxZDdmNjA2NzU0OTQ2MDU2YWE0YzY2MDZlY2Y4MzhkMmI1NmIzOGJkMjU3MjQ0YzJlIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJiNDgwZmQ5MGI3ODFiNTIyMDQ0N2MwODA1NTI0MmMzNjA5ZjYxNTc5YzljMTk4OGI3NTBmMDFhMDcyNjFmMTU3IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIyMWIzMDk1NWViOTIzOGNhYjdkNTE2ZGYxMjI0NTllZmFjZTFkYjZmOGVhOWY1ZDVmN2Q5NDQ1OWVhNzFhOTQ5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_954fd21772734a9aae975d4a622a2668",
+      "statement": "A wholly rejected order remains observable with a stable rejection code but produces no fill and no portfolio mutation; public results distinguish no submissions from all submissions rejected and preserve rejected orders through artifacts.",
+      "evidence": [
+        {
+          "resource": "repo://tests/test_final_execution_affordability.py#L65-L75",
+          "version": "repo-lines-v1:sha256:ab50c5cd07aca65c8afcd3ffdbae4e518ab17a76724cbdd610a905609a694058:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZTgyNjc5OTFkYjkxNTFkN2Y2MDY3NTQ5NDYwNTZhYTRjNjYwNmVjZjgzOGQyYjU2YjM4YmQyNTcyNDRjMmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIxYjMwOTU1ZWI5MjM4Y2FiN2Q1MTZkZjEyMjQ1OWVmYWNlMWRiNmY4ZWE5ZjVkNWY3ZDk0NDU5ZWE3MWE5NDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEyZjVmNDBmZjVlMWFhOTU0MzExNGE0YmUwZWYyZjM5MGJkYjg4M2M5ZTk1MTUwZWE2NjAwNDlhMWM1ODU0MDYifQ"
+        },
+        {
+          "resource": "repo://tests/test_rejected_order_results.py#L161-L193",
+          "version": "repo-lines-v1:sha256:b36e4c9a84a0a429cc012a225948024b858e793242bb9339d219fa25ca465e4a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5ZTFkMjVkYjFiMTU1NjMxYzNmMzYyYjAzODBiM2JiNTVlMmJlYjMzMDVhZDZmZWUwYWQwNGNkZWRkNzA1YTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM0YmJiOTI4NDMxMDVmYjBhZmU3Zjc3Y2Q1MDcxMmY1OWJkNDMzOTRkOTUxYzA4OWVmODIyYzhkYmRjNzgzZjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQzMmRlYWMxOWViMDM2Yzc5ZmUyYzNjNWM2Y2U5MDY4MmIyMGU2ZjVjZGE5ZjRmMDJjMmVhMjIzODk2YWMzMmEifQ"
+        },
+        {
+          "resource": "repo://tests/test_rejected_order_results.py#L88-L159",
+          "version": "repo-lines-v1:sha256:8994c0b3562b0dc349feb1c5606d7ed3142841e31a714bd8bdd5d4cdf9678199:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxNWI1MmMzNGM0N2RlNTIyYWQxNzA5NjQ2ZmQ4YTgxOWUxNzZiZjM2Nzg0MWJkODk3MTA0YjAyZWZmODI2YzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliMGM0NDcxZjkzNjUyOWRjYTU4MjI3NTg1ODBmZTQ0ZmJlMGQ1ZmFlNjEwZmJkOWQzYzk0Mjk2MmU1ZmFlYmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZhMzI4ZmRjYjA3MWI5YTkyYjExNDFhZjVmMzhhN2UyZTcyMTA3MDZmYjZiNjg4ZmM1ZTdjMTI3M2I3MmE2NDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyYjJlOGM0M2JjZmY0YzFhNjBmOWE5NWRiNjViODQxNjZlNzdmMGZiODgxOWVjZDcwZjAwZGM4ODc5ZGZkMzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a581d3fb96dc4cedb9187ebdf644796d",
+      "statement": "On an accepted fill, FillExecutor owns the coordinated commit of fill and order state, position create/close/flip/scale behavior, commission allocation, cash or futures-variation accounting, settlement holds, and optional after-fill snapshots.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/execution/fill_executor.py#L257-L444",
+          "version": "repo-lines-v1:sha256:8860398f6ff214a6c6f825f784ca296630bfc20a7f5fd04892cebb35b558f648:eyJzZWxlY3RlZExpbmVDb3VudCI6MTg4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4Y2MyMmJmNjQ2YTdhYmQ2ODkxNjllMGMyNWM3NjA3ZTc4NzE0MjE5MzllZDBkNGY2M2EyNmM2ODFlN2JmNTMzIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJhOTdiNDdiYjgxY2U5M2NiYTY3YWZjMDg2OThhODBjZmEwOTNhODY2N2U5YzlmOTY1MzM3ODE4ZDY1NzhkMTg1IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIyMmY1NGQ4OGQwNGM0YzUxMGE3ZjYxZGFiMzEzYThlODUwZWIxMWQwMWU0NWVkMTE4ZmQ1YTU2ZWE3ZWZmYjQ4IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIwZDNkNzRlNDA5ZTdlMzRmM2ZjZTljNjdhYTJlZjJlM2IxYTgzY2Q5M2IwMWUxOWVmOTMzNmMyNDVkZmMwZmQ3In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/fill_executor.py#L756-L819",
+          "version": "repo-lines-v1:sha256:b8511b2c033042730f9e2a1c163c836affc1b02e3d40d5d2c83856e4a9ac57dd:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwNGEzNGJmOWZlMDg3MGVhNTM4NTc5NzU3OWNhMjE0NzIzMzRjOGUxNGJhMzc3M2MxY2M5YmM0N2Q4M2NkOTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE5N2I0N2JiODFjZTkzY2JhNjdhZmMwODY5OGE4MGNmYTA5M2E4NjY3ZTljOWY5NjUzMzc4MThkNjU3OGQxODUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZjMzhkNDU1NGNlZWY3N2NiYTUxYWJkODE5NmY5OTg1NjNiNWUwNTEwZWU0ZTM0ZTNiMWUwMzRhOTc0YzMzMDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE3YjM3NWUyODNhNmQ3N2Y4ZTJmNjdlN2EyYjc4M2NiZjJkNTBhM2YyM2JjZmM4NDViNjkzZjQ5OTdjYzQ0OWYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/execution/fill_executor.py#L903-L1199",
+          "version": "repo-lines-v1:sha256:2516ef2efbef8588bf24e88e415a2fa46e8b830d8fb298a8f40869e57711067f:eyJzZWxlY3RlZExpbmVDb3VudCI6Mjk3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJmYjg4MDE2ZTlkYzBiOWFlZmJkZGQyM2Q5MDdlOTQ4ZjUyNzUxYWMyNjJjMjQwYmQ1NTllYWViNTBiMTk0MmQ0IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJjNjNkNzQzMjQ3NjUwNTZjODA1YTQxMGVlMGNhMTFmNjYzNjJkYTA0MWJjMjNhZGRmNTY2ZTM3NzExYWM2NmJlIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIzOTJlYzAyNGM1YzhjYzQ3NTIyYWFkN2ZjYjA2N2ZjZjFjNWRhMWM0YzQwNjkxMDkyOTMzYzA4NGMwMmVkY2U5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_9814c287906846f1b0e2acdfd6af8e4a",
+      "statement": "PortfolioLedger is a read model over canonical account and market state that applies mark fallbacks and derives equity, cash, exposures, holdings, corporate receivables, and futures margin and variation details for Broker observations.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L595-L646",
+          "version": "repo-lines-v1:sha256:bfe9b62b09aacdd1de9019e9474a656e005e232c1b3c3457c0aad7dc27a1adf9:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBiY2IxNjExZDI0ODdjN2JjZTBiMzBmMjM2Zjk5MjA4ZTlmNGUyMmFmYTYyMTEyNWM3ZjU1MzllZmRhNDE4MTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZmZTk3NmY4MTNjZWZjNTU2OTBkZDhkN2UwZTdmYmVjYjcxZjc4NWFiOTBhYWE4MTEyYzcyNjEyNmUzNTVjMTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2OWI3NmUzYmYxNjAxYTBmZDZlODI5NTM2YmEyODhiZGQ4YjZkZDJmOWUxODI3OTI4MTZjMzJkNmZhNGIzYTMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY1OWNmYzhjOTk1ZDYzNDA2Yzg0ZjBhOTQ1ODU3ZWRlOGQ4Y2Y1M2ZlMmYyNTgyMjNmMTIwZTA0ODkwYTAwYjgifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/core/portfolio_ledger.py#L25-L139",
+          "version": "repo-lines-v1:sha256:9327e70fbc17d18f6dce3459f0f055e7fe30dd267f05618a50458ad533b2dfba:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI2YzRmNjkzZDlmZmZiOGYxN2ExYmFlYWIyNjg1ZjgwZThjNWQwNTZlOTJiZTdmMTAwNjY4ZGQ0MjRmOTVkYWMwIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIxMGM2N2M2Y2E5NGRiYzc0NDZiYzgxOWZiYWU3ZWQ0OTVhZGE0Y2QwM2NkYzdhYmM1NDUzNmE4OTM0Nzk5NGU0IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI0YWY2NDQwYTY1ZGJiNmJjZGM1MGVjNmJkMDg2MmEwNDAzNjNhNTRlMmFiMWExODcwMWIxNjcyYmIxZDZmMDFhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIzZDU1Y2EyOThkYTVhNTEzNDI0OWI3ZDg4OTM5NDc4ODFiOThjY2IzMjQ3NWQxZTVlZDg5NGI4MmZkZDAwMzAxIn0"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:31.122Z"
+  }
+}

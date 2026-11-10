@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:dec8bb2bc88facc1bee921dc21fb33594212366cecca4d22b97c065aae3cd4cf",
+  "claims": [
+    {
+      "id": "claim_d173b8f0f8ff4554ad8904491543dcfb",
+      "statement": "Engine deep-copies the supplied BacktestConfig, merges DataFeed FeedSpec metadata into the copy, builds the broker from that effective configuration, and BacktestResult stores a further copy of the effective configuration for both empty and non-empty runs.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L1010-L1040",
+          "version": "repo-lines-v1:sha256:38a7794d1bcaec721dc521a133c06f22b39d069fd29fece5a46169dc92777df0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxNTUyNDJlYzAwZGZiMWFkMTMzNTcxYWVkMzAwN2I2YTlkZmY4NTU1ZjgxOGQ2NTM3ZjgxNWU5MjhlY2U2MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5Mjc5NDcyMDc5YzE2MDZmYzU2ODAxMGIyOTg3YjVkNDM4NzIwNjJjNTRjZDNlMjVmZjM1ODg5M2E4ZjRmZDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA2M2Y4YWU4NzIxNDEwZTMzMDhhYTI1MzU3ODk5NWYzMGM1ZmFhZTEyYmEwMTVmNGExMzg5NDYyZDhlYmFjZGYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L1162-L1181",
+          "version": "repo-lines-v1:sha256:4bcd027d99262fd7fbf7e4b25b44f8472788c1d6a3bc4e5d9d8c67b5594f4211:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxZWZlNTcxYmNmNTQzZjc2YWUzZjE3YmQ5NWIwN2JiYTVhN2QwYzYxNDMyNzdmZTJlNmVjZGRlN2I2MDkyMzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM4MTk3MWEzYWQ1YjE4NDRhYzU5MmFjZjAxYzAwYjk0OTQ1ZTFhMDM2YWQ0ODhjMDZmMDM4Njc1YWYyMTdiZjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2NzhhYzQwZGRmY2ZmZjE3NWE5MTBlODU3MTAxMWVhMjVjOTAwMDhiYTliZGQ4MWRiNDI4NmY2Y2RlNzk2NTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQyNDAzZTU1NjlmNzBjYTdkYmEzYWFmYWE3MDc4ODEyNTQ2NWQ2ODBlOTM3OGExZjljZjY3Njg2YWQ2YjIxZWMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L133-L158",
+          "version": "repo-lines-v1:sha256:4daff82619ea40ffd7d9b1d3985088f4a1c92e904d81b73a99fe3bae9544a25f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlMmVhOTUwZDIyOGZhNDdiZDExY2U3ZjA3ZDQ3MDIxNjVkOTA4MGQwZDQxN2MxYjA2YzFhNjg2YTE5ZmNlYzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkxZmQyN2I1Zjc3ZWYzNWU1YzQxNDQyYTc5NzBlYzJhNWNkZjUxNmJjMjBiMDQxYzdjOTVkNGY0MjM1NjZkODgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiN2YwYjNmMDIxZmJiNjFjMWJhZDg5MWI3MjcyMjdmMmExNTQzYzM3ZjI1ZTc3ZThjMzBmYmE4MzNmZjRlNmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE2YjJiOTVmNGFhOWVlYzhiMjA1MDAxYjQ2NDE3YzE1NTExYzc0Zjk4OTI1ZmVjMGM3OTM0OWY2ODFhZGIxNzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_973601c9c4c6414fa4a55aa38d572f6a",
+      "statement": "Feed metadata resolution preserves explicitly supplied runtime timezone and data frequency, gives a config-owned FeedSpec precedence over the input feed while allowing undeclared version-2 fields to inherit, and exposes resolved calendar, timezone, frequency, session boundary, and timestamp semantics without mutating the caller config.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L831-L923",
+          "version": "repo-lines-v1:sha256:d64c1c24a694bb4742ae14173f1baecf5a4b499e680f3027a0559f066adcfeae:eyJzZWxlY3RlZExpbmVDb3VudCI6OTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhYWU4YTBjYTc2Zjk4ZjdiN2RjNzk4NDk1MWQ2M2U1N2RiM2M2NDU1NzljYTUxYmFkNmE1MzlkNjE0ZWRiYmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5YTE1ZjM5NjdmODAyYTdlNTYwYTAwYzI2NzQ0ODg2YjMzMjlmMzc4NzU5M2VjYWYwMjQ1ZWE5MTIxYjgwYWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAyZmQ5OGY2MWEzYjg0ZTE2NWZjNzMwMTRhODFlZGQyZWNjMDIxNGEwNmExODYyNmY3OTNjNDZmYTNjNmM0MzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmOTZiNjFkZGExM2ExZWFmY2MzNWNmYmFmZDAzYWNjNTNiOGJiNGMzOTVkMTRmZDNlOTc0MWIxMWJjZjRkNDIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L925-L996",
+          "version": "repo-lines-v1:sha256:48e082310f1b558112fd8254c8032be7928dfaf47ba083dc4e73471e06c2bd1a:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1ZTI5YmVmYTU4MGI1YmU1YjFmNDM5YTIzMGI3MWI1ZTJmNDNiYzUwZGYwZWJmOWVhNzU4NzQ5MTdkN2Q2OTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyMTY5MGZhMTQ3Yzc1YjIwZDU1ZTgwMjA2YTY0MzA0YjgyZGFhNjhjNGVkZWYyYjBmZWU5YjQxMmJmMDBjMTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ5Yzk0MGJmYzBiYzJkN2RiOTI3ZGI3YzBhZWIyMGRhMTZkMTUwMDI4OWJiNjI1OTkxOTZhODY3ZThmNTc1ODAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwN2E3Mzk5NTdmZDExY2RkNzgzZmEyYTkwODVjZjI1Mjg0ODI3YjkwY2IzNjcxY2VmNmExYzJlY2Y2ZjFiNDMifQ"
+        },
+        {
+          "resource": "repo://tests/test_config_wiring.py#L2029-L2128",
+          "version": "repo-lines-v1:sha256:c3bba478fb314895439df6763409e1508da7947d19c827b6ce6541deff3b927d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3OGM1OTkwNmEyMWEwODU5N2YxNDA4NTA2MjVmNzg2ZGI1ZGFiYWE0ODgxZjA1YjFjMzkzMjViOGZiNDAyNjk4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI5OTIwNGMzYjAzYzQ0MGY0MjQzMDY1ZjZiNTZlNjNhNDM1ZDgxZmVlZDkwMjBmMDIwM2IwN2MyYTcyZTBlM2FkIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI0YzlmYjJjYTQ1YjUyNzc0YzUzNjRmYmI0NmRlNjhiOWQyZDgyZTdhOGMxMWFhOTAzYTU2YzJmNTg0NmRkNWY3IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0NjI2ZGQxYTliOWI2ZDc4NjFjZjQ2NzM5NjUyYWM0YjY2NTRmMzgxYjViZWY5NGYwZDAyNjQ3MWNlOGQ2ZmVhIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_2ba3232543f7474b888a0114de2af659",
+      "statement": "Under time contract version 2, an omitted calendar can inherit feed metadata while explicit calendar=None disables calendar handling; serialized mappings that omit calendar.time_contract_version retain legacy version-1 interpretation, unlike new direct BacktestConfig construction which defaults to version 2.",
+      "evidence": [
+        {
+          "resource": "repo://docs/user-guide/configuration.md#L321-L353",
+          "version": "repo-lines-v1:sha256:5c79acd43893b7928bee2a975dff922454f17c56ee8bb6e9b0f16d8d4c818682:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIzMjQ2OTQ0NmVmMTc0MDYxMGJkYzcwNWM0YWJiYjIxMDEzMzAzZTZlOTMwYTc3ZWY4ZGZkYWY1YmQ1YTllZGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJjY2QwMGY3ZDdmOTBhOWY0YTE0YjJmOThjNDE5NzUyOTg3YTY0NTZhM2QxZjlmOGJlMjBiOWMzNTA1MTZmNTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY3NGY1Y2UyZjdkNTFkNGE1OGY4YWIxNWRiNWMwNDYyOGRkNDRiY2M3MzkyYjU1YzliMjkyNWU3NWNlNWZiNWUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L1359-L1364",
+          "version": "repo-lines-v1:sha256:b70f04ce20b7d2a56e0deaf7b3237abe8c3313487dec367e360a074f6878309a:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODMwMzFkZDljNWI0YjBjMThkMTYwZDE1YjgxODYxZTYzMjIzNTM1OTQ3NDAzZjA3NWFmYzMyZjk2YzdlNzQxZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYWRmM2E2OGQ4MzdiMDliYWJhMGQ2ZmE4Njc4MzE1ZGU1MDA0MzRiOWRmMzBlNzljMzlmYjM0MzE0YzQ5MGNhMCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYzFjODIyZDYzNzRlMWE2MDM2OTM5YjU0MDkzOWE3MWFmNWI0NTVjNzgwYjU3MDA4MGVlNWU1N2I3NDU3MDAzMyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjcwM2E3NjI3NTNhMTJmNTkzNGY5OGM4MmZlMjNlNDhiYWZhMmI4OTY0MTA0ZDYyZGQxY2NjY2Y3MGYwMDlmNyJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L807-L812",
+          "version": "repo-lines-v1:sha256:a2544791c9af39c72dd0bbc89b6e018667ceefd5f7068057e8b352577528f025:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiODE4OGZjMjA2NWFmYWRjODkxNzEwMGE4NzEzMTI1NTY5OGMzMjJlNmU1ZTA0MTM2MDNiMTNiZmRjMTYxMTRjZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWY5YjhhYzM0NmI5NmZhOGZiOTA4NDYxOGFhOTIyNTY4MTU2YmMxMGJiYWU5YWRiNDAxMzhiZmY4NDQwNWNlZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOTY1NGQ5MTNkZGFiNDZmYjQwMGQ1NTc0ZDljN2ZlNWNiNTUwZmMyNzA4ZjgwMDUwNzliNDNhYmYxZWNiMDlkOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzU0ZmE4OTQ4ZmNhM2VhY2RiY2M3ZWJkYWUxMmJmMzQ4MWEyOTAxYmJiODhlYzBiMjExZmU0YWVhMzcwZGNiMSJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L858-L907",
+          "version": "repo-lines-v1:sha256:a27778ddace29f6f88576b8b0dc9edf6cc2d234b9a410287016e1d98253d8cff:eyJzZWxlY3RlZExpbmVDb3VudCI6NTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiNzM3MmE4NDFlMTdkNDZiYjRkNjg5ZWE2YmZhN2YxZjhhNTFhNGNkNWU5NDc1NDFhZGI1YjhhMTU5Y2U0MTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5MTIxNTA0Y2YxZjdlYmY1YmVlMGJmNGFhYmExYTE2ZDYwODI4ZTMzNTczMTY0ZTFmMWJiNDZlZDE0YTEwMDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM3MTc3YjU3NzVmMzJlODNlMWUwZGZjZWExNjJmOWJhODFmOWIxMzllOTdlNzAwMGU4MzE4Y2Q2YzlhYjJlMTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMwM2UxMWIxN2U1Y2QwM2M0ZDQ0MDNhNGM4Y2E1YzUxZWFhOWU2YmVmYTM4NWQxOTE0YzU5YTQyMDY2M2FmMzIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9ac47c49edf24cb5b85bf4a367c59e2b",
+      "statement": "Profile mappings are returned as deep copies, aliases resolve to canonical profile data, and from_preset converts the selected mapping through strict BacktestConfig parsing while retaining the requested preset name as provenance.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L1391-L1410",
+          "version": "repo-lines-v1:sha256:4da57918d2d348b94a2c6464fd319b277d113612ec2df0948f159d3fae8d8b33:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFkMGZjYTFkMTMyMDhiYWJkZjczNjQ4Y2E0ODZkMjE0YmRjNmFhOWMyZjExZDY2YmM3YTc3MjBlOWM4MTJiYTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhMDU5MzA3NjliMzM0MmE0Nzg5ZGJlZDdlZmZlOWUwYWY0MjIwODkxMDI5ZGI5YjViYTk0YWY3ZTNkYTZiODQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZiNDJiZTFhZDcxYWQ0NzI4OGEzMzcyMzUxYTFjNzExMzA0N2EyZjAyY2EyZDE2MjhmZjhhOTFmOWNiMDk3NTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjEzNTFjMTg1ZWE3OGVkOTUxYTI0ODQxNzMwZGQyYTFlYjU1YjQ4ZmRhMDQ0ODYzZDY4N2YyNjgxYjYxNDFlMmQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/profiles.py#L410-L469",
+          "version": "repo-lines-v1:sha256:8d0766dbba1090128e1c4597cdd7c3475ec805002e3c9e1e1f825c4c2799be5b:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmYjFiZGFkZGQyNTUwODY2NmY3OThlZmU1NjQ1YTk0N2EyNDYwYzI2NWE4NTkwOWIzOGVjODRkNmYyZjBjMWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFmMDdhODY1MTMwNzYyMGNkZjZlYjIxNGJmOTYwYWQwMTgyZjE5MjNjODQzOTA5ZjQyODMzNzE0ZjAzZTdiZGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4MTAyNmQ0MWFiYzE0ZGU3N2ZmMTg2MTM2YzdhNTA4M2MxMzk4ODQyZWJmOWExYWI1ZDdiYjExNWUyMTI0MmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjMjYwOTQ4MGUwMzQ2NTU0MWZjODEzODMyYTk3YTEyZDA0Zjk5NDRkMzMyNzZlZDQ0ZWQyN2UzMjYzZDdjZjcifQ"
+        },
+        {
+          "resource": "repo://tests/contracts/test_profile_parity_basics.py#L251-L269",
+          "version": "repo-lines-v1:sha256:a0dbea967e2bb08a6979e1028d7e8d162d348e04f5a82216bae5d1dec178c1d3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxZGEyZmU5NmJmMWIwYmY0OTViNDI1NjQ4OTI0NTU1OWU3MzcxN2RiNDhlYjA3NGRjYTYyODU1OTM4MzdkZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhjYWVkMTBhMzg5ZmM4MmE1MjVmOTNmZjFiMDBkN2U0YmY2ZWNlNzg3NTNkYjJmZThhNzk1NGIyNGU3YTQ2MGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjgxZDA4MWIxNjFmN2U5NmRhOWE4NzFmZjhjMDMzOWQzNjkxZGYyOWU1NGJlZDUyN2JlZWJiNjRjNmE5MmYzNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNhZTY2Njg0ZmYyMTRlYzIxYzIxNWQxMTQ4NGYzMjk1Y2RjMjUxYzk1MzdlYTI2MTE5ODYxMjRmOThhM2ZiYjQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_634d6844cb9d434ab6c4102ffd5d38d2",
+      "statement": "With structured assumptions, from_user_config layers the selected broker preset, non-commission global defaults, profile-specific overrides, broker-tree overrides, and explicit keyword overrides in increasing precedence; incomplete broker, region, asset-class, and plan tuples are rejected.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L1451-L1553",
+          "version": "repo-lines-v1:sha256:e62aa9dd18f224f2315c30b705c039c034134227ef260874946233b7103d07dd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJhNDA0ZjUzYjNmNDM4YmFkMjI2N2Y2NGNmNjkwYWI1YzFjNjRmZmRlOWZkYzdmYThlZTg2ODk1NmQ1MTdiNGMzIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIyMGYzNjJmYzJmNjQyZTZiM2Y1NDkzM2ZjNzYyY2EzOTRhODBhYmQ0NTc2ZjliNzQ4Y2NjZGIyODA1NmI4NmIwIn0"
+        },
+        {
+          "resource": "repo://tests/test_config_wiring.py#L2189-L2250",
+          "version": "repo-lines-v1:sha256:664e267759826a88cdbefac80936447e12385643d2ae339e54af6aef071ab89b:eyJzZWxlY3RlZExpbmVDb3VudCI6NjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4OTUxOTFmYjg2MDVhOWRkMmE3ZjU2OTBmODkyYjRmNzliMjI3NmZiMWI4NmUzZTBiYmIxY2U4ZWI5MDY1YTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImViNzg3ZTJkZWJiNmZkZjBlMThkZWQwMjE4MGJlOWZlNmQ5NDExNDc5YWQxY2E5NmVmYmE3YjAxYzQwODVmYmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjExODM1OTdiODNkMWEyNDYyNGZjODhiZDZmYWMyYTFiMGI3YjVmNTFiMjA4OTFjNmVhOGVmZmRjZDVlMDMxZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5ODdlZjY0ZGQ5OTUzMDgyZDEwYTYyMDEzYzdkNzM1ZmU3ODc5MDk0NjYzZTNlNjUxOTc4MDZlMzU2NDc2YTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_aca90792feda4c539901a38fd30cbb60",
+      "statement": "Broker.from_config performs mandatory built-in cost validation, maps config fields into native account, execution, stop, cost, cash, settlement, and order components, and lets explicit native commission and slippage model arguments override configured models.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L345-L425",
+          "version": "repo-lines-v1:sha256:13e5404d28ac98b1919d1e7ce74d4a55cd87034d3cc88ea786e5f99eb96337ec:eyJzZWxlY3RlZExpbmVDb3VudCI6ODEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhmMzI1ZDQxMDZhYWRjM2M5YzEzYTFlMGJlZTRiNDE2ZjA4YzdiNWFhYjlkNzZkNWRiMDQ2ZmU0ZTQ3NjM0MjEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2ZGZiZTg4OWM0ZWNiZDBmYzI5M2JlMWE5NGI3YmQxNDZhZTIwZTIwNGNkZjAyMTc1NjY0MGM2MzlmMDQxMmIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L426-L530",
+          "version": "repo-lines-v1:sha256:50b82a5025823d15451baee933dcae686958c384e4d68e149e08ad8545d496c5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA1LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJiYmZlNmVjMzljZGYzMzU3NDBiYTg3MWViODQ1MTg4MmY0NzlhZWI4Yzg5ZGRjN2M1NDFlZGI0ZmJkMzUzOTg2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmZmVhOTkzMTI3MDJhZTUyZTdkZWQ3MzdlMmIwMDQzYjczNzNhZDRkYWNhMTgwNTUwMzVkM2NkODZjYjZmMTQyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkZjUzZDMyNTRhODNkODI1MWJjNzg5MmRjOWMwOTVmODI3MDM3NTgyM2VjOGY2YWY4NWE1ZGYwZWM0NWQ5OWMyIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L698-L734",
+          "version": "repo-lines-v1:sha256:ae077b5efb4e59361fbf2f0c211e0d9e8db5bf4439771fe2653c57f52816579e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxYTFlOGZiMmQ1ZTFkM2QwM2ViODVjNTcxMGFhNTFiNjYxMmE3NDc4Y2EwNDdjZWQ4NDc0MzExMGQ4M2ZhYzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjliODY1ZDRkYzUxOTViN2QwOGZjMDc0OWE4M2Y1ZjYyOTMwM2QwYjQxMDYyMDc0YzJlNTVhOGFmZjczMGM0YzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJiMzExYzhmMGRiNDhiY2E0ZDQ2ODMwZjQ1MDBjZDNiM2E3ZDUxNGY3ZjAzNDYwMzMxNmQ4Y2MwYzg2NjQzNTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0958fd68a255496fb62c3573675cbf33",
+      "statement": "Invalid configured cost values are rejected during Engine construction, while invalid custom commission, slippage, impact, execution-price, and execution-limit outputs are validated before financial mutations are committed.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/models.py#L260-L293",
+          "version": "repo-lines-v1:sha256:16238047a4f5e97c8ec4f096593242f185a9b0d8314d5498dfbb9a6e3a40a735:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjYjUwMDAyZTJiNjNkZTMyNmE4YjhlZDVmMTExNTViMWExZGM1MzE5MWZmOTJlMDQ1OTBlMDNmNzJmZjcxNjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAyNTlkODgzMjhjZjdhYzI5YjE5ZmE0OTk2ZGZkOTRlYjRlOThkMWZlN2NlNzc0NWY1NWM2M2RiYTJjOWU0NDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlYjRkYzEzNWE2MDBlZjcxMmVmYWJkYTIzMzE5YmE2MmJlZjQwYWIzZWYyMmQ3MDBmN2FiODJiMDM2YzY0MDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNmOWMzY2M2MWZmOWY1MDY4YThjNjA2NzhlNTJjMDAxOGZiYTczZjc3MWE1MjkyYWEzMTNjOWM4MzFkMmE1ZGMifQ"
+        },
+        {
+          "resource": "repo://tests/test_cost_validation.py#L177-L224",
+          "version": "repo-lines-v1:sha256:337a5a39bf511e6c846e093d9899ddf5e426b5650029be933b9dfc1a536f025a:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRkZjhlNjI3M2Q4ZTY1NjMzNmRkN2FlNzgwNDc3NDRlMjg4NzQwMGIxN2IxZTA4NDAyOTc1YTYzODUwMmQ4NzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkMGY2MTM0MDI3ODc0MzIxMTllOGY4Yzk5ZDViZjdhNmYwY2YzZTIxZmIxMzU1NTFjZDljOGQyMDc5MTA1MzYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhjYzRhN2QxY2M3OTZhYmEzZTQ2NzIzMzI3ZjUxN2U5ZjgxMTk4MmQyNTBmMDcwMjk4NmU0YjU3NjRhZDk1ODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMwNmNiNzMwZWM4MWQyY2RlNTdhNTVlNzFhNzQ0NWJiM2Q2NGJlNjYwMTVmMTc0NDk3ZDI1YjFiZWNhNGUxNzIifQ"
+        },
+        {
+          "resource": "repo://tests/test_cost_validation.py#L226-L345",
+          "version": "repo-lines-v1:sha256:e612ca965b05c4dbce4ec59c4606a2aca64118153daa08b7379445dc9a772571:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI4ZjRhNjFmMmZiNzdkNmVlYTAwOTQ3MjYzMzllZjA5YjFjOGE2M2E1YTVjY2QwOTU2OWY0MWQwN2QxMDBkNDdiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIwYWRkMzNhNjQ1MWQ1ZDIxNDQ3ODAyODFiOGViNDViNWRmYzM4NTlmMzVkYzVhNzY2MzEwMzQ5OWM4NmNmMTNlIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_da321338d8ae41acbc16a78a4834a031",
+      "statement": "BacktestConfig serialization emits nested subsystem sections plus FeedSpec and metadata, strict mapping/YAML loading rejects unknown sections and keys, and result.config.to_dict represents defaults and merged feed declarations but not arbitrary runtime model objects supplied separately to Engine.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L1102-L1247",
+          "version": "repo-lines-v1:sha256:57022769c2f010721a797533e2027a2fedc18fed6a7890c3077b3c4377520662:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3MWE1MDYyNDFlMmYwZmU0MDc2MWUzMDgzMmJhZjlmMjRhNjc2OGFjNWRmZjU0ZDllZTQzODY1NTYyZTI1YTIxIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI5MzFjZGQyNzljMzNkMTE0MjBiNjNhZjI3MGIxZDI2NzM5ODdjZDY0NjAxZGY1ODY2NzA5NmFhNGM5NTVkZjQ3IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlMTU5NWZiNTRiNzg5OTY3NWZkZGJiNTU1YWQyNTY3ZDYwZDNjZTM4NzE3MmIwZTE5MTFjN2VmMDNkNzMyOWVmIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkZTNmZDgyZmI0ODM2MGI4MGIwYTlkNGNmMzNlODFhYmNkNmUxYzU4YmEwMmQ4ZDk4NDhhZjk1N2Q4YzU5YjY4In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L1373-L1389",
+          "version": "repo-lines-v1:sha256:f93d454beafc34ecd575ac1f29cd7149c4b56e88e6f63d5f470ff669f740f5d7:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmNWYzOWYwYmYzYWRhMDgwMDc5Y2MyMTZlYjRkNGY1NmNjMzQwZjA2MWFmOWFlNDg4NjhiMmQ1ZTIzMWUyYjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUwNDU5MmExMWM4NGVkYjE2Y2M2MDA5ZTRkYzJmNTdmODBkOGVjODFlNDQyODYzM2MyYjRkYWFiNzA4YzQwYzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzZjA0NGI0MTg2NDVmNjNhZWRhMzEwOWEyMTQyZTllYzE3NmU3NTFlZGJjNDc1MWJmMTc5MDE1MGQwOTY0Y2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRmZDhjOGY1ZjQ3MDA2NmFiZGIyMzVmZWY3NzQ5ZjdmYjMzZjE0YjVjMWQ5MDU3MWU0ODM2OTdkYmU5ZGM2MzEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L998-L1100",
+          "version": "repo-lines-v1:sha256:9f49d41293fdc11c62bccfa7d149dab5e2a10b15495ca3b06bf3e2467f80b7f1:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1OTA5YTUzYTYxOGQwMjhlMWQzMDAwYzBhN2FiY2VlY2JlNWZiMzdmNGU1MTFlZmU0NjY0M2ZhZDZlNjY4NzJmIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI4MjBiNDUzZjVlMGM5MmQ1ZjZjMjUxYTVlYTE5NjBkNzJmM2JkMDc5NTZhZTg1N2RhMjBlMzFhODhjNTU5NjlmIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3NDJhOWY2NmFmMDAwNTdmMDA1YTdiMTNkYTVlNmUyOTVhZmQxYjUyYmU0ZDNiYWQ3YmY2MmM1YTEyZThiNzFjIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI5NmU3MGYwMDE4YzgwNGJhYjdjZjYzZTY4YjM1YzU4OTRkZWNhYjUyZjczOWIyYjBkNDgwOTZjN2JjNzg3ZDQ4In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L1281-L1354",
+          "version": "repo-lines-v1:sha256:8dd36886e8bca12e03888c021c284c4b80dae3d73e509d455eea1079a73e8f2e:eyJzZWxlY3RlZExpbmVDb3VudCI6NzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxNWVmYzkzNzVjYzgwMGNiZTRkNmFhMjdiZDViMjdiODVlZWVmZTNjNzU3ZWM1MGZiZDM2MTVlMmU3OTRhM2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ1ZTgyNjc5OTFkYjkxNTFkN2Y2MDY3NTQ5NDYwNTZhYTRjNjYwNmVjZjgzOGQyYjU2YjM4YmQyNTcyNDRjMmUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM5MTI4ZTQ2OWU1MDU5YTY0NjE4N2U5NTIxNjgzMzQ3NjE4ZTc3N2I1YzU5MjA2Y2YyYTY4OTdmNDA3ODhjZTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ea2342b2f15b41018cb888c34ad68ded",
+      "statement": "BacktestConfig.validate is advisory and reports or warns about risky combinations, whereas Broker.from_config always calls the narrower _validate_for_execution gate and raises for non-finite or negative built-in cost inputs.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L394-L425",
+          "version": "repo-lines-v1:sha256:7f809bed20cd6b28e643ab025692de76c0d35c4b7084eab3c62d1a9bb0c7b5f2:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0ZTI5NmQxNzQ0NDY1ZmU1ZjFiYWI0ZTliN2Y4OTRiYjE5NGMwZDM2NTNkZjIyZDM1ZmE4YzI5NzI0M2FjMDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAxYmEwNzIyMTllMmMzZjA2NmM5NjIwMDE0ODFkYmNjNmJhZWRmNmFlYjAwNzkwNjY0MjIxYjM2ZTg1YTU3NGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2ZGZiZTg4OWM0ZWNiZDBmYzI5M2JlMWE5NGI3YmQxNDZhZTIwZTIwNGNkZjAyMTc1NjY0MGM2MzlmMDQxMmIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L576-L697",
+          "version": "repo-lines-v1:sha256:b4b2b6fef0a7bc7ef3f7317cff407511b1fce39b425bf9072f26d52f4120796c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI4ZTUwMmY1MThlZTcxMGMwZmQ5YmEzMGU5NjAzYWJjODdlZGYzODIyMTc2ZWIzNTAyOWRiNDM1Nzk0NWI2ZmZjIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIwMWJhNDcxOWM4MGI2ZmU5MTFiMDkxYTdjMDUxMjRiNjRlZWVjZTk2NGUwOWMwNThlZjhmOTgwNWRhY2E1NDZiIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4NjJlMGNjMGMwZWYwMWUyODgxZjc3YzM1MzllYjI0MDU1NWZlODk0MDhkMTViZjE2NjA4ZTNlZjIyMDliM2UwIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJkYzIwNGNmZTIzNWQxYzAxNjBhZDQ0NzFkNDk4NzU0ZmFhMWY1Njc5ODhlOGQzNTYwMmM3Yjc0N2NlMjZiZDVhIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L698-L734",
+          "version": "repo-lines-v1:sha256:ae077b5efb4e59361fbf2f0c211e0d9e8db5bf4439771fe2653c57f52816579e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMxYTFlOGZiMmQ1ZTFkM2QwM2ViODVjNTcxMGFhNTFiNjYxMmE3NDc4Y2EwNDdjZWQ4NDc0MzExMGQ4M2ZhYzciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjliODY1ZDRkYzUxOTViN2QwOGZjMDc0OWE4M2Y1ZjYyOTMwM2QwYjQxMDYyMDc0YzJlNTVhOGFmZjczMGM0YzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJiMzExYzhmMGRiNDhiY2E0ZDQ2ODMwZjQ1MDBjZDNiM2E3ZDUxNGY3ZjAzNDYwMzMxNmQ4Y2MwYzg2NjQzNTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ae00949ed61642fb809678f9ef74091c",
+      "statement": "Result capture always includes lifecycle and intent counts with empty history arrays; retain_intent_history and retain_lifecycle_history selectively add full intent, reconciliation, and callback invocation records without altering execution configuration.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L1093-L1097",
+          "version": "repo-lines-v1:sha256:0a65aa394647d47dbad52d6619abe6da104308794223e6867f9e0aaac383f6e5:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmVlNDQxZmM1NjE0MjE2MjkxNTI0ZmRiM2FmOTA2OWExMTM4NWJjZjE0ODRhYWIxZTFmNTUxMTcyN2E0Zjk5NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZGIyY2MyN2Y0MDIzZTNmZDY5Yjg4ZjllNjBmOTU1ZTQ3MzY4ZWQxN2VkNzU1YTg5OWEyZDdlYTMxNGI2MGUzNyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNjFiZDdkYTM5M2M4ZGU0YWEzMGRiYzhiNzMyZDk4MWVlYTE5MTU4ZDVhYWNmMmQ5ZmEwZGQwYzkzN2I5OTUzMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjljZWYyNjIyNWU5Njk2MGRlYTYzMDJlZjA5YWIwOTczZDNhZjFjOTEzNDI5NDI1YzE4OWJhOGU2ZDc5OTdkMyJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L818-L823",
+          "version": "repo-lines-v1:sha256:da97c4d9e08865724eb8a586c637e403c50b87d5f7f712e278fc1340b3732f7b:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiYmIwNjllYTU1ZjkzM2VjZTc0MWJmMWRjNzhlZjQ5YzI5MWI4ZDY0NTEwZTQyZWU1OTc1MWUxNDlhY2NiNWJkZSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjU3OTlhNDY5NzljN2RjNDAwZmM3NDZiNDI2MWNmNjczNjBlNTY1MDcwNTg4ZjMwNDlmOGZkNDNlNGU0MTU0OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzM2M2NlMWU0M2U3YWU2MWVlMGY5NWM4ZTIzMGQ2NGFiYTc0NzdmNzc2YzE0YWYyOTQ4NGQ0YzA3ZjBmNGJmZiJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L908-L960",
+          "version": "repo-lines-v1:sha256:b097d67e9bc3efefb69e9f50248b6cb7b605b3bfb7a371752f9c6bca27bac19c:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhNGNhNTFkZGQ0ODNjMGNhNTM3NTBkNWE3YTYzY2U4NjEwM2Y3MGU0ODFhMzZhMGE0ZWMxZjA2MThhZjEyYzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk5YTFhZjRlMzYzYTRlYmE0NWJjZjFiODY5NzM2NTFlYjAzMDE5YzVmMzVlODk2ZWUwZDkxMjM3YTAwMGQ2ZDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA2YTVjNjgyYTEzZDEzNTE4MWY4NTFmNmZmN2ZmYTMxNDgxOWNmZGM3MmM3Zjc1ZGVkN2I4MGExMzI5NjJlZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI0NmE5ZTE1ZmQ4ZmUxNmZmYWEwMmIyN2JlNzdjNjg2ZTIwNTI1YmI4OTUxZTgyMmNiNjIxYWQwYjFiOWRhYzQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_441aa205bbd7445c9b7fdd8b1b5a142b",
+      "statement": "BacktestConfig.rebalance_mode is not the selector used by TargetWeightExecutor; the executor's algorithm is selected through the separate RebalanceConfig.rebalance_mode contract.",
+      "evidence": [
+        {
+          "resource": "repo://docs/user-guide/configuration.md#L297-L314",
+          "version": "repo-lines-v1:sha256:803e9e5c406cf0cb071e080d1be45b0d0763561e6b3ebd8840fa6c4705d2fc34:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVjYjI5NmYwYmM0N2Q1YTRhZmU2OGM2NzA4YTIzYzYyOTBjZTAwYWFlODMxZGU0MjgzMTQ0ZGVmMWZlNmI4M2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJkMGE1NDQ5MTdmZGZiYjY5NWM5YTUxZjA5N2RjYjMzNTJkMWIyNWY1NmE2ZDlhZGUzMjMxZTMyN2U5MjJhNTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIyZTZkODZmNTM3M2EzZGJhNjIxYTk3MjRjMGVjMDgyODViMjI1Y2E4ZWFjZjQ3NGJkZGM5ODMxYWMyYjI5YmQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/config.py#L186-L204",
+          "version": "repo-lines-v1:sha256:5ae8ce74f3478e618cd8963c4e96f16a7a7c3bcd8df03a82eb7f193229cdf186:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJmZWE5YjA5NjZlMWUwYzU1ZDE4MDk5MDhhZjQ2YmVjY2I1M2MyMGM4ZGRkZjQxZDI0NjNjZGU5MTU4YjcwOTgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjOTY2Y2VkZjI3ZTY4MTk5OWEyODA3MmM1YzhhMmU5NmE4MmViNzg5NmFkMzViZDQ3ODA4Nzk1Y2Q4YTczNDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU2YWEzNmI1ZWFmYmI2MDI5OGI5YjdhZGEzM2U5YWQ1MjYxMzQ0ODJjZjVhNzVmNmRmZTAzMjU1NjYwZjM2ODQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZiOTYxMDA3NjFmYzlhZWIyZGI1NGQ3NjI3Yzk4NGEzZWNiMWNiM2FkYjJlZjgzZDcxYWZhMmQwZTA3NWI5YmMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ba959850356c412a910f1fa8d637f7fe",
+      "statement": "Framework-aligned profiles are bounded ML4T comparison protocols rather than universal external-framework defaults, and the behavior coverage map ties profile field groups to native checks, cross-engine scenarios, publication status, and explicit unsupported boundaries that must be reconciled when profile behavior changes.",
+      "evidence": [
+        {
+          "resource": "repo://docs/user-guide/profiles.md#L1-L31",
+          "version": "repo-lines-v1:sha256:c14c2163b69fb60537831dad7ff1a5e80ec566b92b94d36e6316c4aefff54c29:eyJzZWxlY3RlZExpbmVDb3VudCI6MzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI4NTUyYjRiNjEzZWNmNjNjMzRmZWMxNjcxOTE2YWYwNzI0OTc2N2VkOTc3ODVkNDU4ZWYxNjFhYmVhMDI5MGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk1MGJmNDk3N2U4MDBiYWU4NDAxY2JiZjJhZGJmMmE3ZTBhODAxYmExNDE0ODc5NDI5NTJiOGRkOTk1N2IzNzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA2NTdkYzZkYzlmZmRhM2NhZDA2OWY1NjQzYTI1M2Q2MWVhYzlkMDJkNWRhZWIwN2FmODBjNWIzNmNiYWU1MzYifQ"
+        },
+        {
+          "resource": "repo://docs/user-guide/profiles.md#L88-L98",
+          "version": "repo-lines-v1:sha256:4610ab262ac2c31cfc2f8102787c5d83d600af071c9f83355b919ad98c6b5ab2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjMDM0MjQxZTdmMDY5OWI2NjkyYWUyNmJiNWY2OTEyZmQ4ZjZlMjA5NjQ5MTE2ZWEzOGQ5ZGRlZTk3YmU3MzEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhhZDYwM2I0N2M3ZTNlZmViMDIxMTVlNDAxMTM1OWMxNDNiMTNmZTE2Zjc5MGY1NWE3ZGU2MGYyY2YzNGFiNzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM0NmIwYzc4MGRmYTNhZWVmZDM3MjZiOGM2MzY5MzI3NjdlNTM5MTAyNmUwNjljODIwZTlmMGVmOGJmNTQzMjYifQ"
+        },
+        {
+          "resource": "repo://validation/behavior_coverage.toml#L1-L69",
+          "version": "repo-lines-v1:sha256:d8248836172461602ec168266672be4e560ca28a69a66c00f8a1f5f2a06386b8:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRlMWE1M2QzYTEzZWRmMzIyYzdkMTk1YzBiYjU0NmQwYjI5Yjk2OWY3NGY2NDI3YTZlZGYwNWZhNTRlYmFmZWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxMjZiN2EyMGRjNmQ3ZGY3ZTU4YjQ3NzU2ZjMyMjhkOTJhYWZhYTNmZTE4ZTAyYTcwMGQ0ZWE2ZWViYWJiZWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk0MWY2NTI4MzFhZGQ4MGNmYWJlNjFhYjMyYzcyMDRjOGQ5YWFmZDE2ZDJjMmM5OWY5ZWNhNjcyNjE1ZGIzNDkifQ"
+        },
+        {
+          "resource": "repo://validation/behavior_coverage.toml#L70-L139",
+          "version": "repo-lines-v1:sha256:169b9e15bbf396b9e7d960516c31a808d761ea1b97450f2c05639348684f3431:eyJzZWxlY3RlZExpbmVDb3VudCI6NzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2YjAzOTMyOTk2ZTczYzUyYjkzZGVmZjRkNWU4ZDM3MzgxMTZmNGIxYmRmNzUwMzFhNTI2ZGYzNmE1N2FhMDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNmMTQzODkzOWEwMTBhM2FiMDQxOTQ1NzM4NmFmM2NmNjgxNTIxNjEyNDU2NTRjNDJiNWQ0MDA2YTk0MmU2YzgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJhYTAxZTJkZmM1ODc5Mzk5OTUyZTZiNmRjODU2NzBiYjliYzFkNTJkMGNiNmE2MWY3NzAzNGIwNjVlZGI4ODYifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:31.122Z"
+  }
+}

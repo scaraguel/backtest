@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:0c27cf2f57f419414573f8708836ec6c67c111509495de0c0d7b5072a4a74481",
+  "claims": [
+    {
+      "id": "claim_6c24a8b60f484fa18a839ffb34417ef4",
+      "statement": "An Engine owns the orchestration state for one backtest and is single-use once run startup passes input verification; a later run call raises RuntimeError, while optional RuntimeServices are bound for execution and unbound in a finally block.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L237-L282",
+          "version": "repo-lines-v1:sha256:f9d700469edf95652ad3a7495cbf2e0aad4f245c3348db42d12bba03b3bb5027:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2N2Q1ZjQxMGYyMWRmM2YzMDAxMmY3ODJiYmMyZGI3ZGIxMTNhYjkxNzkxNjg2MzcwMjEwYWJkMGEwMjk2M2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1MzM2NzE1OGJlZTg3ZTdlY2U2MTg1ZmZiN2U1ZDg3YTY5NTA4OTQ1MzM0NmMxYTg5ZjRhY2NiZWMzNmJlNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE4MGFhODg5YzNhYzhmMDIwNWM1MmYyYTc2MmEzMWM0NjkxYmEzOTZhM2JhZDlmY2RkYWViYjVjYWViMGRiZGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ1YjNhNTcyYzI1ZmMzZjNjYjBmZTcxMWJkN2JhMjUzZmQ2NGFjZDEyNmJjM2QwYzhiYzRlMTViYTk4YjY2YzkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L90-L235",
+          "version": "repo-lines-v1:sha256:aa603e36f9fe641132e1dc7ffeaa0073fd338da11f679600434eb99aa8829fba:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhNmE3MTUyNTcyZWU4NGYxMDkwNmM3NGI5ZjJhOTI0MzRkZGFiMGUzYzQyODEzYjA0ZTU5N2VmY2VjOTUxYjI2IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI2YmZhYzYwYzEzMTQ2ODU0M2VkY2UxNWU0MTNjMWUzODIyNzc4YjM2Y2QyODAwZDQ0MDAyZDdjZjNiOTRkMmVhIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJhZTYwM2JmNTE2ZTlkMTAxYTc5YzY0MzA3YjUyNjY0OGNmNjU0ZTIzMDFlOWQyMTY4ODQyY2I1YjEyOWQ2MTczIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlMGMwODViNDRkMzNhZTI5ODZmZWQwMmNmOGJkZmNkYmZiNjcyNTQ4MzkxNDc5NDM1YzY3ZmMyOTZmYzNmMmVlIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_5939182d75f84ef9a3da9fc1fabd86cd",
+      "statement": "The strategy lifecycle is ordered as on_start, on_prepare with the resolved configuration and no future feed timestamps, one on_data per accepted market decision event, and on_end; completed-run validation checks exactly-once boundary callbacks and the market-event cardinality.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L469-L492",
+          "version": "repo-lines-v1:sha256:7316d19b3b92af07a9ed43b377891d8a74cf38541e345acfc8213fde5133c5b7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYwM2ZmZTZiMzQxZTBhYWM2MzNjMzI3MTQ1ZGFjZGQwZjNhYmIzOGQ2ZGQ1NDcyOGE5ZWM0ZTUzNmZiOGI3MWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyNDQyMmQ1YWY1NTIyMjkwOTU5Mjc0ZDhmYzRiYzA0NTJmYzE3MDk3ZjkyNjk2NjlmYzJiZjdiY2EzYTMzNTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFmYWZmNWViYWUxYzU0MGM3Y2VhNDYwNTM4YWU2Y2Y5ODEzMTkwZWJjMmM5NzM1ODg5NzEwNDVjNDAyMWFkMWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcwYzc1NjA3ZWM2NGM5OTY5ZTk1OTBjYzE0MjhiNDk5OGM0MDJiY2U3MzVjNWYzNDA0NzY5OGJiYTdhMGEwMTcifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L750-L798",
+          "version": "repo-lines-v1:sha256:85fea8f342d51e3ef7c6b5de763b168f4c1ff1d2a4820fad2e4d5abdbe2f94f1:eyJzZWxlY3RlZExpbmVDb3VudCI6NDksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg0MTNlOWUzM2I3OGFlMTcxODZlMDNhMDFmNDEwNGMxZjRjMzg5MjQ0ZGM0MjRjZjgwM2NiOGUzZWZjMTVmZGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRmNDAzZjgwMjJjNDU1M2QzMjIwZmUxM2E0NGJjYjRlM2NkNDM3OTYzNzgwNjcyZWVhYjQ3MTUzZDhiYmE2ZWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFmYzVlYmFhNjdjMzdhM2E1OTQ5ZTU1YmUwNzRkNTMyNzYyYjliMjllYTQ4NWQ2OTEwNzNlYWI5MTVmYTc1OGQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM4NjhmYThlMjNiMDhkZDAxNmY4NmQ3NmZhMjNhOTkyNWFlYzhkMDdmZjE0NWM2MjIwNzA0Yjc0NGJkMTQzZTIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/lifecycle.py#L40-L136",
+          "version": "repo-lines-v1:sha256:eaf814c4a87582d3702b421bab15e647eddf242c89f72b8f8939e3da4c2a176b:eyJzZWxlY3RlZExpbmVDb3VudCI6OTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxZTU5MTkxNzMyZDdmNjEyMmJiNTk2ZDZkZWNkYmNiZjI3YjIxMzhmOGUwNDIzMmYzYzVlMzI3YTdhMTIwYzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZlYTIwMzkzZjUxMzYzNWVmY2U4ZmVhYzg2YjdmYThmYjQyYzdhODkzMGNlNTg3OTc0MzhhMzk0ODkxMDJkZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZkNDViNDFjYmMwYTg1ZjlmZTdhY2M0YmMzZTI0ZGZjZDA5MTM1N2I1ODMxNjllYmQ5OWRlNjA5ZWEwZWViZjcifQ"
+        },
+        {
+          "resource": "repo://tests/test_causal_lifecycle.py#L50-L73",
+          "version": "repo-lines-v1:sha256:953eca6d7a442dc0ca1d737f4e98cc58e71e59e2f137fa1383e8b94e0bf9b9a8:eyJzZWxlY3RlZExpbmVDb3VudCI6MjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5YjYzOTBjNTFlZTMxM2ZjMjE2NTUwYjU4NDhmN2UzNWIzNzI3YjMwNmU3NjJkOTQ1MWJjZmNjZDNmM2Y5MWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiYjZjZWViYzBlY2Y0YjRjZDVmNDQ1YTE0MTE3MTQ1OTIyNzFlMWYxM2ZiZTJmZTkwNGQ1YzQ2ZjFjOWMxMmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhiOThhY2FjMWFiMDUxZjE3N2FkNmRmMjUzZGEzZjdlMWQzYjExMzgxNDA4OTJmY2Q3MzJlOGYxNWMwNGVlM2QifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b3a282af983546a79f487529182a55b2",
+      "statement": "The engine rejects legacy on_before_risk callbacks and on_prepare signatures exposing timestamps before broker creation because those callback shapes violate the supported causal lifecycle.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L740-L773",
+          "version": "repo-lines-v1:sha256:5cb445bbfd83dcb61d03848d0c61ef16f47df7f021de7afa9f75e717731bb5d2:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE3OWViNzBjNmFkNmU5NzdiMjNjZmE3ZmY2YjgwMWM5NDJjMTIwZjBhYzgwZWMwZmRhMTYzNWY2MGQ0MjY5YjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlMWRjYzAxN2Y3MGYyNDJmMWZlMmU0YWI2YjE0ZTE1ZmY5MjQ4ZDA1NThjNjQzMWZlMTE3ZTQzYTgwMTZkNmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjhhODBjNjY1YzJhNjUxY2UzMGM5ZjNlNDhlMGQ4ZDczZjgzMzI2NzU4MzA4M2IzNjU0NDkyMWY1NDIwZTQ3MjAifQ"
+        },
+        {
+          "resource": "repo://tests/test_causal_lifecycle.py#L255-L321",
+          "version": "repo-lines-v1:sha256:50b0d4c58b35c4cc76389de3746790e04608880ac43fa9bb947b0bb73f2e2623:eyJzZWxlY3RlZExpbmVDb3VudCI6NjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZiMjIzOGY1ZWRlOWFiOWY2YThkY2EzMTI0YzVkZGYyOWMxNTA4Y2VlYjk1NDc5MjJkNTg3ZGJjZjc2OWM5MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFlMDFhYWZkNDcwOTY5ZjEwM2U0M2I2MTk3ZTU4YTM2MGQzOGZmZTYxYWYyOGU5MjIxMDM5NzY5MzgzYjYxYTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM1ZWYxMTZjNjU4NzJiZDU2NDBlMjMyY2ZkYmFiZGVmNzI1MDcwMzNkZGUzMzg0ZTU3ZTdiZDI2ZGFmZTA1OTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9df769a4a4c9411c9ff098c0f560556e",
+      "statement": "Lifecycle callback dispatch lazily snapshots broker resources when first mutated and rolls those mutations back if the callback raises, while read-only callbacks do not snapshot state.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/lifecycle.py#L20-L38",
+          "version": "repo-lines-v1:sha256:7af92c832575e6f8bfc0652eca5753b5c209012d413dea387b9fa4384409fc85:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MmVjZTcwMmY3ZWVmNTEzYmQzYmUzYzI4NDZmMTk3ZjM3OTMyNmEyMTgyOTI3NDJjNGYxMjdiMzE4YzQ2MmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZiOGNmYWU5ZmQ5Y2JhMGE5NGJiZTE1YzczOTUyYmI2ZjJkNzdmMzRmNmNiNjBhZjIyMDMyYWRiY2I4MDljOGIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2NjRkMzc5YWIyMTU2OTNmNjNkM2JjMDBjMTM4ZTUzOTFmMGY2ZjdjZjM1YmM5MGRmM2UzYjEwNDNmMDFlNDMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/lifecycle.py#L85-L120",
+          "version": "repo-lines-v1:sha256:ff797015582f9868d670e89d042ad2b4c1d4203bba0125462ed3050c8d5c7af9:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg5MmE2M2Y4MDMzODI2ZWRmNTYyYjYzOGFiYzY5ZTU2NmEwNDQyY2U4MWM1YTcwNGQ0NjdlNDAwNzI4NzMyODAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyOWM1MjQ0MzRjMDA5YWFmMGQ3ZmU5ZTJmZmU3MjJiMTcwY2Y4ZWIxYzhjMTU3NWU0ZTNiZDUxZTkyNmM3MWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk2NWE3NTQxZmUzODJhNDU3NDE0ZmFlZTQ5NWY4MDE2YjAyZjU1YzViZmM2MDc0NDRhMDAzNTQzYjA5MzNjN2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZkMWRmNzZmOTcxZWE2YjBhZTk1MTYyOWY5NGU3MWIzNjUyMDg2ZjY5MDdjN2ZlMWU2MjU1N2Y4YjY2MDAwMTEifQ"
+        },
+        {
+          "resource": "repo://tests/test_causal_lifecycle.py#L323-L365",
+          "version": "repo-lines-v1:sha256:d78729cef87e13fe50045574794e8417364ba50346fea3ebe04f8df52885dc67:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwZjMzNzhjMzdjYzQwODUzNjMzMzAwNTNhYzQ4MWZkYTlmNWEyODhlZjBiMDY4YzBmNGZjOGMyYzdkMmIxMjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkMTNiYWVkMzYwZmI0NWNiODRhN2NlODdkMjA2NDdjZTBhNzg4Yjg4ZTU1YmE1ZDcyMjQ0Y2MxM2U5M2M3YTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZmMjI0YzI5YzY0YzViODIxODFlNzhiY2Y0OGVjYmMyOWM4NjU0YWRlYTc2MTIwYjljZTM2NjdjMmM1ZjEwYjIifQ"
+        },
+        {
+          "resource": "repo://tests/test_causal_lifecycle.py#L423-L470",
+          "version": "repo-lines-v1:sha256:43e07fab62d70f60a16f3826d1cb931c2ab86f4a3d59b87abf2673cfb096f160:eyJzZWxlY3RlZExpbmVDb3VudCI6NDgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxZmM3N2VhMDI3ZTIxMWI5YTkzMWFiOTdjYWE0YzY1Yzc2YjJjZGMyMzFjYTEyY2Y5YmMyNGQ2OTFiMmExZmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwZDM5ZWExZDg1NGQyODRjYThlNTk4MjliYTQ5OWZkN2E4ZTAxZDYzZjMzOTk5MDU5NzBkMWU5ZjUwNWI2MDAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM4N2IzZTFlODcyMWY4OTA1NjJkOTA5ZGNmZGMzN2U2NGU1MWE0YWJiZDNlMGYwMTJjYTE4YmFhNGRmMjAzZmYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_110c4b63c5814902bb8adcc4d85b0643",
+      "statement": "After on_start has been dispatched, Engine attempts on_end exactly once on both normal completion and failure cleanup; failures before on_start do not finalize, and if cleanup finalization also fails the original exception is preserved with a note.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L263-L282",
+          "version": "repo-lines-v1:sha256:7f4a76ef2411f07a6d4d3bc2f1a5139ffa3b152590c820bb2e99cbc0bfa23e5a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ1ZTY1OGM5M2MzMzM3YTQ5MTAyN2ZlNzBlODZlY2RhN2YwZmRmZTRiNDVhOWRiNzg2MzhmY2E3MWI1MzVjMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM1MzM2NzE1OGJlZTg3ZTdlY2U2MTg1ZmZiN2U1ZDg3YTY5NTA4OTQ1MzM0NmMxYTg5ZjRhY2NiZWMzNmJlNTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlkMjAxYzk4MjRhNDBlMjc5NjFjYzBlODdhMDNjZmZlYjRmOTg4ZWY5ZDlkNjYxNWQwZWIzZmY0NjY3YTE2MmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQ1YjNhNTcyYzI1ZmMzZjNjYjBmZTcxMWJkN2JhMjUzZmQ2NGFjZDEyNmJjM2QwYzhiYzRlMTViYTk4YjY2YzkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L730-L739",
+          "version": "repo-lines-v1:sha256:349aababd99c43a3f7a5779a804ecd33a589a4438f0f5a3928dc7e36a1fb2d3e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU1MDMyZTk2NGQwOTMyMzUxZTVkMTg1MjY5MjgxYjE3MWEzYTA5YjA4YjI4NmU2NjFlYTQ3MDMyM2M4MmViNGQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcyMzI4NDc0NDIzMjI0ZmI2NzdjNWYxNTVjNzYwZWIwMTMwMzUzN2Q0MDhhNGM4NDg4OWE1MDZlZmM0NWQ1MzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM5YTI5ODEyOTNiYzc1YTI1MzUxMjQ4MDdmZjJjNDIxOTQwOTFkZGQ3ZDkxMDMyOWE3NzQ3ZTFkMDY5MDViNDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjNhNDlkZTdhNTBlNDNmYWEwMmVlNjY1NWUxY2E5OTdmZWRkMjk3ODE3YTg3MTgxNjQ2YjQ2MTE3NWI0NGE5MjAifQ"
+        },
+        {
+          "resource": "repo://tests/test_causal_lifecycle.py#L323-L365",
+          "version": "repo-lines-v1:sha256:d78729cef87e13fe50045574794e8417364ba50346fea3ebe04f8df52885dc67:eyJzZWxlY3RlZExpbmVDb3VudCI6NDMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwZjMzNzhjMzdjYzQwODUzNjMzMzAwNTNhYzQ4MWZkYTlmNWEyODhlZjBiMDY4YzBmNGZjOGMyYzdkMmIxMjUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNkMTNiYWVkMzYwZmI0NWNiODRhN2NlODdkMjA2NDdjZTBhNzg4Yjg4ZTU1YmE1ZDcyMjQ0Y2MxM2U5M2M3YTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZmMjI0YzI5YzY0YzViODIxODFlNzhiY2Y0OGVjYmMyOWM4NjU0YWRlYTc2MTIwYjljZTM2NjdjMmM1ZjEwYjIifQ"
+        },
+        {
+          "resource": "repo://tests/test_causal_lifecycle.py#L394-L421",
+          "version": "repo-lines-v1:sha256:706a0f7380a36cf6ac8b751afd9d90c612251e67d65f78809a7fa1c3baf40154:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2ZGRlZGExMzBkYjVlZWVhZWYyM2ZjZjliZjYxMDYxZTU1MWY0NzFiNWVkYjhiODA0ZWY4MTVlNjkzYTlkNzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjZmNGU0YTUzNDA5MzE1MTg3ZWNlOTEzM2M1YmNiZWMwMWUzMDFlOWEyODEyNThjYjQ0YjZkNjUxZWQ1NmQyNzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc2NDE0YmM5ZGM4MGUwNmIxZjkyYTM0YTkyMGE3MDVmZDA2NTYwNGYyYWNmMzc5OWJmMzlkNzgwMzZmNGNhMjgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_0e7f3db56f0347509dddebb5e18d5030",
+      "statement": "For every accepted bar, the engine registers market state and account events, processes deferred risk exits before pre-open targets, evaluates position rules, executes the mode-specific callback/fill branch, then reconciles intents, checks controls, updates watermarks, and records portfolio state.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L573-L725",
+          "version": "repo-lines-v1:sha256:c8c0a60b98bdae1f1f0c83453c7f2fce1c640e27b91ce47d7044681493eb17ca:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUzLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJiOTI0YjBlM2VjNDdlODRjYTliM2ZiZTRkMTVhN2VjMjM0YjE3YTU3Yjk4YzMxYWI3YjlmYmNjZjA4MDRmZDM3IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzY2I0ZWVhOWFiYTE3YWI2OTQyNTJiMGY1NzUwZDg4YjExN2M1Mzc2MTY4OGVjZWNmYTU2MDk1MzVkMGZlYTU0IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJmMjg3ZjIwOWQ1OThlZDAxNDc2ODY0ODQzOWViNzcyYzg5NTUwNjQ0OGZhMDc2MTAyZGZiZDc2MDIyZjMyYTY5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiIwZWIyOWQ3YmNjZjE3Nzg4NDJmYzM4ZDRkMzRiNzJlNGZjOTM2MThhZGY5NjliZmY2MDM5ODI1NWFmZWViMjEwIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_47c93dd889384b76b685e7938d949982",
+      "statement": "In NEXT_BAR mode, eligible prior orders and same-cycle risk exits fill at the open before strategy decisions, current callback orders normally wait for a later bar, and MOC is the current-close exception; in SAME_BAR mode the order queue is processed both before and after on_data.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L641-L696",
+          "version": "repo-lines-v1:sha256:9b919160f80856d2bf17266e7f5aaa274a70157f286000dd6b2d9991ba442991:eyJzZWxlY3RlZExpbmVDb3VudCI6NTYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2YTI1ZTNiODg4ZGViYWMyMzI4NjE5NDQwZWM3OTFhMmQwNWMwZmI0MGY5ZTVlM2MyNjBlMmQ2ZmUzZWFjMzIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkMGZjNTA3ZWZlMTAxOTJmMTNlZTFmZGNlNWI1NzEyZDJhMzU0NTIxYjgxMWJjNGRmZjdhNDI4MDg0MGNkMzUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlhNTIzMTBmMmYyNjM1YTZhODE4M2E2YjhhZGQ0ZDNlODk2ZTgyZjJlM2ZjODEzMjIxNWZjN2VhOTFlY2MwYjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImJkYzc1MjRiN2RkZTIxZjlkNzZmZDM3NTM5Mzk3ZGRjM2Y0MTQ3MWU4ZDQ1NzdmYTE4YjgwOTdkYzVjNjk1MTcifQ"
+        },
+        {
+          "resource": "repo://tests/test_causal_lifecycle.py#L239-L253",
+          "version": "repo-lines-v1:sha256:7789db770ce634571860ab250a09e157ab84641ef8ee007cf679d17bc6000d73:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4ZjUwY2U4NzViN2M2ZDg5YTA1ZGRhMTEyMTI0MjRjNmUzN2IzZWNkOGE0NWIwNjA0YmQ3MWE2ZDFkYmY5MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE2MGZiMjA5ZTQ4ZjAxMTJmODY1YTYzZWNmMjI4ZDc2NzczYTA0YzczYmRjNDg2MzQxYzQzYWVkYjAyZTYzZDMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkzYzUwMDBhOGE2ZDNlYjkwOWMzNDJmYTQ0NDE4MDE1ZjdhMmZjYzYyYjgxZjg4NDUyY2E3ZWEzYzE0ZjY5ZjMifQ"
+        },
+        {
+          "resource": "repo://tests/test_deferred_exit_reentry.py#L126-L252",
+          "version": "repo-lines-v1:sha256:aa4b7c47836d3b098a0a1a2fc1ee578f9bfe99d1ad6251738b523b8ce22ad45d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTI3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJhMGFkY2JiZDBmNzNmZjg0MWNiMzUyZWJjNTYxODA4M2Y1MTIwZDJjNDdhZDAzMjYxNGZlZGU2YzY5NjgxMWVmIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI1OTA5YTUzYTYxOGQwMjhlMWQzMDAwYzBhN2FiY2VlY2JlNWZiMzdmNGU1MTFlZmU0NjY0M2ZhZDZlNjY4NzJmIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiJlNWQ3MmRiZjhhYTYwNTg1MWM3YjliN2IyYjZjNjlmN2Q2NTcxNTUyOWEyMDgxNzIxYmZlZjU3MmJkNTlmMmFjIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlOTlkOTFlMjk1OTM4ZWU2ZmIxZmYwYjJkNzAwMTJkOGM0OTY0NjM2YTNjNzI1MDZjNjQ3M2MyMjgxMzhiZWI2In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_589f7850899240adb708ecbb811529d6",
+      "statement": "PreOpenTargetManager causally validates and idempotently registers PRE_OPEN target intents, lowers eligible targets at the session opening, fills only their child orders at open, cancels opening remainders, requires terminal child states, and records fill and rule reconciliation evidence.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/preopen.py#L230-L439",
+          "version": "repo-lines-v1:sha256:1e7591718caae49c6c3d7b06ce0e64753bd3230edf62fb41f81bca07918b6454:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJiNzQ2Zjg4OTcwMGYyODBlZGNjYzhlMzY1NjU3NzNjNjM5MzMyNzY1ZjA2MGJhNDE2ZWE5MDQxMWE0MjI5ZGU0IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJlYzk4Y2I2YjUwY2Y5YWE0NTJkZmE2YTkxMGM0Nzk5MWMxMzgyZGQ1ZWE1OGU4ZjliZTUwZmZhYjAzNThkOTVmIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI4Y2M0YTdkMWNjNzk2YWJhM2U0NjcyMzMyN2Y1MTdlOWY4MTE5ODJkMjUwZjA3MDI5ODZlNGI1NzY0YWQ5NTg5IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI0YjRmNWM4NzE1ODZhMTU5MzAyZjRiYmJhMDgwMTI1MjM3MzYwMjExNWM2NzY1ZDBmZmFkNGEyOTc4OTc2MTU1In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/preopen.py#L460-L605",
+          "version": "repo-lines-v1:sha256:8e5b7b5172a96061f20b1be0d53425fc4be7d8035fb5adde531aa439c4c0a4f6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ2LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyMTZiOGIyZGE0ZjM4MTRkOWI2YWIzNTA2ZTlhM2FjMmE2NzA2YTgwMjQ2MWNmMjZhNjExN2M3NGMwZTM5YWY4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJiZDhlZTJkZmRmODg5ODJmNWIwYTM5ZmExMTE2ZTAzMDc4MWIwMDc5NjQ1MDQxZGE2ZjZlMjE3ZGQ1ZWQwNTZlIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIwMTQyOWRkNzIxMWY0OTUxZTQ3ZTIxZGYzOGQzNzA1MjJiNWE1OGM4ODczZDlkYjljNjJjNjhhMWY0MDMzMDgyIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI1MzI2NzBlNTc3N2FjMDlkY2I3YzYwZWY3ZGY0ZDdlMDM0YjM1NGM5ZDFmNGRjOThiNjNiZTMwZDE5NjY0NDZkIn0"
+        }
+      ]
+    },
+    {
+      "id": "claim_7350ccec25594bb78ee6546cdc7a0449",
+      "statement": "Calendar and runtime filtering occur before strategy dispatch; explicit session-column feeds require NEXT_BAR and aggregate asset data into one decision callback per session decision timestamp, after which each order remains subject to later matching asset bars.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L135-L144",
+          "version": "repo-lines-v1:sha256:5d70e6a4dd7093bed9c2d22d2346f4a82ce83916b71bdd0de09f2c7421569634:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhMDg2ZTI1NDE5NDliYjFkZGQ4Nzc3NTFmYjEyYzY0MTY5MDg3YWFmZjdiZThiMTI2MTJkMTgxOWE1ZTAyOWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA3ZmVmODZhNDZmZDRiZDM0ODRhMWJiMDg4ZWQ2ZWI2YjY5YjA2Nzk0ZDEzNzcxMjQyZTk1OGU3ZmIxZWNiZjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU0MDZjMGU0NjM0OGY0MTIxODlhYWFhZWIwZmRlYWI1ZWYxYzVhY2Q5ODA1ZjZmZmIxYTQ1OGEzODU4NDA2OGYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L494-L573",
+          "version": "repo-lines-v1:sha256:6b2cd6a5dd837b2aa88f8dd0588f5210f1ce27b4fa46c09a454343026d9de7b8:eyJzZWxlY3RlZExpbmVDb3VudCI6ODAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI5MjRiMGUzZWM0N2U4NGNhOWIzZmJlNGQxNWE3ZWMyMzRiMTdhNTdiOThjMzFhYjdiOWZiY2NmMDgwNGZkMzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVlMjhiYTYzODc0ZTU2ODI0ZDA4N2JkMTUyYzQ2YWU4M2MyZTVjOTlmMDBjZmNlY2QxNmJlN2E0M2VjNjAyOGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI2OTAzMzM4MmNlYTA1MzI2NzQ3YzJiOGM2NTE3YzU1N2YyYzY4MGI3M2MyNGQ5ZWQ4NGMwNWE2NzMyYjAxMDQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L648-L661",
+          "version": "repo-lines-v1:sha256:48b9200e412667cc5627768be293a696e22510ccbcce7332e5fe7d039e2035f5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxZTEyOTM0N2Q3YTA3MmE1Mjg0MTVhMDNiNzhjNjc5OTE3YTRlMjM5ZGJlNmMzN2E1YjE2ZjdkNGE2NWJkZWMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkN2FiNGZiNzk5YzlkMTZmODIxNjQxODhhNzVhM2RkODhmZjJhM2IyNjVlMDA0MWUwMWU0N2NkOGE5OGJjNjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNmZGU1NjAxOTM2NWUxZDQ1NTRlY2Q1MmVlY2VlZGNhYzVlMmZkYzM3ZDIwYTM3NTZkMWRlMGFkZTc0YTZjN2EiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMzNjk5ZmEzYjBjMjA0MGNlZmFlZTljMWU1MzRjZWYwNTIwMDJlYzRhOGZmNmQzMDY5ZDhlOGRkNjRkODg0ZDgifQ"
+        },
+        {
+          "resource": "repo://tests/test_session_decisions.py#L109-L121",
+          "version": "repo-lines-v1:sha256:32cc919c0e6b3f0e35f61c13c7f3a967d11f6292c5e2b5161f6d288195dde20d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxMmEwNjk2NGJkYTBkNjJmZjA0NTdiOTI0M2ZiMGFmZGQ3N2M4MTRhY2JkNDRmMzhmMDY5Y2ZmMGE3Y2U4Y2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhlZTMyMzY5ZGQxZDE5MTQ2Mzg0Yjk2ZDk4YmUyMGFhYmJkZjliYTMzNThlMzQ1MTU1NGQyZGQxMTNlZmFhZTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjMxNmRlZGYwNzI3N2FhMGJiZWQ0YTExYjgyNjVmYzE2ODMyNGY4N2Q1ZWVjMjcxNGIxZWEyMzQ1ODVlNDI3OWEifQ"
+        },
+        {
+          "resource": "repo://tests/test_session_decisions.py#L40-L80",
+          "version": "repo-lines-v1:sha256:004be417e8d3d1ef9f54167a6327bfc9959e31e199a0388dba686034d2052fa1:eyJzZWxlY3RlZExpbmVDb3VudCI6NDEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFkYTA0OGU1YjZlN2Q3OGU1ZDkwNDdiYTEzYjI2YTkxNzExYTFlODljNTBkNDQ1MTVjYTA2MGZiODM1ZjFhNmUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0ZWU0YTA0YjI3NzFhZWY5MzdkZDMyZmMzZTNkY2M1ZGExOTJiZGU4YTM5ODBhMmVkODZmZTNhMzU2OWUyYTAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZjYWIyMDY2ZDBhNTgzZGRkY2RkMDMwYzJkYzZlOThkMmM4NzFmNzVlNGU4OWE1YmZlZDhjMzI0ZGJkYjQ2YzYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b70847748f1d4e7d97b4f0b6058f8eba",
+      "statement": "Session assignment respects timestamp semantics, bar labels, frequency, data timezone, and exchange calendar timezone and schedule, including right-labeled closing endpoints.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/sessions.py#L158-L238",
+          "version": "repo-lines-v1:sha256:69389f4d898d478be077bb375bd5691ab8d5cd29e7a6f7266d9290de878e78a5:eyJzZWxlY3RlZExpbmVDb3VudCI6ODEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMyY2JjY2YwYWVlNmY5MTVjNWU1MGJlNDk5ZjYyZTc3YmFjNTIwMTM3ZGEyODRlMGY3ZGNmM2JmZGY3MDgzNzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMzNjYxMDFlMjcwNWFiNzNhZTNiOGFlZjVlMjYyMTllNmVkYWYxYTdlNmI5YzA1NGY5NjljMjE0OTA3ODZhOGUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI2NTAzYTA3NWMwNmQwOTg1NmVmNTM3NjljMGUzNDM5MTA1MzA4Njk1NzZhOTg3OGNlMWM2YWU2ZmViYTIxNGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJiYzliNWVmZDkyZmI5ZWZjN2U1NjQxYzI4NTM1YzU5Y2Y1NDFhYmJhOGQyNDUwNjE4OGJlMWExYzJkZTNiZjAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/sessions.py#L29-L38",
+          "version": "repo-lines-v1:sha256:a2f2a6309f244c0b7affc666fe434425ffd8a9d7e00007ee06f00404a9f23c5d:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImIyZjIzODA2ZjY2MTcyOWZhMjE2ZDk0MmM4ZDk5N2JjM2Q5MWYzMmUzZTUyOTQyYjVkZTY5YmRhYTkxMmI5ZDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdkZTExNDJhMzc4ZTRjMzkwMWRkZDIxOGM3YjFlYjljOGFkM2M2NzJjYzI5NWIzNGUzYmRhNzlmMDVjYThhYWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFiYzJjZWRiMTRlYTE4MWFkM2NiN2Y0MDk3YzI1MDYzOGVlMWFhN2MzMGFiYmE5MDMwODNmNjI3MDMxYTA0MDQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRjNzFlYTRiZGM2OTI5MWQ4ZWI4YWRkNDY2YTYwZDJiOTllNDk1ZDZjOWExNDBhMWRhNWQyZjBmNjIxNGFjNWIifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a7796f3da95c49d6a99b8ae831ff21f3",
+      "statement": "Engine does not automatically liquidate positions at end of data; result generation instead adds mark-to-market trades for open positions with status open and exit_reason end_of_backtest, without fictional exit slippage.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L1055-L1112",
+          "version": "repo-lines-v1:sha256:a631f3a40d71459cdb176810f5b9ac6e96c28396e6a5df50452d69dba5e5dbd8:eyJzZWxlY3RlZExpbmVDb3VudCI6NTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2Nzk0YjY2ZTU3MzM4NzVhZjM4OGM2ZTIyYTg0YWRjNDY5MDczM2ZmMTUzOTllNTBkNmMzYzQ1OWQyMjgxZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY2NmVjMGNiZWU1NDEwM2Y4ZTMyMDg0OTkzMzExN2I0MjRlOTBjYjg3MzExYjZiMWY4NmZkMTc4MDgwMjFiZjgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM5N2QzYzM5ZWEwOWExNzE5ZTU2MTA4NTVlNTYzYjg4MmUwNGVkMTA4NmY0ZjQ4YmUxZWQzY2E0OWNhNzg4OGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ3NjdlOWI4NTg3NzkwOGMxNWVhMTNjY2U0ZTYzY2M4NmIyYmJlMzkwZTc2MzhhY2M2MTViNTI2MjVmMzMxZmIifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L45-L61",
+          "version": "repo-lines-v1:sha256:43094113e99d83d55d1fe6c3dc7529f83d69d3a123fddf07455dd5e5fafb3966:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4NzJjNDlkYWFkZTViNWQ3ZGZmZTIwZTUwNzA1YzFhZmYxMWIxYjMyZDBkZDFmNDkxMWQ4ZGM1NGZjNjQ2NzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiYTQ5ZmE5MDk1ZDJkMGYyYjhhMWE2ZTA4YTlmY2Y5Mjg2YTc3OTRmYmU5ZWI4MGU1ODkxYjEyNjBlNzg1MTYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjllMzQ3MjlkNjE2OGIxNjZmNDVhMTFlNDRkMjg2NzZhZTRhNjk4MDBkMWEwYzliMTNiYWQxMTRjMjM1ZmM0YmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRkMmEwM2I0YWRkZTIzOWNlYjhmZDI4YjdjOTM1YTE5ODI0NDBlMTdlMGQxOGZlMWE0MDJjZmIxY2E1ZmI1Y2UifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/strategy.py#L35-L43",
+          "version": "repo-lines-v1:sha256:d8fae651db56003bbcd094f9a40a4e902a51b6202c96d7885b5c75468d3a7f8f:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZDJjYzdhMWJiMmNjMzVmNGZlN2ZlYzAxMDVlM2JiNjNmOTg5Yzg5OWQ2ZGVkYTdhNWFiZjg4MDQ4NTk1YjNiNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNTBkZTI1ODcxOTYxNDkyNjA3MWM4ZmIxOWZkODY2MTUwNTU1ZjFiMDEzNTRmOGNkMTYwM2ExMDlhN2RkYWU0MCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNzI3ZTNkNjVlY2RmMTg1MGU3MDAyMzMyMzMzNzU4YTFjNDJlZDA1ZjgxMjA2MzQ4N2ZjNWZiZWRjZTY0NWY1OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjI1YzIxODMzODAzOTg0NDlmYmMzYTNkOGE1ODRhZmVmNTcxM2EzOGYxNGQzNDIzNmM4ZWMwNjRkYTllYWE4ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_54280279a1d94e8aafaf7236a05de844",
+      "statement": "Successful result generation exposes lifecycle and execution-policy evidence and intent counts, optionally includes full lifecycle and intent histories, and supports a structured empty result when no portfolio observations exist.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L1020-L1053",
+          "version": "repo-lines-v1:sha256:b7b6f9e4462c0747d6cea5329090a961d77250c1b11b869af864e5e2c6514c3e:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0YjMxNTEyYTg0ZGY4MDk2ZTFlM2E4NDQ3MGZjMWY2MmQyOWU3ZWIzZTg5MGFlOWFkYzBhY2QwMGNiODhlZDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYxYTYxODExZmViYjFmYjZkYzA2ZjE0YzMwMTg5MmQ1Y2E2YzljZmM4OWM5Mzk0MzA5MTMyMzE4YjI5NTU5ZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjczOWI2NGM0MTM1MTA5MmUxZDI5ZmVlMDJmNGY5ZTkwNTdlMjY3YmFkNDk2NGQ0YmNiZDFhYmI1YWJiMzgwMDAifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L908-L978",
+          "version": "repo-lines-v1:sha256:a5bf04972dcdcfab51b6d004cb4d9a9cd3b462e497624e0d66e25678d0d918fa:eyJzZWxlY3RlZExpbmVDb3VudCI6NzEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhNGNhNTFkZGQ0ODNjMGNhNTM3NTBkNWE3YTYzY2U4NjEwM2Y3MGU0ODFhMzZhMGE0ZWMxZjA2MThhZjEyYzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlkNmIzYWQ1Y2JiZmQwYTIxZTgwNWQ0NWJhMzQzYzU5Nzc2NmY1MjlhM2IzMDNhOTYyNDEzODk3MjJlOWNlNWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA2YTVjNjgyYTEzZDEzNTE4MWY4NTFmNmZmN2ZmYTMxNDgxOWNmZGM3MmM3Zjc1ZGVkN2I4MGExMzI5NjJlZWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY1YzkxMzllNzRiOGNlNWMxZjBmOWI0MzZhNmM5MTQyOGI2MTQzZDI0ZmU3YThmYmM0NGI4NGMzODJkOGM5ZTMifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:31.122Z"
+  }
+}

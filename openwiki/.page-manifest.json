@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/broker-execution-and-accounting.md": {
+      "pageVersion": "sha256:c495c939c4acbbff4afad75c74bfb21e9dc0378c28c3de42c943bb8fd4ae1654",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/architecture/event-driven-runtime.md": {
+      "pageVersion": "sha256:0c27cf2f57f419414573f8708836ec6c67c111509495de0c0d7b5072a4a74481",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/architecture/risk-controls-and-rebalancing.md": {
+      "pageVersion": "sha256:ce091237a5fd52458d90185e7cd2d44349e3a6e15d4c02826f09642e7675945e",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/architecture/runtime-services.md": {
+      "pageVersion": "sha256:d3fc420644e71089cb883b42c9582f9f25b38a189cf05d627c06d27bc56ebb4d",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/concepts/configuration-and-profiles.md": {
+      "pageVersion": "sha256:dec8bb2bc88facc1bee921dc21fb33594212366cecca4d22b97c065aae3cd4cf",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/concepts/instrument-and-cash-lifecycles.md": {
+      "pageVersion": "sha256:9bbf0f04d43a809b451fb67eef9c745a16edbcd6483747dd541381165ef1e73e",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/concepts/market-data-and-time.md": {
+      "pageVersion": "sha256:27e90e3857fd2fa3393ea8d6bb885185e66ed04e864dbfa78c67be5d29d37930",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/integrations/zipline-compatibility.md": {
+      "pageVersion": "sha256:bdc4a87fd6978db6034dd6cdabbbe81eb249ba1c815d4fc1e2dc46e830749c73",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:91602c4ebb5f8a543d85da94e7cab33a4be96f66c40ce569f59ae56455ec4166",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/testing/quality-parity-and-release.md": {
+      "pageVersion": "sha256:a6a92500fb09866466c33399dd38277aa0cd2b6226d547ebb1dd0d4589a9903a",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    },
+    "/openwiki/workflows/results-analytics-and-artifacts.md": {
+      "pageVersion": "sha256:4dcb2f8f4047f9933bc4ec712afb0c269a6f4f6b5fad5914d6d2c13f23e5c999",
+      "completedBy": "openwiki/0.9.0",
+      "completedRunId": "f188fca5-8519-4cdc-b388-6a91139a80dc",
+      "gitHead": "f6f87d9031e7e07d8d6e60189c38ad488f7375fb",
+      "sourceFingerprint": "sha256:c70d7ef354d7de933069643693f72d1118e3c35c38b41f64db2eaf9e09bb3f0e"
+    }
+  }
+}

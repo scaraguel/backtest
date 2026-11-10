@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:9bbf0f04d43a809b451fb67eef9c745a16edbcd6483747dd541381165ef1e73e",
+  "claims": [
+    {
+      "id": "claim_dd468171b5bb47ebb24fec289233aeb5",
+      "statement": "Funding and capital schedules are indexed before a run mutates strategy/account state: funding requires a unique feed-aligned asset event with exactly one finite rate convention, while capital requires a unique event ID, a feed-aligned clock, a delta or nonnegative target, and a causal known-at time.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/capital.py#L28-L67",
+          "version": "repo-lines-v1:sha256:e3e0c2faf296ce194f63e0c1eb433021951505ec11b2826ac0299a8595244f3b:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjcxMzZhMmY4NmQ0N2NhMzRhODRlMTk4MjViZDU3NzBhYjU2Y2QzYWUxNmM2YTA0MzI2NWI1NTFkZGQyOTljNzUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3N2M0NDRjMTdiYjc5MWE0NDA1MGM1NjgxYTBkYWMwMmQzMjIwMWQxZDhhNDRlODU5MzA3Zjg1ZmVmM2VlYWIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjllYTcxOWRjZThkZDg5ZDY1NTI1MzhjMjc2YTJmOTQzZjVkNDVjZmU2N2UxMzU0NzNkMjZkNjQzNWQwZDliOTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUxMGIyMjMwOTNkNDk4ZTJlNDNhNzFiMjViNDI0YWRlMzFjYTNiMjJjNzI0MTc5MGVjMTEwNDhhNzAwNDYyOWMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L174-L190",
+          "version": "repo-lines-v1:sha256:09ca7f9d5dc1ec4dda5020aaa297ac232aeec64e1713c99693652545b502e6ec:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI4MWMyMTg3NTljOTRhZDRlNDcxZThjMzllYTU3YjM5OTViZWM3OWI3Njg3NjA3YWY4NmJlNzkzNDhmMjg0NWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg0OTFlN2I3ZDU3NzFjNDc5YjMwMWEzNGRmYWJiMjA0NjZjMGE2MGYxM2RjMmM2ZGU2ZTA1MWRmOGQ0N2VmNzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk2MzE1NzU5YTViNzU4MGViMTRiMDM3N2NjMzlkOTQ2ODg1YmJiNmQzMGEzY2Q2ZjRjYTQwYzc2Zjc2MTVmMDEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/funding.py#L38-L83",
+          "version": "repo-lines-v1:sha256:6d520c03da4d3e0a5829a93c9b3f17e33cb04235103f2ececae67f1dbf8b4e8c:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNkYzFlOWQzZjczNDU1YzM2MTU0MGQ3MjQ4ZjYxZjNjZWE4YzBiY2NmMjI3MWQwNGNjNDYyNThjMGYwMGFiZjYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlODg3YjdlNTUzZjE0MjFiZWRkYjNhODE2NzU4YmM1ZWJkNGJiNTY3MjZmMjljOTA1NzcyMzRiNzYzNWZjM2YiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhlMjY4YmFjMmQwNDNmODBlYzAxMmM0M2NlZDAzYWYzZjM2OTdlNmQ5OWRkMjYyNzBiYjEzNzUxZTM1NThkODQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_602edc0c25cf4870a30a32f2880bfe92",
+      "statement": "For each accepted event, due corporate actions and scheduled futures settlements advance before quote installation; current marks are then installed before capital and funding events, which are applied before callbacks and ordinary same-event fills.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L510-L543",
+          "version": "repo-lines-v1:sha256:26e869303445ba2eb3a32b3c58cae80d9e533f16b81f7d4fdcea2a97e7f8c5fb:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgzZmMyOTI1MTgwMmFlYzhmZWJkZWU4NzgzYmM1Nzc0ZDk4OTA1MzFjZDVlNDQ3MDIxMzBhNzMzZDIyN2UzMDkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ3ZjBmYjkxYmUwMDk0MDM0ZTZhMjY5MDc0MDYxNTg4Y2NhNGM4YWQyNGE1NzYwNzUzOGMwMjhhNTk1NmY2YzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZmMTc2NzA3YWZhNmYwNGVjYTkwOWJhNTViOTMxOTFlY2NiNzllY2I3MGUyYjRkMmQ1NDU3YTVlYWFhNjg1ZjMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk3M2FhNjMwYzVkY2ViMzE1NzIxYzgxYzk1MDE3YmIzYzNhNjFjOGRiOWM4ODcwOGJiZTFkZmE2NTc2OTNhOTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L609-L648",
+          "version": "repo-lines-v1:sha256:70d191eafd3ad1054529c701c4440f25e98d22d2663db657201460025f41ad48:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmYjYwNTM0OGFjZDhiMjUwMWYzOGE0ZDQ4NWM3OGJlZmI5YmRiN2M2MTk4Y2ExNWM2ODc1YzZhNWM5NjViYmMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjIxZTEyOTM0N2Q3YTA3MmE1Mjg0MTVhMDNiNzhjNjc5OTE3YTRlMjM5ZGJlNmMzN2E1YjE2ZjdkNGE2NWJkZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc5MmY4MTM3OTFiYjg0MzlhYmI0ZTljMThiODdhNWU4NDA3ZWQzMzJlOTdkZWUxMGVhYTdiNzNlZWE4ZDBjNDkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUwOTY0MGEzNzBmM2M3YzI2NjRiZjhhZDExYWE4Yjc5NWU5ODA4NGI2NTIzNzVlZDg0MTI3YjFmMWM4ZTI5N2EifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L649-L700",
+          "version": "repo-lines-v1:sha256:ae3fe3ff13a22a44644bbc4cf2558d053d16655bd5aae59180ede3d8881b4167:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI1NTU0OTc0YTAyZDVjMGE1YmY5ZTI0ZGVlOGU4OTNiMjJiZTNhYTQyNzQ5YjEzNTdkMmFlZjFjYjA1ZDZhMmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlNGFhZDE5NjU4MjI3OTA3MmJhZTU1OWIwZjMwZWMxNjhiOTg3Njc5YzlmYjI0NTY3ZmEzY2VlNDJiNWEzYTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4NWE1MTQwMzMyNjMwNjI4MWNhZmE1YTM1NDQwYTBmOWRhOWZjYjNiYThiNzFjODdmZmU5N2Y1MDk2YTM3YzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxYTU2YzNhMzdmMTMzMmM1ODY4NWQ4OWI3YmViOTNhMDg1N2I5MDkwYjliMDkxYjQ5Y2I0YmI2NTlhMTVlYjEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9ac998d13d1a40fbb85af00bcf670e35",
+      "statement": "Session and runtime filtering do not silently discard cash events: funding on a session-filtered clock is rejected, all capital events must reconcile to applied changes, and RuntimeServices rejects capital/funding events outside its accepted execution windows.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L450-L470",
+          "version": "repo-lines-v1:sha256:ed01ab77eca572ba8e4de33303841e21740b2a54ea88a7e12884204faf258ab7:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlmNWQ2OGQwMDYxMjQ2NjYyMDU5YzM5ODAzMDcwZTVmMWI0ZWNlNWQxN2M1MjM2Mjk2MjdmOTY4NGRiZjZjMGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2MWM2Y2MzOGM3MmQxMDM1ZWZhOGU3MDg1YWM5NDBmYjI5N2FkNDc0M2Y5NTRlMGI3M2NiNjBhZDJkZWViMDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEyYjA2Nzc4MTVhMjk0ZDU3Y2Y0YTUwZGQ4NTkwMDFkZmQ3NTNhY2U4YjU4MzQ1N2ZlZTI4NzNkYjA1MjBmZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI3ODJhNjAwY2ZkZmRjMDM0NTA3NDFjYTYwZWM0OWVjNTlmOTdhMTM0NzAyYmE5Y2Y1YTczYWM2YjZjOGNhYWYifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L961-L965",
+          "version": "repo-lines-v1:sha256:966c28c57ae747898afd36c895e029819cffcd08d97afd103325c1ef11467fb7:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTdmMjM0MjQ3Yjc5OGE5MTdmMjgyYzlhZTg2NTYxZjExMDBiYmFhY2FhZDkzN2M5ZjJjZWY4ZTA3N2VjMDc3MSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMWI3ZjMyOTM0Y2EwYTFjZGFiNzZhYThiYWUwOGUxZjg1N2VlYTQ1MzM5MzI5ZTc2NTgzMmUxMjc2MmM5ZmI1YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzRkZGM2NGNiYzZlNDMxNDBhNjM5OWQ3YWI1YjM3MWE0MzJmOWJmMDlkYWM2MDZkZjBjNjEwMjMwZDU3YTA1ZSJ9"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L1021-L1035",
+          "version": "repo-lines-v1:sha256:fe3e8ece850991562c61258aa1d767c6d24ef4610e5c81f0cd8e7310bdd101cb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlNTNjMmQ5NjdkNGRjZTliM2UzN2FlZmE3MmJkYTBhOTkxNTI5YTkwODNlODJkODU1YjJkMzRkMDM2OTc2YzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjgxNmRjNjc0MzFkMDQ2NGZjYWYzZDc4YWI4MjFmYjMzOWQ2OWYyNDEzNjI2NzcyM2YxM2JlYWVmZjhhMjNhMzkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRlODhlZThiZjk3OTZhYmM2ZWQ4OWJkNmJkOWM1YWI5MDNkMDY0ZTZiYmNkMzgzMWVhMzFkN2E2YzkyYmY5N2YiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmNzYzMWE3OWVmMTI3YTgzZTE4Mzk2NDUxZDMzZjkzZDJiNGUzYTVmNjliNzRlOWQyN2Q1MDg1MDFkOGMzZjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_f01467ac4022444b92cae335984fb119",
+      "statement": "Corporate actions require a manifest proving raw price basis and validate causal revision, currency, equity instrument, economic-term, eligibility, and payment declarations before execution.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/corporate_actions.py#L202-L235",
+          "version": "repo-lines-v1:sha256:caeb3e527ecbaf6b37dc6bda66c2849b7c68fe36331a48b71b27d54671a041e9:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZjZTJjNWMyZGYyOTVmZWY4MGI3ZWM0NGY1NDk0YzhiNTlhM2NiMzU3MzM1OGRkYTI5NjhmOGYwZmFjMzU4YjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE1N2QyYmZkYWI1ZjI1ZTc5ZTIzZWI0MjlhMjg1N2EwYTcxOTc3NTM3NDA0N2ZiNjViZGM1MDU0ODkzMzQyMDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImVjNzUzNjllYmNjNDQ3YzBjMDBiNjBjNjVmZTc4MzkwZmJjYTAyYWYzNDI1ZDEzZThmZDQxZDUxNDU0NmE3OWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjYzNDY5MGZhNzcyZWJkNzY0YjIxMDIxZWFmYzhkY2UzNWI0NmMyYjhkYjZlZGZjOTU0OGIyMTJkMDU3Njg3ODMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/corporate_actions.py#L42-L61",
+          "version": "repo-lines-v1:sha256:12599e86400675389111b168ced536439c8804edb32291417577ca6b2765ee2c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0NDM0MWIwMDY0NTliMzA3MTNkN2I5NGVmZTdjYjljNjU2NmE3YzhkMWNkOTc4MzY3YmY1N2MyZWQyMDU5ZjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4ZWQzNzZkY2M1MThhZTc0YWE0YmZjMzY3NjQ1MWQ4MGNiMDFkZjRlNWUwYWU5OTc1NWM4Yzk2MWVkYjE1YmIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjcyMGI3MzlkYmI1MDc5ZjcyYTUzMDIzODI4MDA2MGI2NTcwNWRhYjcyZGJhY2Y2ODQ0NDhiNmZlZTUwOGJhODcifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/corporate_actions.py#L79-L185",
+          "version": "repo-lines-v1:sha256:cfe3b889c8572fc676af36dd3903f59c8b8774910de2517809ab344c28fd1f88:eyJzZWxlY3RlZExpbmVDb3VudCI6MTA3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI3MzRiYzM3ZTgzZTYzNDRiZDdhOGU0MWQ5Y2Y3MDMxZjQyZjliYTI0MWM2NzdmMmYzZWIwZjZkMjU1YjFhZTA4IiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiIzMzI0YWNmOGVmNGRjYWQ1MzMzNzgyM2I4NWFiMmZlZDZjYWM1OGFhZWUxOTBmMGNkMGVjYzQ4OWY2MWUxYmEwIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3NjY2NWE4ZTQ4NjkwZTFiNzkxMTcwZjRmZjFmNzkxNGY0NTU2NmYxZjMxZGE1MzI4NzI3MjM0ZDJkOTVmNzY3IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4MDkxMmNkODM3NmRiYTZkOTExZDYyMzU0MjMwNzM4NjRkZTE2YmNhOTFmMzlhNTQ2YjQxNmZiZGU1YmJjNDE5In0"
+        }
+      ]
+    },
+    {
+      "id": "claim_3bd061243ed04615b81c875264c966bd",
+      "statement": "At a common corporate-action clock the ledger deterministically orders pre-event entitlements, splits/mergers, post-event entitlements, then payments, and applies the entire clock group atomically by restoring broker lifecycle state and journal length on failure.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/corporate_actions.py#L220-L234",
+          "version": "repo-lines-v1:sha256:b3c11d010d76f897a4569223ad1e7f93dfd99cfb7c0f5679ef37fa7d320914a3:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ2NzI4NTQ0MGRkNGY5NjM4YjY0MDA5ODRjNmY0YjM5YzdjZjJiNDY5ZDVmN2U3MWY5ZThiMzU0ZjM0OGQ2NDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU1MDgwZDRjNjE2ZTEyNzk3ZGFmZjIwZDJjMjEwZDc5M2QyODgwMjNhOTMxOTEyNGViOTZkNGQyOGVlYjQ4MDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUxYTk2YzIzYzliODJkOTBiNjYxMjUxYjg2ZTAwNzRlOWVjNzNmYWZhN2YwYWZlMDU0YzA1MmU5MzhiOGIzMzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRlNmFiMzMwZTJmZTUyOTJiZDEwODE3NTI0Zjg0Y2U2YjEwMTM4ZjEwYTRlMDVhYmJkMjRiYjNiMmU0ZTczOTEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/corporate_actions.py#L287-L320",
+          "version": "repo-lines-v1:sha256:a2ab8c55c22336316ef908150a919dcc74e663e6b46ccd0270794a1e43e52a53:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjOTU5NjFhMTkwYjI2ZjQ4Y2UyMmFmZDdmMzU4N2U5ZjA3YWU5NzlmYWQ2YjEyMjEyMmM1NGUzMGYzMjkwNDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRjNDMyYzQyNDM5YjBhNDk4YTY4MmEzMmU4ZWViMmRjZjRmODU5YjljNDJhZjI1OGQ1NjNhMjQ3YzMyZDdmMTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImYwYmIyZWNjYzM0ZjU4NmE4MDZlZjNhMWI4MmQ4ZWVhNGUzY2Y4Zjk0YjNiZmVmMGFjN2VmNzc4MjIyYTZmOGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjUzOGQyOTQxMjgwZmIwNjY1ZjA0MDQxZTMwY2YxMGEyNmU0NTdjNmY0MGNlZTM5NWMzZjZjOTk3ZmY5NDdjOGQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cedb0b00857d4018990538fbd04263d4",
+      "statement": "Splits rebase positions, marks, and pending-order economic terms, while mergers cancel source orders, remove and block the converted source identity, and create declared cash/security entitlements; native unpaid entitlements are marked as receivables until payment.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/corporate_actions.py#L355-L464",
+          "version": "repo-lines-v1:sha256:d018f0c12ceb789ac6c79e39bcf05e7994fb759d7dab712ec6aa7dd5f856625a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEwLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1NTAzMmU5NjRkMDkzMjM1MWU1ZDE4NTI2OTI4MWIxNzFhM2EwOWIwOGIyODZlNjYxZWE0NzAzMjNjODJlYjRkIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiJkMTllMTMyMDA3MDcyMGZlZDk5NjQ1ZGExNzYwZjQzNzdiNGRhMGQyNTAwYWQyYmY1Mzk3YTIxYzk5N2MzNDk2IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIxNWE2NDdmNzZmNzhiMWIyYzQ1ODkwNDk1ZTlkMDI5ZWEzN2Y0ZDJjNDgzMTEzZTNmYmVjNDIxOGRlZDFjNjhkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4MzM0YzhjYzY3MzA3Y2RkMDgzYjgwZDEwNjI2NDMzM2U1NTkxMDQ2NzQwZmM1OGUyMzE2YjI5NzAwNWI2YjBmIn0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/corporate_actions.py#L665-L749",
+          "version": "repo-lines-v1:sha256:e623ca1f39a661c5e91b6df636bfb23c12c91cef2b73418daa0dbbbbc8bbd1e4:eyJzZWxlY3RlZExpbmVDb3VudCI6ODUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjUxNWM2YjRiNjI3N2RmOWE1NDE1MGZmYjEyN2Q0YmQ2M2Q3YTIyNWJjYTRmYTM1YzZhNGI2NGIwODZjZDhlZGMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczZWM1NWYwOTk4ZmQyODVmODQ4M2VkYTMzMDFhODc2OGExNGE1NTAyMGQwZDQzN2M4NmU2MzI4Y2ViNDEyNWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2M2RjNTUzZWZlZjE0YWNhYTU5NTZiZTM5NjkwMmNkNTU5YzM0NzJjMmUwNGM0OWI1ZTU5YmI3Y2VlNmMxYmEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/corporate_actions.py#L732-L749",
+          "version": "repo-lines-v1:sha256:350465f7e797ff5a30c006a557b6e83423c7ffc52b5fb14d7c8602432efe24c2:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEyNmU0MzY4ZjIxZjg4OTFjZWQyNGNmYWY3Y2EzYmY5OTg1YjNmNDY5ZDRhNjgyNTZlMTYwOWQ2NTZmMWE3OWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjczZWM1NWYwOTk4ZmQyODVmODQ4M2VkYTMzMDFhODc2OGExNGE1NTAyMGQwZDQzN2M4NmU2MzI4Y2ViNDEyNWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBiNDExOGNlNDY1NGYyYmI5NmJiNGYzOWEyOGJmNTM3OTc2MmNmZmQ3MDc1ZTZlMTgxMmEwOGMzM2UzNjJjZTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cc16ae3a16274d2b8df436d0dd93db8b",
+      "statement": "Futures variation accounting maintains a position basis and transfers quantity times price change times multiplier into cash; scheduled events move the basis at their declared settlement, while on-mark instruments generate transfers at observed marks before callbacks and after fills.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L661-L700",
+          "version": "repo-lines-v1:sha256:1265c0c5cd50068ec2afc40f18617ebb419f314610dbab9f4ff5af2a0cdf4cc8:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNkN2FiNGZiNzk5YzlkMTZmODIxNjQxODhhNzVhM2RkODhmZjJhM2IyNjVlMDA0MWUwMWU0N2NkOGE5OGJjNjEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlNGFhZDE5NjU4MjI3OTA3MmJhZTU1OWIwZjMwZWMxNjhiOTg3Njc5YzlmYjI0NTY3ZmEzY2VlNDJiNWEzYTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImI1YzUxNDM5YjkwZGIzNDljMGQyNGEwOTQyY2EwMzc3NzliNjA4OGE0N2FhOTFmYjliNDBhN2Y1ZTgxYzhlYjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxYTU2YzNhMzdmMTMzMmM1ODY4NWQ4OWI3YmViOTNhMDg1N2I5MDkwYjliMDkxYjQ5Y2I0YmI2NTlhMTVlYjEifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/engine.py#L701-L710",
+          "version": "repo-lines-v1:sha256:0a36cf7628274169ceab0ffca5cc76976dd024fbf8ab7f9d3e8f766c77508438:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRkYjQ0OTllZTM0YzQ1MTU3ZWM4ZmZlODMyZDc0OTBhYjVlMTg0ZWU0MmI4ODNiNDRjNjdjOWRjOGYxNjBiOTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjljZmZlNjBjODZiZTQ4MGEwMmVlOTJhZWYwY2ZlNjE3NDYxMjFkMjkyYjc2MDczNzhkYmMyMmMxMTBlZWEyYTUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2NGY0OGE3YTQxMTEwNWJjYTQxYjI2NWNmMzYxYTBiYTZiZWUyYTgzZTg1MGYyYTI4N2NjYjAyMDZhM2MyYjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJmYzNjMTNlZjBiZTQ5NWJkNzA0MDFlNDA1Y2E0OTkzZTdhNzcwNmM5YzQ1OTA5YWQ2NGEwZjE2ZmUyODYwZmQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/futures.py#L134-L177",
+          "version": "repo-lines-v1:sha256:eea7565c4f0cfa229bfbc4e8828fc8ebaa8caa5c53c9103477e7e33b10ac64eb:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlNjAwMjI1MTk0YmI2M2M0YzI2MzRkZjI2ZWI4MzUyNTM2NDBjY2IwNTc2MTIxOTc4MmI1M2EwZjY5MjNkMDYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkwY2I0N2JhYjQxZWUxYWExNTBiZmU2ZWNhZjEyZmJjZmIxMGFjNDNkMTEzOGI1ZjBiZTM1ZDRiMTRmODIzNDgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIwZTNlNjg0YTNlZDcxY2MwNWI3NzEwZGU1ZWNhNGE1YmRiOWE4MWMxOTg2NzE0MmUwMjQ4NGZlYWMyMWRhMjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/futures.py#L87-L132",
+          "version": "repo-lines-v1:sha256:25d09d3824ce3a23fc86ad8a8ad8a24c1a1e4cb62d193518840b43ac0a8b55d0:eyJzZWxlY3RlZExpbmVDb3VudCI6NDYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyNTZkNTgwODFmNjUwOWM4OGY5MTU1ZDNhYWM4Y2QyZjZjYjY3ZjI0NjQxNWEwZDcxZDY5NDJlYWEzNjczYzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijk4NWQ5YTExZDI4ZjQ0NzUwNzE1OTczMTYyNTgzMGY1YWJjM2MxYTk3YTRiMTc1OWQ4MTUyMzFjYmIwZDllMzQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjIxOGZmMGI1MTFhMmY3ZTlhYTYyN2JhYmE4NDE2MWQyZGE4MDdmZDE4ZWI4YTY5OGIyYzk2NDBhMWJjMzRmNmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjJkZWE2YjIyNmU0NjJkMjUzMjQxZTk1YWQ5ODQ3ZWMzMTMwZWVlM2YwMjMzMjQ0MDI2ZTJiZGFmMjhjOGE5NDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_da9d5252323c4881a4558e9328ddf20b",
+      "statement": "Funding is charged to the position held before same-clock callbacks and fills; rate payments use the causal last price and multiplier, amount-per-unit payments omit price, flat positions still produce zero payment evidence, and a timestamp group is committed to cash only after all rows calculate successfully.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L732-L782",
+          "version": "repo-lines-v1:sha256:95d79da45b6ff14970fcb5d04db6d2ff88e2bf762bed17887157ada41268f093:eyJzZWxlY3RlZExpbmVDb3VudCI6NTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEyYzg2MGQyZjM5NTlkYzJlOThlNTI3Y2E3YTlhZDI3YzljMmY5MTkzZmM4ZDMzZWVkNWIwNDBhZmJlM2U4YmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3ODkwODI3MzlkZjc4MGE1ZGQzMTZjZTczMjkwNDk2MDc1Zjg3MDY0Yzg5MTU2MDIxMjEyZDMzZDE4ZGVmMjUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRhN2Q4NTA0NmVlZmI2ZDRlZmQ1Y2UyN2Q5ZmY1NzkyM2FhYmZiOTA5YzM1ODM2ODUxZjQ5MDcxZTAyM2NlMWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjY3ZjhiNmJmNWFjYjBhNGMzNjMxZTg2YzkxNWY5YWE4MmE0NjUwODc2MmFkNTM2NmY2MzkyOWFiYmU4NTE1ZjYifQ"
+        },
+        {
+          "resource": "repo://tests/futures/test_funding.py#L152-L166",
+          "version": "repo-lines-v1:sha256:73550366a425ad4516dcdd1bcf1640ef6a34074aae27e468c12c28ac94e9f8e0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE4OTljNmQ1NzU1NmRmYTc1YzYzMzM4YzE2OGE0YzkzOTkwYjgwYmQ0ODVhYjVmOTdlZjA3YmFjMjhmMzliN2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwNDhkNGMwMDFhYTQxNjcxMzMyNjZlZmZjYTBmZTRlNWE2MDVhNDBjNzQ1MWJmMGVlNjY0NzZjNzg2NDk4ZDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhNzk5MGU3YjNkNGEzOGFkNmI2ZTcyM2VlMjg2OGZiYjdkZGI4M2I3MTRkZjVmZTI1YzJkN2JmYTE1YTkxYmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlkMGMwMzQ5YzhkMzIwMmE2OWU3NzEyMjhhYzQ2ZmYwMTExNjQ3NTc4NTg0MTgwYzcwOTNkNDIxYmRmNzlhMjQifQ"
+        },
+        {
+          "resource": "repo://tests/futures/test_funding.py#L99-L120",
+          "version": "repo-lines-v1:sha256:1832ec4a39143bf5b235e6bf38c8a9a24d5b955da4c35e6bda82098a041ada2a:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NGJiNzU1Y2RmODI4YWUyMDZiMmUzYTU4YTAxYzkxZGRjMWI2YjU0YWU2ODg0MzIwOTk3M2EwYmEwMjhmZjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImZjNTgyODI2MjhmZmZhMzU0YzU0M2RhODg3NzEzZWRmMjExZWJmNDExYjRhMWViZGQzYmJmODFkODQ4ZWRlMjIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImQ0NTZmZjdjY2M5NmE3NTM5ZWNlZTlkNDY0MDg5MTg4OGJhMjYyNGNiNzYzMjkwMzA3N2Q5MDhjM2VhNzE2ZjMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1253863e5b384dc5844c4caa3f8f5047",
+      "statement": "Capital delta and target events are valued from current marked NAV, require marks for every held asset, validate the whole same-clock group before committing cash, and are excluded from investment return through chained pre-flow and post-flow valuation ratios.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L694-L730",
+          "version": "repo-lines-v1:sha256:52acf4c6404bfd46328ca5c05c426e6a09dcd00a3be1f7e885b17d75b6661e5b:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJhNTk2NzA3MmMxMzkwY2QxZWEwNmUyYTM0MjQwYzZmMzUzYjBhOGQzOWU4YTQwNDhlZjEzZmQzMjBhOTlkNDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM5MGFkNzkyZmQ0MmIwYjBiNTBiMzg5NTZjODA3NTYzNGJjN2I4MTc4ZjU2NzFlMDIzZGQ1MDVjYjE0NzJjOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImEwNDUyMTAyYzMxZGJjODEyYWJiYmQ0OTVkMzRiOTAxMDY0MGE5ZmFkODlhMTE4ZDhhOGI4YjNlNDA2ZWJkMDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg3YjEzYzllOGE5YjgwZTIyNGY4ZTI0ZWViYTFkMmYwMjJmYTc4NmZjOWI5MmY5ZGI2ZjNjY2U2ODcwNzdjNzkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/capital.py#L70-L109",
+          "version": "repo-lines-v1:sha256:277603848a66dde4f9195798a60abfa2e0f7a8221e36d8f14a854b351a5c56f8:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNhMzcwMjU3YzllZDdlYTIxODI2Y2U4YWU1MjU0OWQxODVlZGE3Y2U1ZTJjMzdkMGM3YjJiMGNjZTUxYjY1ODEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4MWJiYTBjNmE3MzRiNWY2MzQ5NTNlNTg3MTJmZDcxMjJmNmUxNGE5MjllYTM5NjBiNTQ0MWMyNTRkYmNlZGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQxNzQyMGU0MDBiZWNkNjQ0YTUwZWFlYmVhMWJiNGRmNWViNWM2MDNmN2U1N2Q0YTkyNWRlNmZmNmFmNzc2OWQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://tests/test_capital_flows.py#L25-L64",
+          "version": "repo-lines-v1:sha256:529852bda64ec5b3d57b7f256611e9d2c7a72074c73d54fedd9b87127b09de7d:eyJzZWxlY3RlZExpbmVDb3VudCI6NDAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQ1NDljNzRiNzA2MWZkZGZlZWNhZjBkZDJlMzFjN2I4MzA2ZmUyMmFjZTA1NDUyZTkyOWYwNjI3MzI4NGE4N2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxZDBmNmEzMjlmYzU3MzRiNGI2NGRhMTA1OTNmOTgyNmVlMWY5ZTNlZjkxNWNjN2FkNzU1MjVlNzJmOWM1ZjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlkZjZmODljOTRmOWY3MzhiMzJkMjMxYWMwZGZjYzJlYWY5ZDdiM2MyNWQxMDhiZWFiMzBlZWI1ZDIwZTMyZDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3YmUxOWU3OGJmYzdhMjRiNGYxYjAyYzExODc5MzM4YTc4ODk3MzM3MTg3MWVhZThiNTllNzUzNzNiYThiYmMifQ"
+        },
+        {
+          "resource": "repo://tests/test_capital_flows.py#L96-L117",
+          "version": "repo-lines-v1:sha256:dd7f2567c20cdd270a6924aa3e57ae2dd6ba8e6b55d26dc806c3bc437293103f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI1YjQzMzhlZGVlOGEwNzM5NDZlMTdlNDc2NmQ3MDE0NWY2NGE2YjhiZDhhODZjOWQ3YjdiNTVmYzJlMjQ1YWIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJmNmFmMzU5MzliMzI3Y2QxNzEzNzcxZDdjNmQ3N2I2Y2NhM2FlNDljNjI4YzllYzFkNDYwZmE1Y2RiMzEwODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImMyZWZlZGY5NmZjZTViZTlkODU3N2E2OTY5MzE5MjYwNDliNGE3OTM2OTE1YWE2MWU2MmQwZTUxOTg2ZTgxOWUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_6a17e234e0814df98497316e91578d29",
+      "statement": "InstrumentView delegates causal lifetime and symbol resolution to a caller-owned source using the current as-of cutoff, enforces stable identity dtype and publication availability, rejects inactive quotes, optionally requires inactive positions to be flat, and cancels orders inactive at their eligible execution point.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_instruments.py#L107-L171",
+          "version": "repo-lines-v1:sha256:94fb61e1aee2a3231aaaea2c849e0cff78a958d2467ccb3b3bca38bda90aa45f:eyJzZWxlY3RlZExpbmVDb3VudCI6NjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3MmE5OWNlMDc0MGVlY2Q4ZTIxZjE0NTVkOGU0ZDAxMjhkN2Q3YmU2NjkwMDEyNzlmNzcyYWJmNTIzM2M0NGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkzNGQ0YWQ1NTM2ZTEwNjhmNzAxMTAzMmI3NzQ4YTRjNjgzZmFlZTcwZWNmYjM0YzdjMGIzN2FlZjBkZjEzOTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIyMDQ2M2ZhMGY2NjhjYjA3NDEyYzhkZWJkY2MzNGRjNjk0YjRlM2FjOWUyYTgzZTVkZDI2Nzc5NWUwZjRjNjkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRlMGFjNDBlNjQ0YmRkZTkxNzZmODg1MmFiNmNkZDMxYmZlNjg1YjI5MTM1ZmUzYzZhM2IyMDdmNWNmYmM4ZjMifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/_instruments.py#L173-L224",
+          "version": "repo-lines-v1:sha256:ecb62d89a24b7b009bccb0d0ee21ffdaae74e296dfb04c5f09fed2fe21ff448d:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEwOTQwNWNiYTU2NTIxZDg1OWViZGE2NTQ3ZWU4NDcyMmE2OWFhZDI1NTI0NjIyNmFmNmMxODRhZjMzY2UxNzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM2MzM2M2NmMDBhMTYzM2RiYWY4NzczMDkxOTdmMjlmMGZmZWI3OWZmY2EwYzMyMzFmMjhlMzI4NWZkYjRmZDMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjAzMmVlNTRhN2Y1Y2JmNjJlMjBlNTYwZjY3YzQxZjM1MTAwMGJlNDczNTQwY2NhMGQzODIzNzAxM2Q0Y2ZjNDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImY0YmVkMDc4NzZiNGZiNjJlOThlM2VmYTdiNDBiM2UyYjg4ZTM0ZjZiMDMzY2EzYzMwZTM2YWI3ODg4YmM3ZmQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/_instruments.py#L226-L248",
+          "version": "repo-lines-v1:sha256:5593e84bded53b74df1df524584a067c424f4fbb9713b3b05c18096b961a0bc3:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhYzFjY2FhNDhkYzkzMWNiNDQzOTU4MWNmYmM0NjdmNmNhNGM0YjRjNzEyOWQ1M2VmNjkyNGQ5MjFjYjMxOTkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiNjRiZDQzNGQxYzgyOTY0OTUwMzQxMWI5MDkzZDZmNTM3MGIzNTFkMzNhOWFiYmU4MGRmMzRmMDdmMjhhZDciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzNTQ4NjEzMjNhOGVmZDIwMjg0MjU0NWYwMDQ1YzlhOTM2NzUzOTRjODc2OGVhYTYzYzg2MjM0ZGYxNDU2NzUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c700abc8a84f431f8db64b167a66a2fd",
+      "statement": "A FuturesLifecyclePolicy schedules one explicit physical boundary for a dated contract, cancels old-contract pending orders and submits either a close or roll, then prevents post-boundary orders from increasing or reversing old-contract exposure; it does not synthesize fills when quotes are missing.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/futures_lifecycle.py#L16-L36",
+          "version": "repo-lines-v1:sha256:76eb32804de2468f5b3161bb1cc5f1b45039efca7d798a4e6e2bffad9572901c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNhZTIzYzc1YjAyNmEyM2JkNjg4YTVkZGFhN2E0YmNjNDM1MTc4ZmQxYjE4M2Y2Zjg3MTgwYTVhNzViYmM0OTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc4NTk5ZjNiNDk3NmY1ZmY2ZGZhMjc0YmZmY2Y5YmYxY2M3ZWIwZTk0MmRlNDhiNzIwODI4YTRhZDNhMDc2ZjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFkYWQ5Yjg5Y2NmZDU0ZmRiYmQ2MGJhNDdhZmE2NmU1ZDkxYzNmZTM1MGNiNDAxZDYwNjc0YzY4MWFhNGIxMDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImVlZjBlMmI0MDY4OWMzY2IyMDlkNzM0ZWRkODM0ZmYwN2VjNjA2MmM0MmYxZDNkYjAxYTQ1ZDY3YmM4ZjE3NjQifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/futures_lifecycle.py#L73-L132",
+          "version": "repo-lines-v1:sha256:ccddac7645277f821ae688568f5258f76e8219f4a5a93716767999ba6881c8a8:eyJzZWxlY3RlZExpbmVDb3VudCI6NjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1YjA1ZGVjZGQ4OGEyZTEwMzMzNzUwYTg5OTU4NmU1YzkyNzFiZTc3MzJjZjQzZGZjZjc5YzVmZWRiMjg0MGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFhZjNkYTg1MjA5ZTAyZjgzMzMxNTFjMWQyZTExZTI5NDY4OTE3MTExNTU1Yjk5NWFlMWUyZGViODUxNjNiOGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/runtime.py#L1064-L1074",
+          "version": "repo-lines-v1:sha256:86315c790dd49684b11b07a52dc39ad02824f7e64e30c98ffe5811d31853b966:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1NGY1ZDcyYjI2ZjNhMGJhMzY1Y2VlNTg1YzkyYzUzMDkwYTM1MGIxMDdlODc1YmM5OWRlMTE3MGFlMWFjYjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4YTI4ZWRlMDAzYTYxYzY0NjRiZmM5OWIyOTI0M2M4OGIyZjEzYzRkMDhhNWVjM2U0OTBjNjU4OWFiYzM3NzgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY2NDkyMmIxYWRhYjJmMjU0YTdmNTVkNTFmOWM0NWE5NzlmMDVjMjE5NjAwNjBhNDEwNWM4YjNlNDhkZWE0ZTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1ZTI0MjM3ZDllNzBjY2UxMjE0M2MyNzhmOGM0MTU0ZmUxNTQ5NTE3YmI3NmU4NmIyYzA4OGE5MDY1YWFlNGEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7319dd78bad04a70abd48d006e063eff",
+      "statement": "Dated-futures rolls are paired but non-atomic ordinary orders: both assets require compatible FUTURE specs, clocks must be causal, pending leg orders must be resolved, differing multipliers require explicit replacement quantity, repeated identical roll IDs are idempotent, and conflicting reuse fails.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L2279-L2361",
+          "version": "repo-lines-v1:sha256:2acbf72cd1e6072b9358817b0376330f2eaa46502f2a8296eb8a9ca4cde36b73:eyJzZWxlY3RlZExpbmVDb3VudCI6ODMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBjOWVkNDE1MmI1MWIxNThlZjk2MzQzNTAxNmMwMmI3MGY2MGMwNjcwMjM3OTRkNGY5MWUzODYwYjViMjNmNzkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImRlMDQ1NjJjMGM0NTNkNDlhYmZiYmIzNDRjNWFmMTYzNzhkYzcwMjM5MmU0ODkyMzc5YWM3ZmE2MGVjZjdjNTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ1MzJkYjIzMTk2Y2YzMzQzMTQ0Y2RhZGYzNTljNTg0ZDk2MDk2NDhjOGRhYTUxODQ3ZTM3ZGNmMTEwNDNhMTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFiZGU0ZmIxMDQ0ZmNkZDBiOWZiNTMxMjdjYTdjMTMxNGFmM2EzOTdjYWU1MDMxZmIwOTk1MmYxNmQyY2NiNzkifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/broker.py#L2362-L2429",
+          "version": "repo-lines-v1:sha256:378adf767c0c3b12c09993ff9e5d557df475bc6da50c515de932c010632952e2:eyJzZWxlY3RlZExpbmVDb3VudCI6NjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVlNzcwMDY5NGYxZTY3NTlhYjVmOWU1MWYzMDdlYzYxY2FjNmU4OTkzNzM4NTlkYTQwNzM4MjY1YTE4Mzg4MTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlNzNjNzlmNDQ4YWZlNzUzZTRhZThkN2FlZDMxYmQ2ZjBiZTVkYWU1MGE4NTM1NDM3MjAxNmVkOWVkMThhZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM4ZWM4MTk4YmExMTVmN2RkYmU0ODgxYjZjNTIxYTYxMmFmZWY1ZjhjZGZjNDQ0NzhmZTM3NWMzN2Y2Nzk2NzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3NzZmMGU1ZjY5MDliMWNmYTkyNWVjOTdjNDU0YjI5ZWYzMjE2YzUzYzdjZDc1MGE3YTM0NmJjMWMxNDBiN2YifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4c6e5b1c3b93469891e87452279acef7",
+      "statement": "The roll audit projection derives each leg's actual fills, fees, fill clocks and overall completion state, and artifact validation reconciles both ordered legs and every fill sequence against the fill journal.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_rolls.py#L131-L252",
+          "version": "repo-lines-v1:sha256:5653f2a1acb41d880cbd95071fc87cb25ffb8ff96fca2e4bf83471141b8150ff:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiIyZGIxMGM2MThlMmJlNWU4YjVhN2NjOTc2ZmUxMDE3NmQyZTIxZmM4ODFmY2E2ZTljYmY4ZGE4MTMxODFjZTEwIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI5MTYwMTBmZTk5M2U3YzJlMWM1ODIwZWI1MWNkNzMyMDE2YzMzNTBmZDExNmI0NDMxZjYwOGUwMGIxYTY2ZDM5IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3MjVhNzE3ZWIwNWE2ZTQ3MzUwZTJjOWY0ZWZiY2E3ZjI1Y2RlMjU1NmFjY2RjZjRkMjEzZDNmOGY4M2RiN2M2IiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/_rolls.py#L23-L89",
+          "version": "repo-lines-v1:sha256:856e2c3090bc76ed79d4415ee147d84d1366445c03815431488e8aed7bb21250:eyJzZWxlY3RlZExpbmVDb3VudCI6NjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVmODJmYTE1NzQyYzk1YjE2OTI4MTlkODU5MTUwMzMzZjYyMzAxZDA4MzI4YzAwM2IyOTBiMjk0ODYzNmE3ZTciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiNTc5NDlmZWExMjczMmRiYjVkNjk3NDUxMjcwZDM2NDc0YTQwZTVmMDAyN2UyMjA1MTZkOTQ2NTI0Nzk1NWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlNzY2MzQyNWJhODUzMjAxYzAxMWJlNzgwNjMyMDk4MDM2ZWYxYzIyZjVkMWFlMTI0Y2U0MTkxNTQ5NWViODkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI0YjJhNDRhNjYyOTk5MTY3NDYxNjZhMjY5OTA1OTJmZGZmYmY3YTNhMzAxMzQ0ZDYxNDkyMjBlMzc4YzBkMTgifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1aad136b6aa14471a4b7735462d3f4cc",
+      "statement": "Corporate-action artifact validation reconciles action lineage, causal clocks, exactly-once entitlement/payment history and account NAV including receivables; futures artifact validation reconciles NAV, available funds, margin state, settlement arithmetic and fill-linked transfers.",
+      "evidence": [
+        {
+          "resource": "repo://src/ml4t/backtest/_action_artifacts.py#L70-L162",
+          "version": "repo-lines-v1:sha256:681a4e08524922d27cee027c55ee8cdea2840e952442916558e5d7139f8eadda:eyJzZWxlY3RlZExpbmVDb3VudCI6OTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI0ZTIxZjE5NTEzMDNmNjg0YjE3Yjk2ZWNjMzdjNGNiODIwZTc3NmYyN2Q3OTFhN2ZjMDNlYjZmYzIxNzYyYWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhMjdlNWE2NTZkYjJlNGQ5MTJhODhlOGFkOTU4MDA3MzZlMDMwOTA3NzAxOWIwMTg2NzRjZjc5OGM2MzlkZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU0MzY3ZmZjODA2NTc0MmM4OGE1ODI4MWUxNDg5YWQwYTBjNjY3ZDllMTFhMjk0MTI5ZGUxMmEwY2YxYWI1YTEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/ml4t/backtest/_futures_artifacts.py#L72-L172",
+          "version": "repo-lines-v1:sha256:acbba46c5ea685faab26e825a1693deb93cac27f7adec03c30070ce43203b1c6:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAxLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1OTNmYzk3ODk0MTQwNjIzMDk2Y2E5ZGI3MTU0NDIyZDQwNDRjZGRiZmM5NWFkNDBkYWE3ODVmOWI5MzQyY2ZhIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI3NWE4YWI5ZjhhN2VmYzY2NzQ1MjhmMDU3ZDMxN2Q1MGM0YmU5ZGEzNTA0Mjk0ZTE3NmI3NjAwM2RhNDdhMzU2IiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiIzMzQ4NDdkMDRlYzFhNWQxY2YyNWQwOTQ0YzU1NzkxNWNhOTZlOGI0NzllMWIzYzY5YzkyODhhYjUyOGQ0NDZkIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.9.0",
+    "at": "2026-11-10T03:14:31.122Z"
+  }
+}
